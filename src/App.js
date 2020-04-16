@@ -6,8 +6,7 @@ function App() {
   return (
     <div className="App">
       <Layout />
-      <p>Recipe List ( clickable recipes, pictures of dishes )</p>
-      <p>Sidebar ( Search box )</p>
+      <p>Categories of dishes</p>
     </div>
   );
 }

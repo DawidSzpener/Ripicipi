@@ -1,10 +1,10 @@
 import React from 'react'
 import './Toolbar.css'
 
-const toolbar = () => {
+const toolbar = (props) => {
   return (
     <div className='Toolbar'>
-      <p>menu</p>
+      <div className='Menu' onClick={props.clicked}>MENU</div>
       <p>logo</p>
       <p>navigation items</p>
     </div>
