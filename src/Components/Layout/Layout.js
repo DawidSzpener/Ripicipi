@@ -19,7 +19,7 @@ class Layout extends Component {
     })
   }
 
-  render () {
+  render() {
     return (
       <Aux>
         <Toolbar clicked={this.sideDrawerOpenedHandler}/>
