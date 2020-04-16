@@ -1,12 +1,13 @@
 import React from 'react'
 import './Toolbar.css'
+import NavigationItems from '../NavigationItems/NavigationItems'
 
 const toolbar = (props) => {
   return (
     <div className='Toolbar'>
-      <div className='Menu' onClick={props.clicked}>MENU</div>
+      <NavigationItems />
       <p>logo</p>
-      <p>navigation items</p>
+      <div className='Menu' onClick={props.clicked}>MENU</div>
     </div>
   )
 }
