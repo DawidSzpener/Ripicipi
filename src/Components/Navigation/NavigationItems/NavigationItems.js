@@ -1,11 +1,12 @@
 import React from 'react'
 import './NavigationItems.css'
+import NavigationItem from './NavigationItem/NavigationItem'
 
 const navigationItems = () => {
   return (
     <div className='NavigationItems'>
-      <p>Item 1</p>
-      <p>Item 2</p>
+      <NavigationItem>Item 1</NavigationItem>
+      <NavigationItem>Item 2</NavigationItem>
     </div>
   )
 }
