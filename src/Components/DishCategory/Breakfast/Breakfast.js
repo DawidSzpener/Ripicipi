@@ -3,7 +3,7 @@ import React from 'react'
 const breakfast = () => {
   return (
     <div>
-      breakfast
+      lista wszystkich sniadan
     </div>
   )
 }

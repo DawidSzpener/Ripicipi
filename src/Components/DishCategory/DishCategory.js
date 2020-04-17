@@ -5,13 +5,14 @@ import Card from '../UI/Card/Card'
 
 class DishCategory extends Component {
   state = {
-    categories: ['sniadanie', 'obiad', 'kolacja', 'desery', 'wypieki', 'inne']
+    categories: ['breakfast', 'dinner', 'supper', 'sweets', 'baking', 'other'],
+    shownCategory: null
   }
   
   render() {
     let category = null
 
-    switch (this.props.category) {
+    switch (this.state.shownCategory) {
       case('breakfast'):
         category = <Breakfast />
       break
@@ -19,8 +20,11 @@ class DishCategory extends Component {
         category = <Dinner />
       break
       default:
-        category = this.state.categories.map( category => {
-          return <Card>{category}</Card>
+        category = this.state.categories.map(category => {
+          return (
+          <Card
+            key={category}
+            clicked={() => this.setState({ shownCategory: category })}>{category}</Card>)
         })
     }
 

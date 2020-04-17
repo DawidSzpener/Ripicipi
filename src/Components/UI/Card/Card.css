@@ -7,4 +7,7 @@
   box-shadow: 0 8px 8px #ccc;
   padding: 10px;
   margin: 20px 20px auto;
+  align-content: center;
+  box-sizing: border-box;
+  flex-flow: column;
 }
