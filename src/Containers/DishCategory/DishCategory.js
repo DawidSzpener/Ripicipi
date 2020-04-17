@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import Breakfast from './Breakfast/Breakfast'
-import Dinner from './Dinner/Dinner'
-import Supper from './Supper/Supper'
-import Sweets from './Sweets/Sweets'
-import Baking from './Baking/Baking'
-import Other from './Other/Other'
+import Breakfast from '../../Components/DishCategories/Breakfast/Breakfast'
+import Dinner from '../../Components/DishCategories/Dinner/Dinner'
+import Supper from '../../Components/DishCategories/Supper/Supper'
+import Sweets from '../../Components/DishCategories/Sweets/Sweets'
+import Baking from '../../Components/DishCategories/Baking/Baking'
+import Other from '../../Components/DishCategories/Other/Other'
 import Aux from '../../hoc/Aux'
-import Card from '../UI/Card/Card'
+import Card from '../../Components/UI/Card/Card'
 
 class DishCategory extends Component {
   state = {
