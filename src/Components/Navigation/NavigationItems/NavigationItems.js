@@ -5,8 +5,9 @@ import NavigationItem from './NavigationItem/NavigationItem'
 const navigationItems = () => {
   return (
     <div className='NavigationItems'>
-      <NavigationItem>Item 1</NavigationItem>
-      <NavigationItem>Item 2</NavigationItem>
+      <NavigationItem>New Recipe</NavigationItem>
+      <NavigationItem>Favourites</NavigationItem>
+      <NavigationItem>Categories</NavigationItem>
     </div>
   )
 }

@@ -27,7 +27,7 @@ class DishCategory extends Component {
           <Card
             key={category}
             picture={category}
-            clicked={() => this.setState({ shownCategory: category })}>{category}</Card>)
+            clicked={() => this.setState({ shownCategory: category })}>{category.toUpperCase()}</Card>)
         })
     }
 

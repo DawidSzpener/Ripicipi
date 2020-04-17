@@ -6,7 +6,7 @@ const toolbar = (props) => {
   return (
     <div className='Toolbar'>
       <NavigationItems />
-      <p>logo</p>
+      <p>Logo</p>
       <div className='Menu' onClick={props.clicked}>MENU</div>
     </div>
   )

@@ -1,6 +1,7 @@
 .Button {
   box-sizing: border-box;
   background-color: bisque;
+  border-radius: 8px;
   border: 1px #eee;
   box-shadow: 0 2px 3px #ccc;
   color: black;
