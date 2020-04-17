@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import Breakfast from './Breakfast/Breakfast'
 import Dinner from './Dinner/Dinner'
+import Aux from '../../hoc/Aux'
 import Card from '../UI/Card/Card'
+import Button from '../UI/Button/Button'
 
 class DishCategory extends Component {
   state = {
@@ -29,9 +31,12 @@ class DishCategory extends Component {
     }
 
     return (
-      <div>
-        {category}
-      </div>
+      <Aux>
+        <Button clicked={() => this.setState({ shownCategory: null })}>Categories</Button>
+        <div>
+          {category}
+        </div>
+      </Aux>
     )
   }
 }
