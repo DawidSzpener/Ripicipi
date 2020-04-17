@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import Breakfast from './Breakfast/Breakfast'
 import Dinner from './Dinner/Dinner'
+import Supper from './Supper/Supper'
+import Sweets from './Sweets/Sweets'
+import Baking from './Baking/Baking'
+import Other from './Other/Other'
 import Aux from '../../hoc/Aux'
 import Card from '../UI/Card/Card'
-import Button from '../UI/Button/Button'
 
 class DishCategory extends Component {
   state = {
@@ -21,6 +24,18 @@ class DishCategory extends Component {
       case('dinner'):
         category = <Dinner />
       break
+      case('supper'):
+        category = <Supper />
+      break
+      case('sweets'):
+        category = <Sweets />
+      break
+      case('other'):
+        category = <Other />
+      break
+      case('baking'):
+        category = <Baking />
+      break
       default:
         category = this.state.categories.map(category => {
           return (
@@ -33,8 +48,7 @@ class DishCategory extends Component {
 
     return (
       <Aux>
-        <Button clicked={() => this.setState({ shownCategory: null })}>Categories</Button>
-        <div>
+        <div style={{marginBottom:'50px'}}>
           {category}
         </div>
       </Aux>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Layout from './Components/Layout/Layout'
 import DishCategory from './Components/DishCategory/DishCategory'
-import background from './background.png'
+import background from './assets/pictures/background3.png'
 
 class App extends Component {
 
