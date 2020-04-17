@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <Layout>
-          <DishCategory category='breakfast'/>
+          <DishCategory />
         </Layout>
       </div>
     );
