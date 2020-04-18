@@ -18,6 +18,7 @@ class Recipe extends Component {
     let image = 
     <div className='Recipe'>
       <Button clicked={this.photoToggle}>Toggle</Button>
+      <Button clicked={this.props.showList}>Go Back</Button>
       <p className='RecipeTitle'>{this.state.title}</p>
       <img src={this.state.background} alt="card_bg"></img>
     </div>
@@ -25,13 +26,19 @@ class Recipe extends Component {
     if (!this.state.toggled) {
       image = 
       <div className='RecipeToggled'>
-        <div style={{position: 'absolute'}}><Button clicked={this.photoToggle}>Toggle</Button></div> 
+        <div style={{position: 'absolute'}}>
+          <Button clicked={this.photoToggle}>Toggle</Button>
+          <Button clicked={this.props.showList}>Go Back</Button>
+        </div> 
         <p className='RecipeTitle'>{this.state.title}</p>
       </div>
     } else {
       image = 
       <div className='Recipe'>
-        <div style={{position: 'absolute'}}><Button clicked={this.photoToggle}>Toggle</Button></div>
+        <div style={{position: 'absolute'}}>
+          <Button clicked={this.photoToggle}>Toggle</Button>
+          <Button clicked={this.props.showList}>Go Back</Button>
+        </div>
         <p className='RecipeTitle'>{this.state.title}</p>
         <img src={this.state.background} alt="card_bg"></img>
       </div>
