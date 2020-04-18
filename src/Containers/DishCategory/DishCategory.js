@@ -7,6 +7,8 @@ import Baking from '../../Components/DishCategories/Baking/Baking'
 import Other from '../../Components/DishCategories/Other/Other'
 import Aux from '../../hoc/Aux'
 import Card from '../../Components/UI/Card/Card'
+import background from '../../assets/pictures/background3.png'
+
 
 class DishCategory extends Component {
   state = {
@@ -48,6 +50,9 @@ class DishCategory extends Component {
 
     return (
       <Aux>
+        <div className="bg-color">
+          <img src={background} alt="bg" className="bg"></img>
+        </div>
         <div style={{marginBottom:'50px'}}>
           {category}
         </div>
