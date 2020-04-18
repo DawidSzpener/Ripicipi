@@ -39,14 +39,20 @@ class Recipe extends Component {
       <Aux>
         {image}
         <div className='RecipeIngredients'>
-          <p>INGREDIENTS</p>
-          <p>SALT: 20g</p>
-          <p>WATER: 5L</p>
+          <ol>
+            <li>SALT: 20g</li>
+            <li>SALT: 20g</li>
+            <li>SALT: 20g</li>
+            <li>SALT: 20g</li>
+          </ol>
         </div>
-        <div className='RecipePreparation'>
-          <p>First do this</p>
-          <p>Then this</p>
-          <p>AAaaand then this</p>
+        <div className='RecipeInstructions'>
+          <ol>
+            <li>SOMETHING</li>
+            <li>SOMETHING</li>
+            <li>SOMETHING</li>
+            <li>SOMETHING</li>
+          </ol>
         </div>
       </Aux>
     )
