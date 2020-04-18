@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import picture from '../../assets/pictures/background2.png'
 import './Recipe.css'
 import Aux from '../../hoc/Aux'
 import Button from '../UI/Button/Button'
 
 class Recipe extends Component {
   state = {
+    title: this.props.title,
+    background: this.props.picture,
     toggled: true
   }
 
@@ -17,21 +18,22 @@ class Recipe extends Component {
     let image = 
     <div className='Recipe'>
       <Button clicked={this.photoToggle}>Toggle</Button>
-      <p className='RecipeTitle'>RECIPEE TITLE HERE</p>
-      <img src={picture} alt="card_bg"></img>
+      <p className='RecipeTitle'>{this.state.title}</p>
+      <img src={this.state.background} alt="card_bg"></img>
     </div>
 
     if (!this.state.toggled) {
       image = 
       <div className='RecipeToggled'>
-        <div style={{position: 'absolute'}}><Button clicked={this.photoToggle}>Toggle</Button></div>
+        <div style={{position: 'absolute'}}><Button clicked={this.photoToggle}>Toggle</Button></div> 
+        <p className='RecipeTitle'>{this.state.title}</p>
       </div>
     } else {
       image = 
       <div className='Recipe'>
         <div style={{position: 'absolute'}}><Button clicked={this.photoToggle}>Toggle</Button></div>
-        <p className='RecipeTitle'>RECIPEE TITLE HERE</p>
-        <img src={picture} alt="card_bg"></img>
+        <p className='RecipeTitle'>{this.state.title}</p>
+        <img src={this.state.background} alt="card_bg"></img>
       </div>
     }
 

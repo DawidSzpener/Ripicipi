@@ -15,7 +15,7 @@
 .RecipeToggled {
   display: inline-block;
   width: 880px;
-  height: 70px;
+  height: 72px;
   background-color: blanchedalmond;
   border: 2px #eee;
   box-shadow: 0 12px 30px black;
@@ -103,6 +103,7 @@
   font-family: 'Caveat', cursive;
   font-size: 1.6rem;
   color: black;
+  margin-top: 12px;
 }
 
 .RecipeInstructions {
