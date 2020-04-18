@@ -10,8 +10,8 @@ class App extends Component {
     return (
       <div className="App">
         <Layout>
-          {/* <DishCategory /> */}
-          <Homescreen />
+          <DishCategory />
+          {/* <Homescreen /> */}
         </Layout>
       </div>
     );

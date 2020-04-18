@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Recipe from '../../Recipe/Recipe'
 import picture from '../../../assets/pictures/background2.png'
-import './Baking.css'
+import './Category.css'
 
-class Baking extends Component {
+class Category extends Component {
   state = {
     recipeList: [
       <Recipe
@@ -17,7 +17,8 @@ class Baking extends Component {
         ingredients={['5g of salt', '2 table spoons of soya', '50g of almond flour']}
         preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3']}/>
     ],
-    displayedRecipe: null
+    displayedRecipe: null,
+    category: this.props.name
   }
 
   showRecipeList = () => {
@@ -62,4 +63,4 @@ class Baking extends Component {
   }
 }
 
-export default Baking
+export default Category

@@ -1,10 +1,5 @@
 import React, { Component } from 'react'
-import Breakfast from '../../Components/DishCategories/Breakfast/Breakfast'
-import Dinner from '../../Components/DishCategories/Dinner/Dinner'
-import Supper from '../../Components/DishCategories/Supper/Supper'
-import Sweets from '../../Components/DishCategories/Sweets/Sweets'
-import Baking from '../../Components/DishCategories/Baking/Baking'
-import Other from '../../Components/DishCategories/Other/Other'
+import Category from '../../Components/DishCategories/Category/Category'
 import Aux from '../../hoc/Aux'
 import Card from '../../Components/UI/Card/Card'
 import background from '../../assets/pictures/background3.png'
@@ -21,22 +16,22 @@ class DishCategory extends Component {
 
     switch (this.state.shownCategory) {
       case('breakfast'):
-        category = <Breakfast />
+        category = <Category name='Breakfast'/>
       break
       case('dinner'):
-        category = <Dinner />
+        category = <Category name='Dinner'/>
       break
       case('supper'):
-        category = <Supper />
+        category = <Category name='Supper'/>
       break
       case('sweets'):
-        category = <Sweets />
+        category = <Category name='Sweets'/>
       break
       case('other'):
-        category = <Other />
+        category = <Category name='Other'/>
       break
       case('baking'):
-        category = <Baking />
+        category = <Category name='Baking'/>
       break
       default:
         category = this.state.categories.map(category => {
