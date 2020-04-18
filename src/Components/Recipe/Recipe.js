@@ -7,7 +7,14 @@ class Recipe extends Component {
   state = {
     title: this.props.title,
     background: this.props.picture,
-    toggled: true
+    ingredients: null,
+    preparation: null,
+    toggled: true,
+    loading: true
+  }
+
+  componentDidMount() {
+    this.setState({ loading: false, ingredients: this.props.ingredients, preparation: this.props.preparation })
   }
 
   photoToggle = () => {
@@ -42,26 +49,36 @@ class Recipe extends Component {
         <p className='RecipeTitle'>{this.state.title}</p>
         <img src={this.state.background} alt="card_bg"></img>
       </div>
+    }    
+
+    let ingredients = null
+    let preparations = null
+    
+    if (!this.state.loading) {
+      ingredients = 
+      <ol>
+        {this.state.ingredients.map(ingredient => {
+          return <li key={ingredient}>{ingredient}</li>
+        })}
+      </ol>
+
+      preparations = 
+      <ol>
+      {this.state.preparation.map(step => {
+        return <li key={step}>{step}</li>
+      })}
+      </ol>
     }
 
-    return (
+    return (   
+     
       <Aux>
         {image}
         <div className='RecipeIngredients'>
-          <ol>
-            <li>SALT: 20g</li>
-            <li>SALT: 20g</li>
-            <li>SALT: 20g</li>
-            <li>SALT: 20g</li>
-          </ol>
+          {ingredients}
         </div>
         <div className='RecipeInstructions'>
-          <ol>
-            <li>SOMETHING</li>
-            <li>SOMETHING</li>
-            <li>SOMETHING</li>
-            <li>SOMETHING</li>
-          </ol>
+          {preparations}
         </div>
       </Aux>
     )

@@ -6,11 +6,16 @@ import './Baking.css'
 class Baking extends Component {
   state = {
     recipeList: [
-      <Recipe title='Testowy tytul 1' picture={picture}/>,
-      <Recipe title='Testowy tytul 2' picture={picture}/>,
-      <Recipe title='Testowy tytul 3' picture={picture}/>,
-      <Recipe title='Testowy tytul 4' picture={picture}/>,
-      <Recipe title='Testowy tytul 5' picture={picture}/>
+      <Recipe
+        title='Testowy tytul 1'
+        picture={picture}
+        ingredients={['5g of salt', '2 table spoons of soya', '50g of almond flour']}
+        preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3']}/>,
+      <Recipe
+      title='Testowy tytul 2'
+      picture={picture}
+      ingredients={['5g of salt', '2 table spoons of soya', '50g of almond flour']}
+      preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3']}/>
     ],
     displayedRecipe: null
   }
@@ -38,7 +43,13 @@ class Baking extends Component {
 
       this.state.recipeList.map(recipe => {
         if (recipe.props.title === this.state.displayedRecipe) {
-          shownRecipes = <Recipe showList={() => this.showRecipeList()} title={recipe.props.title} picture={recipe.props.picture}/>
+          shownRecipes = 
+          <Recipe
+            showList={() => this.showRecipeList()}
+            title={recipe.props.title} 
+            picture={recipe.props.picture}
+            ingredients={recipe.props.ingredients}
+            preparation={recipe.props.preparation}/>
         } 
         return null
       })
