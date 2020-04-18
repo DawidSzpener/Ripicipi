@@ -1,17 +1,49 @@
-.MiddleHomescreen {
-  height: 100%;
-  width: 100px;
-  position: absolute;
-  overflow: visible;
-  top: 0;
-  left: 45%;
-  display: flex;
+.Homescreen {
+  padding-top: 20px;
+  height: 90%;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
   box-sizing: border-box;
-  z-index: 90;
-  background-image: url(../../assets/pictures/watermelon.png);
-  background-size: contain;
-  background-repeat: space;
+}
+
+.Button1 img{
+  height: 30%;
+  width: 30%;
+}
+
+.Button2 img{
+  height: 30%;
+  width: 30%;
+}
+
+.Button3 img{
+  height: 30%;
+  width: 30%;
+}
+
+@media (min-width: 499px){
+  .Homescreen {
+    padding-top: 150px;
+    height: 90%;
+    justify-content: space-between;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .Button1 img{
+    height: 70%;
+    width: 70%;
+  }
+
+  .Button2 img{
+    height: 70%;
+    width: 70%;
+  }
+
+  .Button3 img{
+    height: 70%;
+    width: 70%;
+  }
 }

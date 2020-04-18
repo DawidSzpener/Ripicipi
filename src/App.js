@@ -13,10 +13,10 @@ class App extends Component {
         <div className="bg-color">
         <img src={background} alt="bg" className="bg"></img>
       </div>
-      <Homescreen />
-        {/* <Layout>
-          <DishCategory />
-        </Layout> */}
+        <Layout>
+          {/* <DishCategory /> */}
+          <Homescreen />
+        </Layout>
       </div>
     );
   }

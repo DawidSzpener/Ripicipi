@@ -1,15 +1,17 @@
 import React from 'react'
 import Aux from '../../hoc/Aux'
 import './WelcomeScreen.css'
-import Button from '../../Components/UI/Button/Button'
+import orange1 from '../../assets/pictures/green.png'
+import orange2 from '../../assets/pictures/orange.png'
+import orange3 from '../../assets/pictures/yellow.png'
 
 const homeScreen = () => {
   return (
     <Aux>
       <div className='Homescreen'>
-        <div className='MiddleHomescreen'>
-          <Button>Categories</Button>
-        </div>
+        <div className='Button1'><img src={orange1} alt='bg'/></div>
+        <div className='Button2'><img src={orange2} alt='bg'/></div>
+        <div className='Button3'><img src={orange3} alt='bg'/></div>
       </div>
     </Aux>
   )
