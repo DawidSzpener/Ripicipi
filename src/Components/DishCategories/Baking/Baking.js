@@ -12,10 +12,10 @@ class Baking extends Component {
         ingredients={['5g of salt', '2 table spoons of soya', '50g of almond flour']}
         preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3']}/>,
       <Recipe
-      title='Testowy tytul 2'
-      picture={picture}
-      ingredients={['5g of salt', '2 table spoons of soya', '50g of almond flour']}
-      preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3']}/>
+        title='Testowy tytul 2'
+        picture={picture}
+        ingredients={['5g of salt', '2 table spoons of soya', '50g of almond flour']}
+        preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3']}/>
     ],
     displayedRecipe: null
   }

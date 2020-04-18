@@ -3,6 +3,7 @@ import './App.css';
 import Layout from './Components/Layout/Layout'
 import DishCategory from './Containers/DishCategory/DishCategory'
 import background from './assets/pictures/background3.png'
+import Homescreen from './Containers/WelcomeScreen/WelcomeScreen'
 
 class App extends Component {
 
@@ -12,9 +13,10 @@ class App extends Component {
         <div className="bg-color">
         <img src={background} alt="bg" className="bg"></img>
       </div>
-        <Layout>
+      <Homescreen />
+        {/* <Layout>
           <DishCategory />
-        </Layout>
+        </Layout> */}
       </div>
     );
   }

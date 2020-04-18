@@ -1,0 +1,17 @@
+.MiddleHomescreen {
+  height: 100%;
+  width: 100px;
+  position: absolute;
+  overflow: visible;
+  top: 0;
+  left: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 90;
+  background-image: url(../../assets/pictures/watermelon.png);
+  background-size: contain;
+  background-repeat: space;
+}
