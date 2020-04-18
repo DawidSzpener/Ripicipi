@@ -1,4 +1,4 @@
-.RecipeList {
+.SingleRecipeCard {
   display: inline-block;
   width: 280px;
   height: 240px;
@@ -12,14 +12,15 @@
   border-radius: 8px;
 }
 
-.RecipeList img {
+.SingleRecipeCard img {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 80%;
+  
 }
 
-.RecipeListTitle {
+.SingleRecipeCardTitle {
   height: 20%;
   font-family: 'Caveat', cursive;
   font-size: 1.6rem;
