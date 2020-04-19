@@ -7,16 +7,16 @@ const form = (props) => {
 
   switch (props.inputtype) {
     case('input'):
-      inputElement = <input className={classes.InputElement} {...props}/>
+      inputElement = <input className='InputElement' {...props}/>
       break
     case('textarea'):
-      inputElement = <textarea className={classes.InputElement} {...props}/>
+      inputElement = <textarea className='InputElement' {...props}/>
       break
     case('select'):
       inputElement = 
       <Aux>
         <p>Category</p>
-        <select className={classes.InputElement} {...props}>
+        <select className='InputElement' {...props}>
           <option key='Breakfast' value='Breakfast'>Breakfast</option>
           <option key='Dinner' value='Dinner'>Dinner</option>
           <option key='Desserts' value='Desserts'>Desserts</option>
@@ -30,12 +30,12 @@ const form = (props) => {
       </Aux>
       break
     default:
-      inputElement = <input className={classes.InputElement} {...props}/>
+      inputElement = <input className='InputElement' {...props}/>
   }
 
   return (
-    <div className={classes.Input}>
-      <label className={classes.Label}>{props.label}</label>
+    <div className='Input'>
+      <label className='Label'>{props.label}</label>
       {inputElement}
     </div>
   )
