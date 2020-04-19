@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import Aux from '../../hoc/Aux'
-import background from '../../assets/pictures/addbackground.png'
 import Input from '../../Components/UI/Form/Form'
 import './AddRecipe.css'
 
 class AddRecipe extends Component {
   state = {
-    ingredients: [{ingredient: ''}],
+    ingredients: [{ingredient: ''}, {ingredient: ''}, {ingredient: ''}],
+    preparations: [{preparation: ''}, {preparation: ''}, {preparation: ''}],
   }
 
   addIngredient = (event) => {
@@ -15,15 +15,10 @@ class AddRecipe extends Component {
     }))
   }
 
-  handleChange = (event) => {
-    if (['ingredient'].include(event.target.className)){
-      let ingredients = [...this.state.ingredients]
-
-      ingredients[event.target.dataset.id][event.target.className] = event.target.value.toUpperCase()
-      this.setState({ ingredients }, () => console.log(this.state.ingredients))
-    } else {
-      this.setState({ [event.target.name]: event.target.value.toUpperCase()})
-    }
+  addPreparation = (event) => {
+    this.setState((prevState) => ({
+      preparations: [...prevState.preparations, {prepartion: ''}]
+    }))
   }
 
   handleSubmit = (event) => { event.preventDefault() }
@@ -31,36 +26,50 @@ class AddRecipe extends Component {
   render() {
 
     let {ingredients} = this.state
+    let {preparations} = this.state
 
 
     return (
       <Aux>
-        <div className="bg-color" label='Title'>
-          <img src={background} alt="bg" className="bg"></img>
-        </div>
         <div className='AddRecipeForms'>
+          <div className='bg-add'></div>
           <form onSubmit={this.handleSubmit}>
             <Input inputtype='input' type="text" name="title" placeholder="Recipe title"/>
             <Input inputtype='select' type="text" name="category" />
             <Input inputtype='input' type="text" name="picture" placeholder="Picture URL"/>
-            <button onClick={this.addIngredient}>Add new ingredient</button>
-
-            {
-              ingredients.map((val, idx) => {
-                let ingredientId = `Ingredient ${idx}`
-                return (
-                  <div key={idx}>
+            <button className ='IngredientsButton' onClick={this.addIngredient}>Add new ingredient</button>
+            <div className='IngredientsForms'>
+              {
+                ingredients.map((val, idx) => {
+                  let ingredientId = `Ingredient ${idx}`
+                  return (
                     <Input
                       inputtype='input' 
                       type="text"
                       key={ingredientId} 
                       name={ingredientId}
                       placeholder={`Ingredient ${idx + 1}`}/>
-                  </div>
-                )
-              })
-            }
-            <Input type='submit' value='Submit' />
+                  )
+                })
+              }
+            </div>
+            <button className ='PreparationsButton' onClick={this.addPreparation}>Add another step</button>
+            <div className='PreparationsForms'>
+              {
+                preparations.map((val, idx) => {
+                  let preparationsId = `preparations ${idx}`
+                  return (
+                    <Input
+                      inputtype='input' 
+                      type="text"
+                      key={preparationsId} 
+                      name={preparationsId}
+                      placeholder={`Step ${idx + 1}`}/>
+                  )
+                })
+              }
+            </div>
+            <input type='submit' value='Submit' />
           </form>
         </div>
       </Aux>

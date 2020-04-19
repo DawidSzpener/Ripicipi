@@ -6,6 +6,41 @@
   box-sizing: border-box;
 }
 
+.IngredientsForms {
+  max-height: 150px;
+  overflow: auto;
+}
+
+.PreparationsForms {
+  max-height: 150px;
+  overflow: auto;
+}
+
+.PreparationsButton {
+}
+
+.IngredientsButton {
+  
+}
+
+.bg-add {
+  background: url('../../assets/pictures/addbackground.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 1024px;
+  min-width: 1024px;
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 @media (min-width: 600px) {
   .AddRecipeForms {
     width: 440px;
