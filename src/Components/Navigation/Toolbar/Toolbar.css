@@ -13,6 +13,22 @@
   z-index: 90;
 }
 
+.ToolbarBottom {
+  margin-top: 40px;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: -5px;
+  background-image: url('../../../assets/pictures/toolbarbottom.png');
+  display: flex;
+  align-items: center;
+  z-index: 91;
+  background-size: contain;
+  justify-content: stretch;
+  box-sizing: border-box;
+}
+
 .Menu {
   color: black;
 }

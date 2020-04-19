@@ -1,14 +1,18 @@
 import React from 'react'
 import './Toolbar.css'
 import NavigationItems from '../NavigationItems/NavigationItems'
+import Aux from '../../../hoc/Aux'
 
 const toolbar = (props) => {
   return (
-    <div className='Toolbar'>
-      <NavigationItems />
-      <p>Logo</p>
-      <div className='Menu' onClick={props.clicked}>MENU</div>
-    </div>
+    <Aux>
+      <div className='Toolbar'>
+        <NavigationItems />
+        <p>Logo</p>
+        <div className='Menu' onClick={props.clicked}>MENU</div>
+      </div>
+      <div className='ToolbarBottom'></div>
+    </Aux>
   )
 }
 
