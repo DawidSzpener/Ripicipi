@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Category from '../../Components/DishCategories/Category/Category'
 import Aux from '../../hoc/Aux'
 import Card from '../../Components/UI/Card/Card'
-import background from '../../assets/pictures/background3.png'
+import background from '../../assets/pictures/background7.png'
 
 
 class DishCategory extends Component {

@@ -7,7 +7,7 @@ const navigationItems = () => {
     <div className='NavigationItems'>
       <NavigationItem>New Recipe</NavigationItem>
       <NavigationItem>Favourites</NavigationItem>
-      <NavigationItem>Categories</NavigationItem>
+      <NavigationItem>Recipes</NavigationItem>
     </div>
   )
 }
