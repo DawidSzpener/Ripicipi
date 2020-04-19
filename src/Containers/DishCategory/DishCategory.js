@@ -7,7 +7,18 @@ import background from '../../assets/pictures/background3.png'
 
 class DishCategory extends Component {
   state = {
-    categories: ['breakfast', 'dinner', 'supper', 'sweets', 'baking', 'other'],
+    categories: [
+      'breakfast',
+      'dinner', 
+      'desserts', 
+      'baking', 
+      'sauces',
+      'salads', 
+      'pizza', 
+      'snacks',
+      'liquids'
+
+    ],
     shownCategory: null
   }
   
@@ -18,20 +29,29 @@ class DishCategory extends Component {
       case('breakfast'):
         category = <Category name='Breakfast'/>
       break
+      case('pizza'):
+        category = <Category name='Pizza'/>
+      break
       case('dinner'):
         category = <Category name='Dinner'/>
       break
-      case('supper'):
-        category = <Category name='Supper'/>
+      case('salads'):
+        category = <Category name='Salads'/>
       break
-      case('sweets'):
-        category = <Category name='Sweets'/>
+      case('desserts'):
+        category = <Category name='Desserts'/>
       break
-      case('other'):
-        category = <Category name='Other'/>
+      case('sauces'):
+        category = <Category name='Sauces'/>
       break
       case('baking'):
         category = <Category name='Baking'/>
+      break
+      case('snacks'):
+        category = <Category name='Snacks'/>
+      break
+      case('liquids'):
+        category = <Category name='Liquids'/>
       break
       default:
         category = this.state.categories.map(category => {
@@ -39,7 +59,7 @@ class DishCategory extends Component {
           <Card
             key={category}
             picture={category}
-            clicked={() => this.setState({ shownCategory: category })}>{category.toUpperCase()}</Card>)
+            clicked={() => this.setState({ shownCategory: category })}></Card>)
         })
     }
 
