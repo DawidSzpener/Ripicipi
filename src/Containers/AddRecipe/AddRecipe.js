@@ -6,44 +6,12 @@ import './AddRecipe.css'
 
 class AddRecipe extends Component {
   state = {
-    numberOfIngredients: 1,
-    numberOfPreparations: 1
-  }
-
-  increaseIngredientsHandler = () => {
-    let number = this.state.numberOfIngredients
-    this.setState({ numberOfIngredients: number + 1})
-  }
-
-  decreaseIngredientsHandler = () => {
-    let number = this.state.numberOfIngredients
-    this.setState({ numberOfIngredients: number - 1})
-  }
-
-  increasePreparationsHandler = () => {
-    let number = this.state.numberOfPreparations
-    this.setState({ numberOfPreparations: number + 1})
-  }
-
-  decreasePreparationsHandler = () => {
-    let number = this.state.numberOfPreparations
-    this.setState({ numberOfPreparations: number - 1})
+    ingredients: [{ingredient: ''}],
   }
 
   render() {
-    let ingredientInput = 
-    <div>
-      <Input inputtype='input' type="text" name="ingredients" placeholder="Ingredient"/>
-      <button onClick={() => this.increaseIngredientsHandler()}>+</button>
-      <button onClick={() => this.decreaseIngredientsHandler()}>-</button>
-    </div>
 
-    let preparationInput =
-    <div>
-      <Input inputtype='input' type="text" name="preparation" placeholder="Preparation"/>
-      <button onClick={() => this.increasePreparationsHandler()}>+</button>
-      <button onClick={() => this.decreasePreparationsHandler()}>-</button>
-    </div>
+    let {ingredients} = this.state
 
 
     return (
@@ -52,11 +20,31 @@ class AddRecipe extends Component {
           <img src={background} alt="bg" className="bg"></img>
         </div>
         <div className='AddRecipeForms'>
-          <Input inputtype='input' type="text" name="title" placeholder="Recipe title"/>
-          <Input inputtype='select' type="text" name="category" />
-          <Input inputtype='input' type="text" name="picture" placeholder="Picture ulr"/>
-          {ingredientInput}
-          {preparationInput}
+          <form>
+            <Input inputtype='input' type="text" name="title" placeholder="Recipe title"/>
+            <Input inputtype='select' type="text" name="category" />
+            <Input inputtype='input' type="text" name="picture" placeholder="Picture ulr"/>
+            <button>Add new ingredient</button>
+
+            {
+              ingredients.map((val, idx) => {
+                let ingredientId = `Ingredient ${idx}`
+                return (
+                  <div key={idx}>
+                  {console.log(val)}
+                    <Input
+                      label={ingredientId + 1}
+                      inputtype='input' 
+                      type="text"
+                      key={ingredientId} 
+                      name={ingredientId}
+                      placeholder="Ingredient"/>
+                  </div>
+                )
+              })
+            }
+            <Input type='submit' value='Submit' />
+          </form>
         </div>
       </Aux>
     )

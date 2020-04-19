@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './Form.css'
+import './Form.css'
 import Aux from '../../../hoc/Aux'
 
 const form = (props) => {
