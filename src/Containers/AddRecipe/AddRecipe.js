@@ -5,8 +5,8 @@ import './AddRecipe.css'
 
 class AddRecipe extends Component {
   state = {
-    ingredients: [{ingredient: ''}, {ingredient: ''}, {ingredient: ''}],
-    preparations: [{preparation: ''}, {preparation: ''}, {preparation: ''}],
+    ingredients: [{ingredient: ''}, {ingredient: ''}, {ingredient: ''} ],
+    preparations: [{preparation: ''}, {preparation: ''}, {preparation: ''} ],
   }
 
   addIngredient = (event) => {
@@ -35,9 +35,8 @@ class AddRecipe extends Component {
           <div className='bg-add'></div>
           <form onSubmit={this.handleSubmit}>
             <Input inputtype='input' type="text" name="title" placeholder="Recipe title"/>
-            <Input inputtype='select' type="text" name="category" />
+            <Input inputtype='select' type="text" name="category" className='add-select'/>
             <Input inputtype='input' type="text" name="picture" placeholder="Picture URL"/>
-            <button className ='IngredientsButton' onClick={this.addIngredient}>Add new ingredient</button>
             <div className='IngredientsForms'>
               {
                 ingredients.map((val, idx) => {
@@ -53,7 +52,7 @@ class AddRecipe extends Component {
                 })
               }
             </div>
-            <button className ='PreparationsButton' onClick={this.addPreparation}>Add another step</button>
+            <button className ='IngredientsButton' onClick={this.addIngredient}>Add new ingredient</button>
             <div className='PreparationsForms'>
               {
                 preparations.map((val, idx) => {
@@ -69,7 +68,8 @@ class AddRecipe extends Component {
                 })
               }
             </div>
-            <input type='submit' value='Submit' />
+            <button className='PreparationsButton' onClick={this.addPreparation}>Add another step</button>
+            <button className='AddFormSubmit' type='submit' value='Submit'>Submit</button>
           </form>
         </div>
       </Aux>

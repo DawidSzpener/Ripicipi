@@ -12,6 +12,7 @@
 }
 
 .InputElement {
+  border-radius: 0.5em;
   outline: none;
   border: 1px solid #ccc;
   background-color: white;
@@ -23,6 +24,9 @@
 }
 
 .InputElement:focus {
-  outline: none;
-  background-color: white;
+	border-color: #aaa;
+	box-shadow: 0 0 1px 3px rgb(7, 7, 7);
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	color: #222;
+	outline: none;
 }

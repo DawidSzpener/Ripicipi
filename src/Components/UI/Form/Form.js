@@ -15,8 +15,7 @@ const form = (props) => {
     case('select'):
       inputElement = 
       <Aux>
-        <p>Category</p>
-        <select className='InputElement' {...props}>
+        <select {...props}>
           <option key='Breakfast' value='Breakfast'>Breakfast</option>
           <option key='Dinner' value='Dinner'>Dinner</option>
           <option key='Desserts' value='Desserts'>Desserts</option>
