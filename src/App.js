@@ -3,6 +3,7 @@ import './App.css';
 import Layout from './Components/Layout/Layout'
 import DishCategory from './Containers/DishCategory/DishCategory'
 import Homescreen from './Containers/WelcomeScreen/WelcomeScreen'
+import AddRecipe from './Containers/AddRecipe/AddRecipe'
 
 class App extends Component {
 
@@ -10,7 +11,8 @@ class App extends Component {
     return (
       <div className="App">
         <Layout>
-          <DishCategory />
+          <AddRecipe />
+          {/* <DishCategory /> */}
           {/* <Homescreen /> */}
         </Layout>
       </div>
