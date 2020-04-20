@@ -2,14 +2,12 @@ import React from 'react'
 import './NavigationItems.css'
 import NavigationItem from './NavigationItem/NavigationItem'
 
-const navigationItems = () => {
-  return (
-    <div className='NavigationItems'>
-      <NavigationItem>New Recipe</NavigationItem>
-      <NavigationItem>Favourites</NavigationItem>
-      <NavigationItem>Recipes</NavigationItem>
-    </div>
-  )
-}
+const navigationItems = () => (
+  <ul className='NavigationItems'>
+    <NavigationItem link='/add'>New Recipe</NavigationItem>
+    <NavigationItem link='/categories'>Recipes</NavigationItem>
+    <NavigationItem link='/'>Homescreen</NavigationItem>
+  </ul>
+)
 
 export default navigationItems
