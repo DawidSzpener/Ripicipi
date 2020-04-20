@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom'
 import './App.css';
 import Layout from './Components/Layout/Layout'
 import DishCategory from './Containers/DishCategory/DishCategory'
@@ -11,9 +12,9 @@ class App extends Component {
     return (
       <div className="App">
         <Layout>
-          <AddRecipe />
-          {/* <DishCategory /> */}
-          {/* <Homescreen /> */}
+          <Route path='/' exact component={Homescreen} />
+          <Route path='/categories' component={DishCategory} />
+          <Route path='/add' component={AddRecipe} />
         </Layout>
       </div>
     );
