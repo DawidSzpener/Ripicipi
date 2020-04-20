@@ -66,7 +66,7 @@ class DishCategory extends Component {
 
     return (
       <Aux>
-        <Logo screen='categories' style={{marginTop: '5px', marginLeft: '9px'}}/>
+        <Logo screen='categories' style={{marginTop: '2px', marginLeft: '9px'}}/>
         <div className="bg-color">
           <img src={background} alt="bg" className="bg"></img>
         </div>
