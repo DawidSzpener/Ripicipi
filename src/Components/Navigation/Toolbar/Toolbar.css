@@ -34,6 +34,9 @@
 }
 
 @media (min-width: 499px) {
+  .Toolbar {
+    padding: 0px;
+  }
   .Menu {
     display: none;
   }

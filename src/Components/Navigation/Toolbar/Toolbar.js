@@ -2,13 +2,14 @@ import React from 'react'
 import './Toolbar.css'
 import NavigationItems from '../NavigationItems/NavigationItems'
 import Aux from '../../../hoc/Aux'
+import Logo from '../../Logo/Logo'
 
 const toolbar = (props) => {
   return (
     <Aux>
+      <Logo />
       <div className='Toolbar'>
         <NavigationItems />
-        <p>Logo</p>
         <div className='Menu' onClick={props.clicked}>MENU</div>
       </div>
       <div className='ToolbarBottom'></div>
