@@ -22,37 +22,41 @@ class DishCategory extends Component {
     ],
     shownCategory: null
   }
+
+  categoryHandler = () => {
+    this.setState({ shownCategory: null })
+  }
   
   render() {
     let category = null
 
     switch (this.state.shownCategory) {
       case('breakfast'):
-        category = <Category name='Breakfast'/>
+        category = <Category showList={() => this.categoryHandler()} name='Breakfast'/>
       break
       case('pizza'):
-        category = <Category name='Pizza'/>
+        category = <Category showList={() => this.categoryHandler()} name='Pizza'/>
       break
       case('dinner'):
-        category = <Category name='Dinner'/>
+        category = <Category showList={() => this.categoryHandler()} name='Dinner'/>
       break
       case('salads'):
-        category = <Category name='Salads'/>
+        category = <Category showList={() => this.categoryHandler()} name='Salads'/>
       break
       case('desserts'):
-        category = <Category name='Desserts'/>
+        category = <Category showList={() => this.categoryHandler()} name='Desserts'/>
       break
       case('sauces'):
-        category = <Category name='Sauces'/>
+        category = <Category showList={() => this.categoryHandler()} name='Sauces'/>
       break
       case('baking'):
-        category = <Category name='Baking'/>
+        category = <Category showList={() => this.categoryHandler()} name='Baking'/>
       break
       case('snacks'):
-        category = <Category name='Snacks'/>
+        category = <Category showList={() => this.categoryHandler()} name='Snacks'/>
       break
       case('liquids'):
-        category = <Category name='Liquids'/>
+        category = <Category showList={() => this.categoryHandler()} name='Liquids'/>
       break
       default:
         category = this.state.categories.map(category => {

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Recipe from '../../Recipe/Recipe'
 import picture from '../../../assets/pictures/background2.png'
+import Button from '../../UI/Button/Button'
+import Aux from '../../../hoc/Aux'
 import './Category.css'
 
 class Category extends Component {
@@ -56,9 +58,12 @@ class Category extends Component {
       })
 
     return (
-      <div className='Baking'>
-        {shownRecipes}
-      </div>
+      <Aux>
+        <Button clicked={this.props.showList}>Categories</Button>
+        <div className='Baking'>
+          {shownRecipes}
+        </div>
+      </Aux>
     )
   }
 }
