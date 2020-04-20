@@ -3,6 +3,7 @@ import Aux from '../../hoc/Aux'
 import Input from '../../Components/UI/Form/Form'
 import './AddRecipe.css'
 import Logo from '../../Components/Logo/Logo'
+import axios from '../../axios-recipes'
 
 class AddRecipe extends Component {
   state = {
@@ -13,7 +14,7 @@ class AddRecipe extends Component {
   addIngredient = (event) => {
     this.setState((prevState) => ({
       ingredients: [...prevState.ingredients, {ingredient: ''}]
-    }))
+    })) 
   }
 
   addPreparation = (event) => {
@@ -22,7 +23,32 @@ class AddRecipe extends Component {
     }))
   }
 
-  handleSubmit = (event) => { event.preventDefault() }
+  handleSubmit = (event) => { 
+    event.preventDefault() 
+
+    const recipe = {
+      tite: 'text title',
+      category: 'breakfast',
+      background: 'https://i.imgur.com/Pgua1YZ.jpg',
+      ingredients: {
+        ingredient1: 'salad: 10g',
+        ingredient2: 'sugar: 20g',
+      },
+      preparations: {
+        step1: 'first in position',
+        step2: 'a to 2 lala'
+      },
+      keto: true
+    }
+
+    axios.post('/recipes.json', recipe)
+      .then(res => {
+        console.log(res)
+      })
+      .catch (err => {
+        console.log(err)
+      })
+  }
 
   render() {
 
@@ -42,7 +68,7 @@ class AddRecipe extends Component {
             <div className='IngredientsForms'>
               {
                 ingredients.map((val, idx) => {
-                  let ingredientId = `Ingredient ${idx}`
+                  let ingredientId = `Ingredient${idx}`
                   return (
                     <Input
                       inputtype='input' 
@@ -58,7 +84,7 @@ class AddRecipe extends Component {
             <div className='PreparationsForms'>
               {
                 preparations.map((val, idx) => {
-                  let preparationsId = `preparations ${idx}`
+                  let preparationsId = `step${idx}`
                   return (
                     <Input
                       inputtype='input' 
