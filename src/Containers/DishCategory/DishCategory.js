@@ -3,6 +3,7 @@ import Category from '../../Components/DishCategories/Category/Category'
 import Aux from '../../hoc/Aux'
 import Card from '../../Components/UI/Card/Card'
 import background from '../../assets/pictures/background7.png'
+import Logo from '../../Components/Logo/Logo'
 
 
 class DishCategory extends Component {
@@ -65,10 +66,11 @@ class DishCategory extends Component {
 
     return (
       <Aux>
+        <Logo screen='categories' style={{marginTop: '5px', marginLeft: '9px'}}/>
         <div className="bg-color">
           <img src={background} alt="bg" className="bg"></img>
         </div>
-        <div style={{marginBottom:'50px'}}>
+        <div className='DishCategory' style={{marginBottom:'50px'}}>
           {category}
         </div>
       </Aux>

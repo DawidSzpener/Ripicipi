@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Aux from '../../hoc/Aux'
 import Input from '../../Components/UI/Form/Form'
 import './AddRecipe.css'
+import Logo from '../../Components/Logo/Logo'
 
 class AddRecipe extends Component {
   state = {
@@ -31,6 +32,7 @@ class AddRecipe extends Component {
 
     return (
       <Aux>
+        <Logo screen='add'/>
         <div className='AddRecipeForms'>
           <div className='bg-add'></div>
           <form onSubmit={this.handleSubmit}>

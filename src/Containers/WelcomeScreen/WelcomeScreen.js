@@ -5,6 +5,7 @@ import orange1 from '../../assets/pictures/green.png'
 import orange2 from '../../assets/pictures/orange.png'
 import orange3 from '../../assets/pictures/yellow.png'
 import background from '../../assets/pictures/background4.png'
+import Logo from '../../Components/Logo/Logo'
 
 class Homescreen extends Component {
   goToCategories = () => {
@@ -18,6 +19,7 @@ class Homescreen extends Component {
   render() {
     return (
       <Aux>
+        <Logo screen='homepage'/>
         <div className="bg-color">
           <img src={background} alt="bg" className="bg"></img>
         </div>
