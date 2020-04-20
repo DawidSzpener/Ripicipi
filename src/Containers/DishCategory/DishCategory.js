@@ -4,6 +4,7 @@ import Aux from '../../hoc/Aux'
 import Card from '../../Components/UI/Card/Card'
 import background from '../../assets/pictures/background7.png'
 import Logo from '../../Components/Logo/Logo'
+import axios from '../../axios-recipes'
 
 
 class DishCategory extends Component {
@@ -25,6 +26,11 @@ class DishCategory extends Component {
 
   categoryHandler = () => {
     this.setState({ shownCategory: null })
+  }
+
+  componentDidMount() {
+    axios.get('/recipes.json')
+      .then(res => { console.log(res) })
   }
   
   render() {
