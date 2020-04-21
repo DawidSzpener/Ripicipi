@@ -27,7 +27,7 @@
     height: 100%;
     width: auto;
     align-items: center;
-    font-size: larger;
+    font-size: 20px;
     font-family: monospace;
   }
 
@@ -36,13 +36,20 @@
     height: 100%;
     padding: 34px 10px;
     border-bottom: 4px solid transparent;
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
-  .NavigationItem a:hover,
+  .NavigationItem a:hover {
+    background-color: rgb(245, 211, 197);
+  }
   .NavigationItem a:active,
   .NavigationItem a.active {
-    background-color: darkgreen;
-    border-bottom: 4px solid rgb(8, 11, 12);
+    background-image: url('../../../../assets/pictures/itemBorder.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(245, 211, 197);
+    border-bottom: 2px solid rgb(231, 117, 72);
     color: white;
   }
 }

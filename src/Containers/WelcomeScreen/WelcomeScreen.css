@@ -7,16 +7,19 @@
 }
 
 .Button1 img{
+  opacity: 0.9;
   height: 30%;
   width: 30%;
 }
 
 .Button2 img{
-  height: 30%;
+  opacity: 0.8;
+  height: 20%;
   width: 30%;
 }
 
 .Button3 img{
+  opacity: 0.85;
   height: 30%;
   width: 30%;
 }

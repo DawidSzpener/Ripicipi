@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import Category from '../../Components/DishCategories/Category/Category'
 import Aux from '../../hoc/Aux'
 import Card from '../../Components/UI/Card/Card'
-import background from '../../assets/pictures/background7.png'
-import Logo from '../../Components/Logo/Logo'
+import background from '../../assets/pictures/background8.jpeg'
 import axios from '../../axios-recipes'
 import './DishCategory.css'
 
@@ -77,7 +76,6 @@ class DishCategory extends Component {
 
     return (
       <Aux>
-        <Logo screen='categories' style={{marginTop: '2px', marginLeft: '9px'}}/>
         <div className="bg-color">
           <img src={background} alt="bg" className="bg"></img>
         </div>

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Aux from '../../hoc/Aux'
 import Input from '../../Components/UI/Form/Form'
 import './AddRecipe.css'
-import Logo from '../../Components/Logo/Logo'
 import axios from '../../axios-recipes'
 
 class AddRecipe extends Component {
@@ -58,7 +57,6 @@ class AddRecipe extends Component {
 
     return (
       <Aux>
-        <Logo screen='add'/>
         <div className='AddRecipeForms'>
           <div className='bg-add'></div>
           <form onSubmit={this.handleSubmit}>

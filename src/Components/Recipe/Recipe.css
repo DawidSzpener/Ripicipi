@@ -2,7 +2,7 @@
   display: inline-block;
   width: 880px;
   height: 680px;
-  background-color: ivory;
+  background-color: rgb(245, 211, 197);
   border: 2px #eee;
   box-shadow: 0 12px 30px black;
   padding: 6px;
@@ -16,7 +16,7 @@
   display: inline-block;
   width: 880px;
   height: 72px;
-  background-color: ivory;
+  background-color: rgb(245, 211, 197);
   border: 2px #eee;
   box-shadow: 0 12px 30px black;
   padding: 6px;
@@ -39,7 +39,7 @@
   font-size: 20px;
   display: inline-block;
   width: 40%;
-  background-color: ivory;
+  background-color: rgb(245, 211, 197);
   border: 2px #eee;
   box-shadow: 0 12px 30px black;
   padding: 6px;
@@ -110,7 +110,7 @@
   font-size: 20px;
   display: inline-block;
   width: 40%;
-  background-color: ivory;
+  background-color: rgb(245, 211, 197);
   border: 2px #eee;
   box-shadow: 0 12px 30px black;
   padding: 6px;
