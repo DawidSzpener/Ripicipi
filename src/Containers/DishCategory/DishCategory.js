@@ -5,6 +5,7 @@ import Card from '../../Components/UI/Card/Card'
 import background from '../../assets/pictures/background7.png'
 import Logo from '../../Components/Logo/Logo'
 import axios from '../../axios-recipes'
+import './DishCategory.css'
 
 
 class DishCategory extends Component {
@@ -14,7 +15,7 @@ class DishCategory extends Component {
       'dinner', 
       'desserts', 
       'baking', 
-      'sauces',
+      'sauces', 
       'salads', 
       'pizza', 
       'snacks',
@@ -80,7 +81,7 @@ class DishCategory extends Component {
         <div className="bg-color">
           <img src={background} alt="bg" className="bg"></img>
         </div>
-        <div className='DishCategory' style={{marginBottom:'50px'}}>
+        <div className='DishCategory'>
           {category}
         </div>
       </Aux>

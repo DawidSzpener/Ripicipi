@@ -1,3 +1,5 @@
 .DishCategory {
   overflow: auto;
+  padding-top: 60px;
+  padding-bottom: 50px;
 }

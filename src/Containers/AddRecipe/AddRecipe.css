@@ -1,8 +1,8 @@
 .AddRecipeForms {
-  margin: 20px auto;
+  margin: 0px auto;
   width: 80%;
   text-align: center;
-  padding: 0px;
+  padding-top: 30px;
   box-sizing: border-box;
   font-family: 'Special Elite', cursive;
 }
@@ -23,7 +23,7 @@
   font-family: 'Special Elite', cursive;
   border-radius: 0.5em;
   float: left;
-  margin: 5px 5.5px;
+  margin: 5px 3.5px;
   padding: 6px 7px 4px 7px;
   background-color: black;
   color: white;
@@ -61,7 +61,7 @@
   font-family: 'Special Elite', cursive;
   border-radius: 0.5em;
   float: left;
-  margin: 5px 5.5px;
+  margin: 5px 5.5px -3px 5.5px;
   padding: 6px 7px 4px 7px;
   background-color: black;
   color: white;

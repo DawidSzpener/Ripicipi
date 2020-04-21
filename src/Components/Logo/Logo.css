@@ -4,13 +4,13 @@
   padding: 0px;
   box-sizing: border-box;
   border-radius: 5px;
-  height: 46px;
-  width: 56px;
+  height: 86px;
+  width: 96px;
   margin-top: 1px;
   position: fixed;
-  left: 46.5%;
+  left: 45%;
   top: 0;
-  z-index: 91;
+  z-index: 101;
 }
 
 .Logo img {

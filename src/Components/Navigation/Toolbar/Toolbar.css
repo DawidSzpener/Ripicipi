@@ -1,5 +1,5 @@
 .Toolbar {
-  height: 56px;
+  height: 96px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -14,7 +14,7 @@
 }
 
 .ToolbarBottom {
-  margin-top: 40px;
+  margin-top: 80px;
   height: 50px;
   width: 100%;
   position: fixed;
