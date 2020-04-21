@@ -35,6 +35,7 @@
   background-image: url('../../../assets/pictures/ricipici.png');
   height: 86px;
   width: 286px;
+  cursor: pointer;
   background-size: cover;
 }
 

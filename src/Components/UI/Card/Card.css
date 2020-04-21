@@ -10,6 +10,7 @@
   align-content: center;
   box-sizing: border-box;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .Card img {
