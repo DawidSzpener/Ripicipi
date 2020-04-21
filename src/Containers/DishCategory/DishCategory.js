@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import Category from '../../Components/DishCategories/Category/Category'
 import Aux from '../../hoc/Aux'
 import Card from '../../Components/UI/Card/Card'
 import background from '../../assets/pictures/background8.jpeg'
-import axios from '../../axios-recipes'
+import { withRouter } from 'react-router-dom'
 import './DishCategory.css'
 
 
@@ -20,59 +19,19 @@ class DishCategory extends Component {
       'snacks',
       'liquids'
 
-    ],
-    shownCategory: null
-  }
-
-  categoryHandler = () => {
-    this.setState({ shownCategory: null })
-  }
-
-  componentDidMount() {
-    axios.get('/recipes.json')
-      .then(res => { console.log(res) })
+    ]
   }
   
   render() {
-    let category = null
 
-    switch (this.state.shownCategory) {
-      case('breakfast'):
-        category = <Category showList={() => this.categoryHandler()} name='Breakfast'/>
-      break
-      case('pizza'):
-        category = <Category showList={() => this.categoryHandler()} name='Pizza'/>
-      break
-      case('dinner'):
-        category = <Category showList={() => this.categoryHandler()} name='Dinner'/>
-      break
-      case('salads'):
-        category = <Category showList={() => this.categoryHandler()} name='Salads'/>
-      break
-      case('desserts'):
-        category = <Category showList={() => this.categoryHandler()} name='Desserts'/>
-      break
-      case('sauces'):
-        category = <Category showList={() => this.categoryHandler()} name='Sauces'/>
-      break
-      case('baking'):
-        category = <Category showList={() => this.categoryHandler()} name='Baking'/>
-      break
-      case('snacks'):
-        category = <Category showList={() => this.categoryHandler()} name='Snacks'/>
-      break
-      case('liquids'):
-        category = <Category showList={() => this.categoryHandler()} name='Liquids'/>
-      break
-      default:
-        category = this.state.categories.map(category => {
-          return (
-          <Card
-            key={category}
-            picture={category}
-            clicked={() => this.setState({ shownCategory: category })}></Card>)
-        })
-    }
+    let category = this.state.categories.map(category => {
+      return (
+      <Card
+        key={category}
+        clicked={() => this.props.history.push(`/categories/${category}`)}
+        picture={category}
+       />)
+    })
 
     return (
       <Aux>
@@ -87,4 +46,4 @@ class DishCategory extends Component {
   }
 }
 
-export default DishCategory
+export default withRouter(DishCategory)

@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import Recipe from '../../../Recipe/Recipe'
-import picture from '../../../../assets/pictures/background2.png'
-import Aux from '../../../../hoc/Aux'
-import background from '../../../../assets/pictures/background8.jpeg'
-import './Breakfast.css'
+import Recipe from '../../Recipe/Recipe'
+import picture from '../../../assets/pictures/background2.png'
+import Aux from '../../../hoc/Aux'
+import background from '../../../assets/pictures/background8.jpeg'
 
-class Breakfast extends Component {
+class Pizza extends Component {
   state = {
     recipeList: [
       <Recipe
@@ -69,4 +68,4 @@ class Breakfast extends Component {
   }
 }
 
-export default Breakfast
+export default Pizza
