@@ -26,7 +26,7 @@
 
 @media (min-width: 499px){
   .Homescreen {
-    padding-top: 150px;
+    padding-top: 110px;
     height: 90%;
     justify-content: space-between;
     display: flex;
@@ -36,17 +36,20 @@
   }
 
   .Button1 img{
-    height: 70%;
-    width: 70%;
+    cursor: pointer;
+    height: 80%;
+    width: 80%;
   }
 
   .Button2 img{
-    height: 70%;
-    width: 70%;
+    cursor: pointer;
+    height: 80%;
+    width: 80%;
   }
 
   .Button3 img{
-    height: 70%;
-    width: 70%;
+    cursor: pointer;
+    height: 80%;
+    width: 80%;
   }
 }
