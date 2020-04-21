@@ -8,12 +8,12 @@ class Dinner extends Component {
   state = {
     recipeList: [
       <Recipe
-        title='Testowy tytul 1'
+        title='Kotlety schabowe'
         picture={picture}
         ingredients={['5g of salt', '2 table spoons of soya', '50g of almond flour']}
         preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3']}/>,
       <Recipe
-        title='Testowy tytul 2'
+        title='Bialy sos'
         picture={picture}
         ingredients={['5g of salt', '2 table spoons of soya', '50g of almond flour']}
         preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3']}/>

@@ -11,7 +11,7 @@ class Dropdown extends Component {
   render() {
     return (
       <div className='Dropdown'>
-        <select onChange={this.onChange} className='DropdownToolbar' name='Select' value='Select'>
+        <select onChange={this.onChange} className='DropdownToolbar'>
           <option value="breakfast">Breakfast</option>
           <option value="dinner">Dinner</option>
           <option value="desserts">Desserts</option>

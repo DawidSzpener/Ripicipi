@@ -9,12 +9,12 @@ class Breakfast extends Component {
   state = {
     recipeList: [
       <Recipe
-        title='Testowy tytul 1'
+        title='Jajecznica'
         picture={picture}
-        ingredients={['5g of salt', '2 table spoons of soya', '50g of almond flour']}
-        preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3']}/>,
+        ingredients={['5g of salt', '2 table spoons of soya', '50g of almond flour','55g of salt', '22 table spoons of soya']}
+        preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3', 'now eat at step 4', 'now eat at step 5']}/>,
       <Recipe
-        title='Testowy tytul 2'
+        title='Owsianka'
         picture={picture}
         ingredients={['5g of salt', '2 table spoons of soya', '50g of almond flour']}
         preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3']}/>
