@@ -5,6 +5,7 @@ import Layout from './Components/Layout/Layout'
 import DishCategory from './Containers/DishCategory/DishCategory'
 import Homescreen from './Containers/WelcomeScreen/WelcomeScreen'
 import AddRecipe from './Containers/AddRecipe/AddRecipe'
+import Breakfast from './Components/DishCategories/Category/Breakfast/Breakfast'
 
 class App extends Component {
 
@@ -13,7 +14,8 @@ class App extends Component {
       <div className="App">
         <Layout>
           <Switch>
-            <Route path='/categories' component={DishCategory} />
+            <Route path='/categories/breakfast' component={Breakfast} />
+            <Route path='/categories' exact component={DishCategory} />
             <Route path='/add' component={AddRecipe} />
             <Route path='/' exact component={Homescreen} />
           </Switch>

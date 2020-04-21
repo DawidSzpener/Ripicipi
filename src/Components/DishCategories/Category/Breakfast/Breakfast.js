@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import Recipe from '../../Recipe/Recipe'
-import picture from '../../../assets/pictures/background2.png'
-import Aux from '../../../hoc/Aux'
-import background from '../../../assets/pictures/background8.jpeg'
-import './Category.css'
+import Recipe from '../../../Recipe/Recipe'
+import picture from '../../../../assets/pictures/background2.png'
+import Aux from '../../../../hoc/Aux'
+import background from '../../../../assets/pictures/background8.jpeg'
+import './Breakfast.css'
 
-class Category extends Component {
+class Breakfast extends Component {
   state = {
     recipeList: [
       <Recipe
@@ -19,8 +19,7 @@ class Category extends Component {
         ingredients={['5g of salt', '2 table spoons of soya', '50g of almond flour']}
         preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3']}/>
     ],
-    displayedRecipe: null,
-    category: this.props.name
+    displayedRecipe: null
   }
 
   showRecipeList = () => {
@@ -62,7 +61,7 @@ class Category extends Component {
         <div className="bg-color">
           <img src={background} alt="bg" className="bg"></img>
         </div>
-        <div className='SingleCategory'>
+        <div className='SingleBreakfast'>
           {shownRecipes}
         </div>
       </Aux>
@@ -70,4 +69,4 @@ class Category extends Component {
   }
 }
 
-export default Category
+export default Breakfast
