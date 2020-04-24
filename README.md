@@ -5,3 +5,5 @@ Firebase - backend
 Authors
  
 Dawid Szpener
+
+Sebastian Szpener
