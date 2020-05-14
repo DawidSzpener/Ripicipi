@@ -1,7 +1,6 @@
 Built With
-React - The frontend framework
-Firebase - backend
-
+React - frontend framework
+Firebase - online database
 Authors
  
 Dawid Szpener
