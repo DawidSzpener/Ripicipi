@@ -8,6 +8,12 @@ class AddRecipe extends Component {
   state = {
     ingredients: [{ingredient: ''}, {ingredient: ''}, {ingredient: ''} ],
     preparations: [{preparation: ''}, {preparation: ''}, {preparation: ''} ],
+    recipeForm: {
+      tite: 'text title',
+      category: 'breakfast',
+      background: 'https://i.imgur.com/Pgua1YZ.jpg',
+      keto: true
+    }
   }
 
   addIngredient = (event) => {
@@ -20,24 +26,19 @@ class AddRecipe extends Component {
     this.setState((prevState) => ({
       preparations: [...prevState.preparations, {prepartion: ''}]
     }))
+    console.log(this.state.recipeForm)
   }
 
   handleSubmit = (event) => { 
     event.preventDefault() 
 
     const recipe = {
-      tite: 'text title',
-      category: 'breakfast',
-      background: 'https://i.imgur.com/Pgua1YZ.jpg',
-      ingredients: {
-        ingredient1: 'salad: 10g',
-        ingredient2: 'sugar: 20g',
-      },
-      preparations: {
-        step1: 'first in position',
-        step2: 'a to 2 lala'
-      },
-      keto: true
+      tite: this.state.recipeForm.title,
+      category: this.state.recipeForm.category,
+      background: this.state.recipeForm.background,
+      ingredients: this.state.ingredients,
+      preparations: this.state.preparations,
+      keto: this.state.recipeForm.keto
     }
 
     axios.post('/recipes.json', recipe)
@@ -47,6 +48,21 @@ class AddRecipe extends Component {
       .catch (err => {
         console.log(err)
       })
+  }
+
+  inputChangedHandler = (event, inputIdentifier) => {
+    const updatedRecipeForm = {
+      ...this.state.recipeForm
+    }
+    let updatedFormElement = {
+      ...updatedRecipeForm[inputIdentifier]
+    }
+
+    updatedFormElement = event.target.value
+    updatedRecipeForm[inputIdentifier] = updatedFormElement
+
+
+    this.setState({recipeForm: updatedRecipeForm})
   }
 
   render() {
@@ -60,15 +76,16 @@ class AddRecipe extends Component {
         <div className='AddRecipeForms'>
           <div className='bg-add'></div>
           <form onSubmit={this.handleSubmit}>
-            <Input inputtype='input' type="text" name="title" placeholder="Recipe title"/>
-            <Input inputtype='select' type="text" name="category" className='add-select'/>
-            <Input inputtype='input' type="text" name="picture" placeholder="Picture URL"/>
+            <Input inputtype='input' type="text" onChange={(event) => this.inputChangedHandler(event, 'title')} name="title" placeholder="Recipe title"/>
+            <Input inputtype='select' type="text" onChange={(event) => this.inputChangedHandler(event, 'category')} name="category" className='add-select'/>
+            <Input inputtype='input' type="text" onChange={(event) => this.inputChangedHandler(event, 'background')} name="picture" placeholder="Picture URL"/>
             <div className='IngredientsForms'>
               {
                 ingredients.map((val, idx) => {
                   let ingredientId = `Ingredient${idx}`
                   return (
                     <Input
+                      onChange={this.inputChangedHandler}
                       inputtype='input' 
                       type="text"
                       key={ingredientId} 
@@ -85,9 +102,10 @@ class AddRecipe extends Component {
                   let preparationsId = `step${idx}`
                   return (
                     <Input
+                      onChange={this.inputChangedHandler}
                       inputtype='input' 
                       type="text"
-                      key={preparationsId} 
+                      key={preparationsId}
                       name={preparationsId}
                       placeholder={`Step ${idx + 1}`}/>
                   )
