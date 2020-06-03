@@ -9,7 +9,7 @@ class AddRecipe extends Component {
     ingredients: [{ingredient: ''}, {ingredient: ''}, {ingredient: ''} ],
     preparations: [{preparation: ''}, {preparation: ''}, {preparation: ''} ],
     recipeForm: {
-      tite: 'text title',
+      title: 'text title',
       category: 'breakfast',
       background: 'https://i.imgur.com/Pgua1YZ.jpg',
       keto: true
@@ -60,9 +60,15 @@ class AddRecipe extends Component {
 
     updatedFormElement = event.target.value
     updatedRecipeForm[inputIdentifier] = updatedFormElement
+    console.log(inputIdentifier)
 
-
+    if (inputIdentifier === 'ingredient') {
+      console.log(this.state.ingredients)
+    } else if (inputIdentifier === 'preparation') {
+      console.log(this.state.preparations)
+    } else {
     this.setState({recipeForm: updatedRecipeForm})
+    }
   }
 
   render() {
@@ -85,7 +91,7 @@ class AddRecipe extends Component {
                   let ingredientId = `Ingredient${idx}`
                   return (
                     <Input
-                      onChange={this.inputChangedHandler}
+                      onChange={(event) => this.inputChangedHandler(event, ingredientId)}
                       inputtype='input' 
                       type="text"
                       key={ingredientId} 
@@ -102,7 +108,7 @@ class AddRecipe extends Component {
                   let preparationsId = `step${idx}`
                   return (
                     <Input
-                      onChange={this.inputChangedHandler}
+                      onChange={(event) => this.inputChangedHandler(event, preparationsId)}
                       inputtype='input' 
                       type="text"
                       key={preparationsId}
