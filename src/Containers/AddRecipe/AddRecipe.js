@@ -60,15 +60,8 @@ class AddRecipe extends Component {
 
     updatedFormElement = event.target.value
     updatedRecipeForm[inputIdentifier] = updatedFormElement
-    console.log(inputIdentifier)
-
-    if (inputIdentifier === 'ingredient') {
-      console.log(this.state.ingredients)
-    } else if (inputIdentifier === 'preparation') {
-      console.log(this.state.preparations)
-    } else {
     this.setState({recipeForm: updatedRecipeForm})
-    }
+    console.log(this.state)
   }
 
   render() {
