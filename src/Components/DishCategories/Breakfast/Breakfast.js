@@ -3,6 +3,7 @@ import Recipe from '../../Recipe/Recipe'
 import picture from '../../../assets/pictures/background2.png'
 import Aux from '../../../hoc/Aux'
 import background from '../../../assets/pictures/background8.jpeg'
+import axios from '../../../axios-recipes'
 import './Breakfast.css'
 
 class Breakfast extends Component {
@@ -20,6 +21,18 @@ class Breakfast extends Component {
         preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3']}/>
     ],
     displayedRecipe: null
+  }
+
+  componentDidMount() {
+    axios.get('/recipes.json')
+    .then(res => {
+      console.log(res)
+      const recipes = res.data
+      console.log(recipes)
+    })
+    .catch (err => {
+      console.log(err)
+    })
   }
 
   showRecipeList = () => {

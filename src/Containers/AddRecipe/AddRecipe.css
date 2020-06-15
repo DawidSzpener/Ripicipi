@@ -19,6 +19,7 @@
 }
 
 .PreparationsButton {
+  clear: both;
   font-size: 1.1rem;
   font-family: 'Special Elite', cursive;
   border-radius: 0.5em;
