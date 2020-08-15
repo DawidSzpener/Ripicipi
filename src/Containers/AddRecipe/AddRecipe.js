@@ -3,7 +3,6 @@ import Aux from '../../hoc/Aux'
 import Input from '../../Components/UI/Form/Form'
 import './AddRecipe.css'
 import axios from '../../axios-recipes'
-import {Animated} from "react-animated-css";
 import Modal from '../../Components/UI/Modal/Modal'
 
 class AddRecipe extends Component {
@@ -18,7 +17,7 @@ class AddRecipe extends Component {
       background: '',
       keto: true
     },
-    showConfirmation: false
+    showConfirmation: false,
   }
 
   addIngredient = () => {
@@ -98,21 +97,21 @@ class AddRecipe extends Component {
       updatedRecipeForm[inputIdentifier] = updatedFormElement
       this.setState({recipeForm: updatedRecipeForm})
       }
-    console.log(this.state)
+  }
+
+  modalClosed = () => {
+    this.setState({ showConfirmation: false })
   }
 
   render() {
     let animated = null
     if(this.state.showConfirmation) {
       animated = 
-        <Animated animationIn="rotateInDownRight" animationOut="rotateOutUpRight" animationInDuration={1400} animationOutDuration={1400} isVisible={true}>
-          <Modal />
-        </Animated>
+        <Modal show={this.state.showConfirmation} modalClosed={() => this.modalClosed()}/>
     }
 
     return (
       <Aux>
-        {animated}
         <div className='AddRecipeForms'>
           <div className='bg-add'></div>
           <form onSubmit={this.handleSubmit}>
@@ -155,7 +154,8 @@ class AddRecipe extends Component {
           </form>
           <button className='PreparationsButton' onClick={this.addPreparation}>Add another step</button>
           <button className='IngredientsButton' onClick={this.addIngredient}>Add new ingredient</button>
-        </div>
+        </div> 
+        {animated}
       </Aux>
     )
   }
