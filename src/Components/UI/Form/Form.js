@@ -28,6 +28,30 @@ const form = (props) => {
         </select>
       </Aux>
       break
+    case('select_time'):
+			inputElement = 
+				<Aux>
+					<label>How long?</label>
+					<div style={{paddingTop: '5px'}}></div>
+					<select className='InputElement' name='select_time' {...props}>
+						<option key='15' value='15 minutes'>15 minutes</option>
+						<option key='30' value='30 Minutes'>30 Minutes</option>
+						<option key='60' value='60 minutes'>60 minutes</option>
+					</select>
+				</Aux>
+			break 
+			case('select_difficulty'):
+			inputElement = 
+				<Aux>
+					<label>How hard?</label>
+					<div style={{paddingTop: '5px'}}></div>
+					<select className='InputElement' {...props}>  
+						<option key='easy' value='easy'>easy</option>
+						<option key='moderate' value='moderate'>moderate</option>
+						<option key='hard' value='hard'>hard</option>
+					</select>
+				</Aux>
+			break 
     default:
       inputElement = <input className='InputElement' {...props}/>
   }

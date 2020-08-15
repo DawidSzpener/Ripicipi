@@ -3,6 +3,7 @@ import Aux from '../../../hoc/Aux'
 import Backdrop from '../Backdrop/Backdrop'
 import {Animated} from "react-animated-css";
 import Input from '../Form/Form'
+import './Modal.css'
 
 class Modal extends Component {
 
@@ -14,12 +15,15 @@ render () {
     return (
       <Aux>
       <Backdrop show={this.props.show} clicked={this.props.modalClosed}/>
-      <Animated animationIn="rotateInDownRight" animationOut="rotateOutUpRight" animationInDuration={1400} animationOutDuration={1400} isVisible={true}>
+      <Animated className='Modal' animationIn="zoomInUp" animationOut="zoomOutDown" animationInDuration={1000} animationOutDuration={1000} isVisible={true}>
         <div className='Modal'>
+          <h4>Just before you go</h4>
           <form>
-            <Input inputtype='input' type="text" name="time" placeholder="How long"/>
-            <Input inputtype='input' type="text" name="difficulty" placeholder="How difficult"/>
+            <Input inputtype='select_time' type="text" name="time" placeholder="How long"></Input>
+            <Input inputtype='select_difficulty' type="text" name="difficulty" placeholder="How difficult"/>
           </form>
+          <div style={{paddingTop: '20px'}}></div>
+          <button className='AddFormSubmit' onClick={this.props.clicked} value='Submit'>   Submit a recipe!</button>
         </div>
       </Animated>
       </Aux>

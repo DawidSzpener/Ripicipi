@@ -44,15 +44,24 @@ class AddRecipe extends Component {
       keto: this.state.recipeForm.keto
     }
 
-    // axios.post('/recipes.json', recipe)
-    //   .then(res => {
-    //     console.log(res)
-    //   })
-    //   .catch (err => {
-    //     console.log(err)
-    //   })
+    axios.post('/recipes.json', recipe)
+      .then(res => {
+        console.log(res)
+      })
+      .catch (err => {
+        console.log(err)
+      })
+    
+    console.log('Recipe uploaded!')
+  }
 
+  showModal = (event) => {
+    event.preventDefault() 
     this.setState({ showConfirmation: true })
+  }
+
+  modalClosed = () => {
+    this.setState({ showConfirmation: false })
   }
 
   inputChangedHandler = (event, inputIdentifier, idx) => {
@@ -99,22 +108,18 @@ class AddRecipe extends Component {
       }
   }
 
-  modalClosed = () => {
-    this.setState({ showConfirmation: false })
-  }
-
   render() {
     let animated = null
     if(this.state.showConfirmation) {
       animated = 
-        <Modal show={this.state.showConfirmation} modalClosed={() => this.modalClosed()}/>
+        <Modal clicked={this.handleSubmit} show={this.state.showConfirmation} modalClosed={() => this.modalClosed()}/>
     }
 
     return (
       <Aux>
         <div className='AddRecipeForms'>
           <div className='bg-add'></div>
-          <form onSubmit={this.handleSubmit}>
+          <form>
             <Input inputtype='input' type="text" onChange={(event) => this.inputChangedHandler(event, 'title')} name="title" placeholder="Recipe title"/>
             <Input inputtype='select' type="text" onChange={(event) => this.inputChangedHandler(event, 'category')} name="category" className='add-select'/>
             <Input inputtype='input' type="text" onChange={(event) => this.inputChangedHandler(event, 'background')} name="picture" placeholder="Picture URL"/>
@@ -150,7 +155,7 @@ class AddRecipe extends Component {
                 })
               }
             </div>
-            <button className='AddFormSubmit' type='submit' value='Submit'>Submit</button>
+            <button className='AddFormSubmit' type='submit' onClick={this.showModal} value='Submit'>Submit</button>
           </form>
           <button className='PreparationsButton' onClick={this.addPreparation}>Add another step</button>
           <button className='IngredientsButton' onClick={this.addIngredient}>Add new ingredient</button>
