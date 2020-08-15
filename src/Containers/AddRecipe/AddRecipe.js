@@ -56,58 +56,31 @@ class AddRecipe extends Component {
 
   inputChangedHandler = (event, inputIdentifier, idx) => {
 
-    if(inputIdentifier === 'ingredients') {
-      const updatedIngredients = {
-        ...this.state.ingredients
+    if(inputIdentifier === 'ingredients' || inputIdentifier === 'preparations') {
+      const updatedForm = {
+        ...this.state.inputIdentifier
       }
 
-
-      let updatedIngredientsForm = {
-        ...updatedIngredients[idx]
+      let updatedFormElement = {
+        ...updatedForm[idx]
       }
 
-      updatedIngredientsForm = {ingredient: event.target.value}
-      updatedIngredients[idx] = updatedIngredientsForm
+      updatedFormElement = {ingredient: event.target.value}
+      updatedForm[idx] = updatedFormElement
 
       const updatedRecipeForm = {
         ...this.state.recipeForm
       }
-      let updatedFormElement = {
+      let updatedRecipeFormElement = {
         ...updatedRecipeForm[inputIdentifier]
       }
       
-      updatedFormElement = updatedIngredients
+      updatedRecipeFormElement = updatedForm
 
-      updatedRecipeForm[inputIdentifier] = updatedFormElement
-
-      this.setState({recipeForm: updatedRecipeForm})
-    }
-
-    if(inputIdentifier === 'preparations') {
-      const updatedPreparations = {
-          ...this.state.preparations
-      }
-
-
-      let updatedPreparationsForm = {
-          ...updatedPreparations[idx]
-      }
-
-      updatedPreparationsForm = {ingredient: event.target.value}
-      updatedPreparations[idx] = updatedPreparationsForm
-
-      const updatedRecipeForm = {
-          ...this.state.recipeForm
-      }
-      let updatedFormElement = {
-          ...updatedRecipeForm[inputIdentifier]
-      }
-      
-      updatedFormElement = updatedPreparations
-
-      updatedRecipeForm[inputIdentifier] = updatedFormElement
+      updatedRecipeForm[inputIdentifier] = updatedRecipeFormElement
 
       this.setState({recipeForm: updatedRecipeForm})
+      console.log(this.state)
     }
 
     const updatedRecipeForm = {
