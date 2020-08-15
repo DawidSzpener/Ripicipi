@@ -31,11 +31,11 @@
 }
 
 .PreparationsButton:focus {
-	border-color: #aaa;
-	box-shadow: 0 0 1px 3px rgb(7, 7, 7);
-	box-shadow: 0 0 0 3px -moz-mac-focusring;
-  color: white;
-	outline: none;
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px rgb(7, 7, 7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: white;
+    outline: none;
 }
 
 .AddFormSubmit {
@@ -149,16 +149,16 @@
   }
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 1000px) {
   .AddRecipeForms {
 		width: 540px;
-		padding-top: 5%;
+		padding-top: 8%;
   }
 }
 
-@media (min-width: 2800px) {
+@media (min-width: 1300px) {
   .AddRecipeForms {
 		width: 640px;
-		padding-top: 7%;
+		padding-top: 8%;
   }
 }
