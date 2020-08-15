@@ -16,11 +16,12 @@ class AddRecipe extends Component {
       category: 'Breakfast',
       background: '',
       keto: true,
-      time: '',
-      difficulty: '',
+      time: '15 minutes',
+      difficulty: 'easy',
 
     },
     showConfirmation: false,
+    showWarning: false
   }
 
   addIngredient = () => {
@@ -50,14 +51,14 @@ class AddRecipe extends Component {
     }
 
     axios.post('/recipes.json', recipe)
-      .then(res => {
-        console.log(res)
-      })
-      .catch (err => {
-        console.log(err)
-      })
-    
-    console.log('Recipe uploaded!')
+    .then(res => {
+      console.log(res)
+    })
+    .catch (err => {
+      console.log(err)
+    })
+
+    this.setState({ showConfirmation: false, showWarning: true })
   }
 
   showModal = (event) => {
@@ -67,6 +68,10 @@ class AddRecipe extends Component {
 
   modalClosed = () => {
     this.setState({ showConfirmation: false })
+  }
+
+  warningClosed = () => {
+    this.setState({ showWarning: false })
   }
 
   inputChangedHandler = (event, inputIdentifier, idx) => {
@@ -83,7 +88,7 @@ class AddRecipe extends Component {
         ...updatedForm[idx]
       }
 
-      updatedFormElement = {ingredient: event.target.value}
+      updatedFormElement = {inputIdentifier: event.target.value}
       updatedForm[idx] = updatedFormElement
 
       const updatedRecipeForm = {
@@ -114,6 +119,11 @@ class AddRecipe extends Component {
   }
 
   render() {
+    let warning = null
+    if(this.state.showWarning) {
+        warning = <div className='Modal' onClick={() => this.warningClosed()} ><h1>Thank you!</h1></div>
+    }
+
     let animated = null
     if(this.state.showConfirmation) {
       animated = 
@@ -171,6 +181,7 @@ class AddRecipe extends Component {
           <button className='IngredientsButton' onClick={this.addIngredient}>Add new ingredient</button>
         </div> 
         {animated}
+        {warning}
       </Aux>
     )
   }
