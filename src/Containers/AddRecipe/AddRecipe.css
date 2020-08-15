@@ -143,10 +143,22 @@
   font-weight:normal;
 }
 
-
-
 @media (min-width: 600px) {
   .AddRecipeForms {
-    width: 440px;
+		width: 440px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .AddRecipeForms {
+		width: 540px;
+		padding-top: 5%;
+  }
+}
+
+@media (min-width: 2800px) {
+  .AddRecipeForms {
+		width: 640px;
+		padding-top: 7%;
   }
 }
