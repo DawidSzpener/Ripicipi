@@ -83,6 +83,32 @@ class AddRecipe extends Component {
       this.setState({recipeForm: updatedRecipeForm})
     }
 
+    if(inputIdentifier === 'preparations') {
+      const updatedPreparations = {
+          ...this.state.preparations
+      }
+
+
+      let updatedPreparationsForm = {
+          ...updatedPreparations[idx]
+      }
+
+      updatedPreparationsForm = {ingredient: event.target.value}
+      updatedPreparations[idx] = updatedPreparationsForm
+
+      const updatedRecipeForm = {
+          ...this.state.recipeForm
+      }
+      let updatedFormElement = {
+          ...updatedRecipeForm[inputIdentifier]
+      }
+      
+      updatedFormElement = updatedPreparations
+
+      updatedRecipeForm[inputIdentifier] = updatedFormElement
+
+      this.setState({recipeForm: updatedRecipeForm})
+    }
 
     const updatedRecipeForm = {
       ...this.state.recipeForm
