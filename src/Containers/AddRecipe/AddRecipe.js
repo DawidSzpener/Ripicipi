@@ -15,7 +15,10 @@ class AddRecipe extends Component {
       title: '',
       category: 'Breakfast',
       background: '',
-      keto: true
+      keto: true,
+      time: '',
+      difficulty: '',
+
     },
     showConfirmation: false,
   }
@@ -41,7 +44,9 @@ class AddRecipe extends Component {
       background: this.state.recipeForm.background,
       ingredients: this.state.recipeForm.ingredients,
       preparations: this.state.recipeForm.preparations,
-      keto: this.state.recipeForm.keto
+      keto: this.state.recipeForm.keto,
+      time: this.state.recipeForm.time,
+      difficulty: this.state.recipeForm.difficulty
     }
 
     axios.post('/recipes.json', recipe)
@@ -112,7 +117,12 @@ class AddRecipe extends Component {
     let animated = null
     if(this.state.showConfirmation) {
       animated = 
-        <Modal clicked={this.handleSubmit} show={this.state.showConfirmation} modalClosed={() => this.modalClosed()}/>
+        <Modal
+          clicked={this.handleSubmit}
+          timeChangeHandler={(event) => this.inputChangedHandler(event, 'time')}
+          difficultyChangeHandler={(event) => this.inputChangedHandler(event, 'difficulty')}
+          show={this.state.showConfirmation}
+          modalClosed={() => this.modalClosed()}/>
     }
 
     return (
