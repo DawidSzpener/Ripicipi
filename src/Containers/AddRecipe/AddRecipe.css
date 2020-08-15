@@ -149,14 +149,14 @@
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1400px) {
   .AddRecipeForms {
 		width: 540px;
 		padding-top: 8%;
   }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1800px) {
   .AddRecipeForms {
 		width: 640px;
 		padding-top: 8%;
