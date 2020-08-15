@@ -3,6 +3,8 @@ import Aux from '../../hoc/Aux'
 import Input from '../../Components/UI/Form/Form'
 import './AddRecipe.css'
 import axios from '../../axios-recipes'
+import {Animated} from "react-animated-css";
+import Modal from '../../Components/UI/Modal/Modal'
 
 class AddRecipe extends Component {
   state = {
@@ -11,9 +13,9 @@ class AddRecipe extends Component {
     recipeForm: {
       ingredients: [],
       preparations: [],
-      title: 'text title',
-      category: 'breakfast',
-      background: 'https://i.imgur.com/Pgua1YZ.jpg',
+      title: '',
+      category: 'Breakfast',
+      background: '',
       keto: true
     },
     showConfirmation: false
@@ -43,24 +45,27 @@ class AddRecipe extends Component {
       keto: this.state.recipeForm.keto
     }
 
-    axios.post('/recipes.json', recipe)
-      .then(res => {
-        console.log(res)
-      })
-      .catch (err => {
-        console.log(err)
-      })
+    // axios.post('/recipes.json', recipe)
+    //   .then(res => {
+    //     console.log(res)
+    //   })
+    //   .catch (err => {
+    //     console.log(err)
+    //   })
 
-    this.setState({ showConfirmation: true})
+    this.setState({ showConfirmation: true })
   }
 
   inputChangedHandler = (event, inputIdentifier, idx) => {
 
     if(inputIdentifier === 'ingredients' || inputIdentifier === 'preparations') {
-      const updatedForm = {
-        ...this.state.inputIdentifier
+      let updatedForm = {}
+      if(inputIdentifier === 'ingredients'){
+        updatedForm = {...this.state.recipeForm.ingredients}
       }
-
+      if(inputIdentifier === 'preparations'){
+        updatedForm = {...this.state.recipeForm.preparations}
+      }
       let updatedFormElement = {
         ...updatedForm[idx]
       }
@@ -80,25 +85,34 @@ class AddRecipe extends Component {
       updatedRecipeForm[inputIdentifier] = updatedRecipeFormElement
 
       this.setState({recipeForm: updatedRecipeForm})
-      console.log(this.state)
-    }
+    } else {
 
-    const updatedRecipeForm = {
-      ...this.state.recipeForm
-    }
-    let updatedFormElement = {
-      ...updatedRecipeForm[inputIdentifier]
-    }
-    updatedFormElement[idx] = event.target.value
+      const updatedRecipeForm = {
+        ...this.state.recipeForm
+      }
+      let updatedFormElement = {
+        ...updatedRecipeForm[inputIdentifier]
+      }
+      updatedFormElement = event.target.value
 
-    updatedRecipeForm[inputIdentifier] = updatedFormElement
-    this.setState({recipeForm: updatedRecipeForm})
+      updatedRecipeForm[inputIdentifier] = updatedFormElement
+      this.setState({recipeForm: updatedRecipeForm})
+      }
+    console.log(this.state)
   }
 
   render() {
+    let animated = null
+    if(this.state.showConfirmation) {
+      animated = 
+        <Animated animationIn="rotateInDownRight" animationOut="rotateOutUpRight" animationInDuration={1400} animationOutDuration={1400} isVisible={true}>
+          <Modal />
+        </Animated>
+    }
 
     return (
       <Aux>
+        {animated}
         <div className='AddRecipeForms'>
           <div className='bg-add'></div>
           <form onSubmit={this.handleSubmit}>
