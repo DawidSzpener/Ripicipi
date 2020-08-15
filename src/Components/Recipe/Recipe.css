@@ -1,7 +1,7 @@
 .Recipe {
   float: left;
   width: 50%;
-  height: 470px;
+  height: 50%;
   background-color: rgb(245, 211, 197);
   border: 2px #eee;
   box-shadow: 0 12px 30px black;
