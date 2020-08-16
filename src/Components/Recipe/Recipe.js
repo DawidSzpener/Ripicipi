@@ -54,7 +54,7 @@ class Recipe extends Component {
 
     if(this.state.difficulty === 'easy') {
       difficulty = <div className='difficultyContainer' style={{backgroundImage: `url(${Easy})`}}></div>
-    } else if (this.state.difficulty === 'medium') {
+    } else if (this.state.difficulty === 'moderate') {
       difficulty = <div className='difficultyContainer' style={{backgroundImage: `url(${Medium})`}}></div>
     } else {
       difficulty = <div className='difficultyContainer' style={{backgroundImage: `url(${Hard})`}}></div>

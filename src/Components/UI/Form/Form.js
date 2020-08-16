@@ -34,9 +34,9 @@ const form = (props) => {
 					<label>How long?</label>
 					<div style={{paddingTop: '5px'}}></div>
 					<select className='InputElement' name='select_time' {...props}>
-						<option key='15' value='15 minutes'>15 minutes</option>
-						<option key='30' value='30 Minutes'>30 Minutes</option>
-						<option key='60' value='60 minutes'>60 minutes</option>
+						<option key='15' value='15 minutes'>15 Minutes</option>
+						<option key='30' value='30 minutes'>30 Minutes</option>
+						<option key='60' value='60 minutes'>60 Minutes</option>
 					</select>
 				</Aux>
 			break 
