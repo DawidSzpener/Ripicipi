@@ -1,7 +1,9 @@
 .Modal {
   position: absolute;
   z-index: 500;
-  background-color: white;
+  background-image: url('../../../assets/pictures/notebook1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 70%;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 1px black;

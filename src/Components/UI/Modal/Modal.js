@@ -15,7 +15,7 @@ render () {
     return (
       <Aux>
       <Backdrop show={this.props.show} clicked={this.props.modalClosed}/>
-      <Animated className='Modal' animationIn="zoomInUp" animationOut="zoomOutDown" animationInDuration={1000} animationOutDuration={1000} isVisible={true}>
+      <Animated className='Modal' style={{ paddingTop: '0px', paddingBottom: '0px'}} animationIn="zoomInUp" animationOut="zoomOutDown" animationInDuration={1000} animationOutDuration={1000} isVisible={true}>
         <div className='Modal'>
           <h4>Just before you go</h4>
           <form>
