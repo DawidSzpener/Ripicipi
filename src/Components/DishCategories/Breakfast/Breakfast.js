@@ -26,11 +26,23 @@ class Breakfast extends Component {
   componentDidMount() {
     axios.get('/recipes.json')
     .then(res => {
-      const recipes = res.data
-      console.log(recipes)
-      console.log(recipes.map(recipe => recipe))
+      const data = Object.values(res.data)
+      const recipeList = data.map(recipe => {
+          return (
+            <Recipe 
+                title={recipe.title}
+                picture={recipe.background}
+                ingredients={Object.values(recipe.ingredients.map(ing => ing.ingredient))}
+                preparation={Object.values(recipe.preparations.map(prep => prep.preparation))}
+                category={recipe.category}
+                difficulty={recipe.difficulty}
+                keto={recipe.keto}
+                time={recipe.time}
+            />
+          )
+      })
       
-    //   this.setState({recipeList: recipes})
+      this.setState({recipeList: recipeList})
     })
     .catch (err => {
       console.log(err)

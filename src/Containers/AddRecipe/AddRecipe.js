@@ -84,11 +84,18 @@ class AddRecipe extends Component {
       if(inputIdentifier === 'preparations'){
         updatedForm = {...this.state.recipeForm.preparations}
       }
+
       let updatedFormElement = {
         ...updatedForm[idx]
       }
 
-      updatedFormElement = {inputIdentifier: event.target.value}
+      if(inputIdentifier === 'ingredients'){
+        updatedFormElement = {ingredient: event.target.value}
+      }
+      if(inputIdentifier === 'preparations'){
+        updatedFormElement = {preparation: event.target.value}
+      }
+      
       updatedForm[idx] = updatedFormElement
 
       const updatedRecipeForm = {

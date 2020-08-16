@@ -6,14 +6,26 @@ class Recipe extends Component {
   state = {
     title: this.props.title,
     background: this.props.picture,
-    ingredients: null,
-    preparation: null,
-    keto: false,
+    ingredients: this.props.ingredients,
+    preparation: this.props.preparatio,
+    keto: this.props.keto,
+    time: this.props.time,
+    difficulty: this.props.difficulty,
+    category: this.props.category,
     loading: true
   }
 
   componentDidMount() {
-    this.setState({ loading: false, ingredients: this.props.ingredients, preparation: this.props.preparation })
+    this.setState({ 
+      loading: false,
+      ingredients: this.props.ingredients,
+      preparation: this.props.preparation,
+      keto: this.props.keto,
+      time: this.props.time,
+      difficulty: this.props.difficulty,
+      category: this.props.category,
+      title: this.props.title,
+      background: this.props.picture })
   }
 
   render() {
