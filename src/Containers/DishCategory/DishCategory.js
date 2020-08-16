@@ -18,7 +18,6 @@ class DishCategory extends Component {
       'pizza', 
       'snacks',
       'liquids'
-
     ]
   }
   

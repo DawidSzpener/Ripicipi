@@ -58,8 +58,8 @@ const form = (props) => {
             <label>Keto friendly?</label>
             <div style={{paddingTop: '5px'}}></div>
             <select className='InputElement' {...props}>  
-                <option key='yes' value='yes'>Yes</option>
-                <option key='no' value='no'>No</option>
+                <option key='yes' value={true}>Yes</option>
+                <option key='no' value={false}>No</option>
             </select>
         </Aux>
     break 

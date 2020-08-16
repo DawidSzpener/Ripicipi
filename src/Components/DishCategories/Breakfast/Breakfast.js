@@ -67,6 +67,10 @@ class Breakfast extends Component {
         shownRecipes = 
         <Recipe
           showList={() => this.showRecipeList()}
+          category={recipe.props.category}
+          difficulty={recipe.props.difficulty}
+          keto={recipe.props.keto}
+          time={recipe.props.time}
           title={recipe.props.title} 
           picture={recipe.props.picture}
           ingredients={recipe.props.ingredients}

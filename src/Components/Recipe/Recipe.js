@@ -1,6 +1,14 @@
 import React, { Component } from 'react'
 import './Recipe.css'
 import Aux from '../../hoc/Aux'
+import Time15 from '../../assets/pictures/15minutes.png'
+import Time30 from '../../assets/pictures/30minutes.png'
+import Time60 from '../../assets/pictures/60minutes.png'
+import Easy from '../../assets/pictures/easy.png'
+import Medium from '../../assets/pictures/medium.png'
+import Hard from '../../assets/pictures/hard.png'
+import Keto from '../../assets/pictures/keto.png'
+import NoKeto from '../../assets/pictures/ketofalse.png'
 
 class Recipe extends Component {
   state = {
@@ -20,21 +28,42 @@ class Recipe extends Component {
       loading: false,
       ingredients: this.props.ingredients,
       preparation: this.props.preparation,
+      title: this.props.title,
+      background: this.props.picture,
       keto: this.props.keto,
       time: this.props.time,
       difficulty: this.props.difficulty,
-      category: this.props.category,
-      title: this.props.title,
-      background: this.props.picture })
+      category: this.props.category})
   }
 
   render() {
 
     let ingredients = null
     let preparations = null
-    let keto = null
-    let difficulty = null
+    let keto = <div className='ketoContainer' style={{backgroundImage: `url(${NoKeto})`}}></div>
     let time = null
+    let difficulty = null
+
+    if(this.state.time === '15 minutes') {
+      time = <div className='timeContainer' style={{backgroundImage: `url(${Time15})`}}></div>
+    } else if (this.state.time === '30 minutes') {
+      time = <div className='timeContainer' style={{backgroundImage: `url(${Time30})`}}></div>
+    } else {
+      time = <div className='timeContainer' style={{backgroundImage: `url(${Time60})`}}></div>
+    }
+
+    if(this.state.difficulty === 'easy') {
+      difficulty = <div className='difficultyContainer' style={{backgroundImage: `url(${Easy})`}}></div>
+    } else if (this.state.difficulty === 'medium') {
+      difficulty = <div className='difficultyContainer' style={{backgroundImage: `url(${Medium})`}}></div>
+    } else {
+      difficulty = <div className='difficultyContainer' style={{backgroundImage: `url(${Hard})`}}></div>
+    }
+
+    if(this.state.keto) {
+      keto = 
+      <div className='ketoContainer' style={{backgroundImage: `url(${Keto})`}}></div>
+    }
     
     if (!this.state.loading) {
       ingredients = 
@@ -53,14 +82,15 @@ class Recipe extends Component {
     }
 
     return (   
-     
       <Aux>
         <div className='Recipe'>
           <p className='RecipeTitle'>{this.state.title}</p>
           <img src={this.state.background} alt="card_bg"></img>
         </div>
         <div className='RecipeCredentials'>
-          <h5>C R E D E N T I A L S</h5>
+          {keto}
+          {time}
+          {difficulty}
         </div>
         <div className='RecipeIngredients'>
           <h5>I N G R E N D I E N T S</h5>

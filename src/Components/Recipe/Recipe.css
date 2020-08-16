@@ -1,12 +1,12 @@
 .Recipe {
   float: left;
-  width: 50%;
+  width: 60%;
   height: auto;
   background-color: rgb(245, 211, 197);
   border: 2px #eee;
-  box-shadow: 0 12px 30px black;
+  box-shadow: 0 1px 20px black;
   padding: 1px;
-  margin: 10px 30px 30px 25%;
+  margin: 10px 30px 0px 20%;
   align-content: center;
   box-sizing: border-box;
   border-radius: 8px;
@@ -16,16 +16,41 @@
 .RecipeCredentials {
   font-family: 'Caveat', cursive;
   font-size: 28px;
-  width: 50%;
+  width: 60%;
   height: auto;
   background-color: rgb(245, 211, 197);
   border: 2px #eee;
   box-shadow: 0 12px 30px black;
-  padding: 6px;
-  margin: 35px 30px 30px 25%;
+  padding: 0.5px;
+  margin: 0px 30px 30px 20%;
   align-content: center;
-  box-sizing: border-box;
-  border-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  clear: both;
+}
+.ketoContainer {
+  width: 33.3%;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: left;
+  background-position: left;
+}
+.timeContainer {
+  width: 33.3%;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: left;
+  background-position: center;
+}
+.difficultyContainer {
+  width: 33.3%;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: left;
+  background-position: right;
 }
 
 .RecipeIngredients {
