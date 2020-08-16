@@ -32,6 +32,9 @@ class Recipe extends Component {
 
     let ingredients = null
     let preparations = null
+    let keto = null
+    let difficulty = null
+    let time = null
     
     if (!this.state.loading) {
       ingredients = 

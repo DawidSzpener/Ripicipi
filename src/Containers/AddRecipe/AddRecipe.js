@@ -136,6 +136,7 @@ class AddRecipe extends Component {
       animated = 
         <Modal
           clicked={this.handleSubmit}
+          ketoChangeHandler={(event) => this.inputChangedHandler(event, 'keto')}
           timeChangeHandler={(event) => this.inputChangedHandler(event, 'time')}
           difficultyChangeHandler={(event) => this.inputChangedHandler(event, 'difficulty')}
           show={this.state.showConfirmation}

@@ -40,18 +40,29 @@ const form = (props) => {
 					</select>
 				</Aux>
 			break 
-			case('select_difficulty'):
-			inputElement = 
-				<Aux>
-					<label>How hard?</label>
-					<div style={{paddingTop: '5px'}}></div>
-					<select className='InputElement' {...props}>  
-						<option key='easy' value='easy'>easy</option>
-						<option key='moderate' value='moderate'>moderate</option>
-						<option key='hard' value='hard'>hard</option>
-					</select>
-				</Aux>
-			break 
+    case('select_difficulty'):
+    inputElement = 
+        <Aux>
+            <label>How hard?</label>
+            <div style={{paddingTop: '5px'}}></div>
+            <select className='InputElement' {...props}>  
+                <option key='easy' value='easy'>easy</option>
+                <option key='moderate' value='moderate'>moderate</option>
+                <option key='hard' value='hard'>hard</option>
+            </select>
+        </Aux>
+    break 
+    case('select_keto'):
+    inputElement = 
+        <Aux>
+            <label>Keto friendly?</label>
+            <div style={{paddingTop: '5px'}}></div>
+            <select className='InputElement' {...props}>  
+                <option key='yes' value='yes'>Yes</option>
+                <option key='no' value='no'>No</option>
+            </select>
+        </Aux>
+    break 
     default:
       inputElement = <input className='InputElement' {...props}/>
   }
