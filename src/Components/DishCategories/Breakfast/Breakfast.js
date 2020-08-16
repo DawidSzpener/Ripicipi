@@ -10,6 +10,7 @@ class Breakfast extends Component {
   state = {
     recipeList: [],
     displayedRecipe: null,
+    showArrow: false,
     loading: true
   }
 
@@ -56,7 +57,7 @@ class Breakfast extends Component {
           keto = <img src={KetoPic} alt="bg"/>
         }
         return (
-          <div className='SingleRecipeCard' key={recipe.props.title} onClick={() => this.setState({displayedRecipe: recipe.props.title})}>
+          <div className='SingleRecipeCard' key={recipe.props.title} onClick={() => this.setState({displayedRecipe: recipe.props.title, showArrow: true})}>
             <div className='SingleRecipeCardTitle'>{title}
               <div className='SingleRecipeCardKeto'>
                 {keto}
@@ -89,11 +90,19 @@ class Breakfast extends Component {
       return null
     })
 
+    let arrow = null
+    if(this.state.showArrow) {
+      arrow = 
+      <div className='RecipeArrow' onClick={() => this.setState ({ displayedRecipe: null, showArrow: false })}>
+      </div>
+    }
+
     return (
       <Aux>
         <div className="bg-color">
           <img src={background} alt="bg" className="bg"></img>
         </div>
+        {arrow}
         <div className='SingleBreakfast'>
           {shownRecipes}
         </div>

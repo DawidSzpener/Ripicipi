@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 1%;
   box-sizing: border-box;
   z-index: 90;
 }
@@ -33,6 +33,7 @@
 .Ricipici {
   margin-top: -10px;
   background-image: url('../../../assets/pictures/ricipici.png');
+  margin-left: 1%;
   height: 86px;
   width: 286px;
   cursor: pointer;

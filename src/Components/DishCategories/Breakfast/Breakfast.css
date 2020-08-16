@@ -45,3 +45,17 @@
   width: 8%;
   height: auto;
 }
+
+.RecipeArrow {
+  position: fixed;
+  z-index: 91;
+  float: left;
+  padding: 10% 0% 0% 0%;
+  margin-top: 6%;
+  margin-left: 1%;
+  width: 20%;
+  height: auto;
+  background-image: url('../../../assets/pictures/arrow.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
