@@ -4,6 +4,7 @@ import Aux from '../../../hoc/Aux'
 import background from '../../../assets/pictures/background8.jpeg'
 import axios from '../../../axios-recipes'
 import './Breakfast.css'
+import KetoPic from '../../../assets/pictures/ketoTitle.png'
 
 class Breakfast extends Component {
   state = {
@@ -49,9 +50,18 @@ class Breakfast extends Component {
 
     const recipesAsCards = 
       this.state.recipeList.map(recipe => {
+        let title = recipe.props.title
+        let keto = null
+        if(recipe.props.keto) {
+          keto = <img src={KetoPic} alt="bg"/>
+        }
         return (
           <div className='SingleRecipeCard' key={recipe.props.title} onClick={() => this.setState({displayedRecipe: recipe.props.title})}>
-            <div className='SingleRecipeCardTitle'>{recipe.props.title}</div>
+            <div className='SingleRecipeCardTitle'>{title}
+              <div className='SingleRecipeCardKeto'>
+                {keto}
+              </div>
+            </div>
             <img src={recipe.props.picture} alt="card_bg"></img>
           </div>
         )

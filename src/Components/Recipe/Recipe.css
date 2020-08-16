@@ -55,7 +55,7 @@
 
 .RecipeIngredients {
   font-family: 'Caveat', cursive;
-  font-size: 28px;
+  font-size: 31px;
   width: 40%;
   height: auto;
   background-color: rgb(245, 211, 197);
@@ -71,7 +71,7 @@
 
 .RecipeInstructions {
   font-family: 'Caveat', cursive;
-  font-size: 28px;
+  font-size: 31px;
   width: 40%;
   height: auto;
   background-color: rgb(245, 211, 197);
@@ -99,8 +99,8 @@
   padding-left: 0;
   box-sizing: border-box;
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 10px;
@@ -110,8 +110,8 @@
   text-align: left;
   position: relative;
   list-style: none;
-  padding: 0px 5px 10px 36px;
-  margin-top: 1em;
+  padding: 0px 5px 0px 36px;
+  margin-top: 0.5em;
   min-height: 2em;  
   border-bottom: 1px solid #ac965c;
   overflow: auto;
@@ -137,6 +137,7 @@
   text-align: center;
   border-radius: 50%;
   border: 2px solid #06aab0;
+  margin-top: 8px;
   padding: 0.12em;
   background-color: #06aab0;
   color: #fff;
@@ -162,21 +163,19 @@
   padding-left: 0;
   box-sizing: border-box;
   display: block;
-  list-style-type: decimal;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 10px;
 }
 
 .RecipeInstructions li {
-  font-family: 'Caveat', cursive;
   text-align: left;
   position: relative;
   list-style: none;
-  padding: 0px 5px 10px 36px;
-  margin-top: 1em;
+  padding: 0px 5px 0px 36px;
+  margin-top: 0.5em;
   min-height: 2em;  
   border-bottom: 1px solid #ac965c;
   overflow: auto;
@@ -202,6 +201,7 @@
   text-align: center;
   border-radius: 50%;
   border: 2px solid #06b05b;
+  margin-top: 5px;
   padding: 0.12em;
   background-color: #06b05b;
   color: #fff;

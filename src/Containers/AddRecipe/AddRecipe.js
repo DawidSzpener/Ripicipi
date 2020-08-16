@@ -118,7 +118,12 @@ class AddRecipe extends Component {
       let updatedFormElement = {
         ...updatedRecipeForm[inputIdentifier]
       }
-      updatedFormElement = event.target.value
+
+      if(inputIdentifier === 'keto') {
+        updatedFormElement = JSON.parse(event.target.value) // turns the value into bolean
+      } else {
+        updatedFormElement = event.target.value
+      }
 
       updatedRecipeForm[inputIdentifier] = updatedFormElement
       this.setState({recipeForm: updatedRecipeForm})
