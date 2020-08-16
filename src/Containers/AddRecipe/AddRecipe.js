@@ -40,7 +40,7 @@ class AddRecipe extends Component {
     event.preventDefault() 
 
     const recipe = {
-      tite: this.state.recipeForm.title,
+      title: this.state.recipeForm.title,
       category: this.state.recipeForm.category,
       background: this.state.recipeForm.background,
       ingredients: this.state.recipeForm.ingredients,

@@ -55,7 +55,10 @@ class Recipe extends Component {
         <div className='Recipe'>
           <p className='RecipeTitle'>{this.state.title}</p>
           <img src={this.state.background} alt="card_bg"></img>
-        </div> 
+        </div>
+        <div className='RecipeCredentials'>
+          <h5>C R E D E N T I A L S</h5>
+        </div>
         <div className='RecipeIngredients'>
           <h5>I N G R E N D I E N T S</h5>
           {ingredients}
