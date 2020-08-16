@@ -5,7 +5,7 @@
   background-color: rgb(245, 211, 197);
   border: 2px #eee;
   box-shadow: 0 12px 30px black;
-  padding: 0px;
+  padding: 1px;
   margin: 35px 30px auto;
   align-content: center;
   box-sizing: border-box;
@@ -15,9 +15,9 @@
 .RecipeIngredients {
   overflow: auto;
   font-family: 'Caveat', cursive;
-  font-size: 20px;
+  font-size: 28px;
   width: 35%;
-  height: 470px;
+  height: auto;
   background-color: rgb(245, 211, 197);
   border: 2px #eee;
   box-shadow: 0 12px 30px black;
@@ -30,9 +30,10 @@
 }
 
 .RecipeInstructions {
-  display: inline-block;
+  font-family: 'Caveat', cursive;
   font-size: 28px;
-  width: 60%;
+  width: 35%;
+  height: auto;
   background-color: rgb(245, 211, 197);
   border: 2px #eee;
   box-shadow: 0 12px 30px black;
@@ -41,6 +42,7 @@
   align-content: center;
   box-sizing: border-box;
   border-radius: 8px;
+  float: left;
 }
 
 .Recipe img {
@@ -69,7 +71,7 @@
   position: relative;
   list-style: none;
   padding: 0px 1.5em 1em 2.2em;
-  margin-top: 1.5em;
+  margin-top: 1em;
   min-height: 2em;  
   border-bottom: 1px solid #ac965c;
   overflow: auto;

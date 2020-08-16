@@ -57,9 +57,11 @@ class Recipe extends Component {
           <img src={this.state.background} alt="card_bg"></img>
         </div> 
         <div className='RecipeIngredients'>
+          <h5>I N G R E N D I E N T S</h5>
           {ingredients}
         </div>
         <div className='RecipeInstructions'>
+          <h5>S T E P S</h5>
           {preparations}
         </div>
       </Aux>

@@ -8,18 +8,7 @@ import './Breakfast.css'
 
 class Breakfast extends Component {
   state = {
-    recipeList: [
-      <Recipe
-        title='Jajecznica'
-        picture={picture}
-        ingredients={['5g of salt', '2 table spoons of soya', '50g of almond flour','55g of salt', '22 table spoons of soya']}
-        preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3', 'now eat at step 4', 'now eat at step 5']}/>,
-      <Recipe
-        title='Owsianka'
-        picture={picture}
-        ingredients={['5g of salt', '2 table spoons of soya', '50g of almond flour']}
-        preparation={['Take a look at this first', 'should be step 2', 'now eat at step 3']}/>
-    ],
+    recipeList: [],
     displayedRecipe: null
   }
 
@@ -30,6 +19,7 @@ class Breakfast extends Component {
       const recipeList = data.map(recipe => {
           return (
             <Recipe 
+                key={recipe.title}
                 title={recipe.title}
                 picture={recipe.background}
                 ingredients={Object.values(recipe.ingredients.map(ing => ing.ingredient))}
