@@ -20,8 +20,8 @@ const form = (props) => {
           <option key='Dinner' value='Dinner'>Dinner</option>
           <option key='Desserts' value='Desserts'>Desserts</option>
           <option key='Baking' value='Baking'>Baking</option>
-          <option key='Sauce' value='Sauce'>Sauce</option>
-          <option key='Salad' value='Salad'>Salad</option>
+          <option key='Sauces' value='Sauces'>Sauces</option>
+          <option key='Salads' value='Salads'>Salads</option>
           <option key='Pizza' value='Pizza'>Pizza</option>
           <option key='Snacks' value='Snacks'>Snacks</option>
           <option key='Liquids' value='Liquids'>Liquids</option>

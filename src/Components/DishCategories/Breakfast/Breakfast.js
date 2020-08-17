@@ -18,7 +18,8 @@ class Breakfast extends Component {
     axios.get('/recipes.json')
     .then(res => {
       const data = Object.values(res.data)
-      const recipeList = data.map(recipe => {
+      const filteredData = data.filter(recipe => recipe.category === 'Breakfast')
+      const recipeList = filteredData.map(recipe => {
         if(recipe.category === 'Breakfast') {
           return (
             <Recipe 
@@ -35,7 +36,7 @@ class Breakfast extends Component {
           )
         } else { return null }
       })
-      
+
       this.setState({recipeList: recipeList})
     })
     .catch (err => {
