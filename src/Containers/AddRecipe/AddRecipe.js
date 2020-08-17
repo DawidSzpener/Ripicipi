@@ -4,6 +4,8 @@ import Input from '../../Components/UI/Form/Form'
 import './AddRecipe.css'
 import axios from '../../axios-recipes'
 import Modal from '../../Components/UI/Modal/Modal'
+import thankyou from '../../assets/pictures/thankyou.jpeg'
+import Backdrop from '../../Components/UI/Backdrop/Backdrop'
 
 class AddRecipe extends Component {
   state = {
@@ -133,7 +135,13 @@ class AddRecipe extends Component {
   render() {
     let warning = null
     if(this.state.showWarning) {
-        warning = <div className='Modal' onClick={() => this.warningClosed()} ><h1>Thank you!</h1></div>
+      warning = 
+      <Aux>
+        <Backdrop show={this.state.showWarning} clicked={() => this.warningClosed()}/>
+        <div className='Thankyou' onClick={() => this.warningClosed()}>
+          <img src={thankyou} alt="bg" id='id-thankyou'></img>
+        </div>
+      </Aux>
     }
 
     let animated = null
