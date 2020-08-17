@@ -54,7 +54,7 @@ class Breakfast extends Component {
         let title = recipe.props.title
         let keto = null
         if(recipe.props.keto) {
-          keto = <img src={KetoPic} alt="bg"/>
+          keto = <img src={KetoPic} id='keto-card' alt="bg"/>
         }
         return (
           <div className='SingleRecipeCard' key={recipe.props.title} onClick={() => this.setState({displayedRecipe: recipe.props.title, showArrow: true})}>
@@ -63,7 +63,7 @@ class Breakfast extends Component {
                 {keto}
               </div>
             </div>
-            <img src={recipe.props.picture} alt="card_bg"></img>
+            <img id='card-bg' src={recipe.props.picture} alt="card_bg"></img>
           </div>
         )
       })
