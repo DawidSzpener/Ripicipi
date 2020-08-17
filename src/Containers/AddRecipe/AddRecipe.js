@@ -152,10 +152,10 @@ class AddRecipe extends Component {
       <Aux>
         <div className='AddRecipeForms'>
           <div className='bg-add'></div>
-          <form>
-            <Input inputtype='input' type="text" onChange={(event) => this.inputChangedHandler(event, 'title')} name="title" placeholder="Recipe title"/>
-            <Input inputtype='select' type="text" onChange={(event) => this.inputChangedHandler(event, 'category')} name="category" className='add-select'/>
-            <Input inputtype='input' type="text" onChange={(event) => this.inputChangedHandler(event, 'background')} name="picture" placeholder="Picture URL"/>
+          <form onSubmit={this.showModal}>
+            <Input inputtype='input' type="text" onChange={(event) => this.inputChangedHandler(event, 'title')} required name="title" placeholder="Recipe title"/>
+            <Input inputtype='select' type="text" onChange={(event) => this.inputChangedHandler(event, 'category')} required name="category" className='add-select'/>
+            <Input inputtype='input' type="text" onChange={(event) => this.inputChangedHandler(event, 'background')} required name="picture" placeholder="Picture URL"/>
             <div className='IngredientsForms'>
               {
                 this.state.ingredients.map((val, idx) => {
@@ -165,6 +165,7 @@ class AddRecipe extends Component {
                       onChange={(event) => this.inputChangedHandler(event, 'ingredients', idx)}
                       inputtype='input' 
                       type="text"
+                      required
                       key={ingredientId} 
                       name={ingredientId}
                       placeholder={`Ingredient ${idx + 1}`}/>
@@ -181,6 +182,7 @@ class AddRecipe extends Component {
                       onChange={(event) => this.inputChangedHandler(event, 'preparations', idx)}
                       inputtype='input' 
                       type="text"
+                      required
                       key={preparationsId}
                       name={preparationsId}
                       placeholder={`Step ${idx + 1}`}/>
@@ -188,7 +190,7 @@ class AddRecipe extends Component {
                 })
               }
             </div>
-            <button className='AddFormSubmit' type='submit' onClick={this.showModal} value='Submit'>Submit</button>
+            <button className='AddFormSubmit' type='submit' value='Submit'>Submit</button>
           </form>
           <button className='PreparationsButton' onClick={this.addPreparation}>Add another step</button>
           <button className='IngredientsButton' onClick={this.addIngredient}>Add new ingredient</button>
