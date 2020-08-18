@@ -52,7 +52,7 @@ class AddRecipe extends Component {
       difficulty: this.state.recipeForm.difficulty
     }
 
-    axios.post('/recipes.json', recipe)
+    axios.post(`/recipes/${recipe.category}.json`, recipe)
     .then(res => {
       console.log(res)
     })
