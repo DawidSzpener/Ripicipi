@@ -15,7 +15,7 @@ class Desserts extends Component {
   }
 
   componentDidMount() {
-    axios.get('/recipes.json')
+    axios.get('/recipes/Desserts.json')
     .then(res => {
       const data = Object.values(res.data)
       const filteredData = data.filter(recipe => recipe.category === 'Desserts')

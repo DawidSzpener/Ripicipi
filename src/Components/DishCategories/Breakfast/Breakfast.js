@@ -15,7 +15,7 @@ class Breakfast extends Component {
   }
 
   componentDidMount() {
-    axios.get('/recipes.json')
+    axios.get('/recipes/Breakfast.json')
     .then(res => {
       const data = Object.values(res.data)
       const filteredData = data.filter(recipe => recipe.category === 'Breakfast')
