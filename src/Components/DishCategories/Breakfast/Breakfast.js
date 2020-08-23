@@ -4,7 +4,7 @@ import Aux from '../../../hoc/Aux'
 import background from '../../../assets/pictures/background8.jpeg'
 import axios from '../../../axios-recipes'
 import './Breakfast.css'
-import KetoPic from '../../../assets/pictures/ketoTitle.png'
+import KetoPic from '../../../assets/pictures/keto1.jpeg'
 
 class Breakfast extends Component {
   state = {

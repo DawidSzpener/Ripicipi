@@ -9,8 +9,8 @@ import Backdrop from '../../Components/UI/Backdrop/Backdrop'
 
 class AddRecipe extends Component {
   state = {
-    ingredients: [{ingredient: ''}, {ingredient: ''}, {ingredient: ''} ],
-    preparations: [{preparation: ''}, {preparation: ''}, {preparation: ''} ],
+    ingredients: [{ingredient: ''}, {ingredient: ''}, {ingredient: ''}],
+    preparations: [{preparation: ''}, {preparation: ''}, {ingredient: ''}],
     recipeForm: {
       ingredients: [],
       preparations: [],
@@ -20,10 +20,9 @@ class AddRecipe extends Component {
       keto: true,
       time: '15 minutes',
       difficulty: 'easy',
-
     },
     showConfirmation: false,
-    showWarning: false
+    showWarning: false,
   }
 
   addIngredient = () => {
@@ -176,7 +175,8 @@ class AddRecipe extends Component {
                       required
                       key={ingredientId} 
                       name={ingredientId}
-                      placeholder={`Ingredient ${idx + 1}`}/>
+                      placeholder={`Ingredient ${idx + 1}`}
+                      buttonappear='true'/>
                   )
                 })
               }
@@ -198,10 +198,12 @@ class AddRecipe extends Component {
                 })
               }
             </div>
+            <div style={{display: 'inline-block', width: '100%'}}>
+              <button type='button' className='IngredientsButton' onClick={this.addIngredient}>+ ingredient</button>
+              <button type='button' className='PreparationsButton' onClick={this.addPreparation}>+ step</button>
+            </div>
             <button className='AddFormSubmit' type='submit' value='Submit'>Submit</button>
           </form>
-          <button className='PreparationsButton' onClick={this.addPreparation}>Add another step</button>
-          <button className='IngredientsButton' onClick={this.addIngredient}>Add new ingredient</button>
         </div> 
         {animated}
         {warning}

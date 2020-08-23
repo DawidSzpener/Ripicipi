@@ -19,8 +19,7 @@
 }
 
 .PreparationsButton {
-  clear: both;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: 'Special Elite', cursive;
   border-radius: 0.5em;
   float: left;
@@ -41,8 +40,8 @@
 .AddFormSubmit {
   border-radius: 0.5em;
   float: left;
-  margin: 5px 5.5px;
-  padding: 6px 7px 4px 7px;
+  margin: 1px 5.5px;
+  padding: 6px 27px 4px 27px;
   background-color: black;
   color: white;
   font-family: 'Special Elite', cursive;
@@ -58,7 +57,7 @@
 }
 
 .IngredientsButton {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: 'Special Elite', cursive;
   border-radius: 0.5em;
   float: left;
@@ -72,7 +71,7 @@
 	border-color: #aaa;
 	box-shadow: 0 0 1px 3px rgb(7, 7, 7);
 	box-shadow: 0 0 0 3px -moz-mac-focusring;
-  color: white;
+    color: white;
 	outline: none;
 }
 

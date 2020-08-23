@@ -6,7 +6,7 @@ const form = (props) => {
   let inputElement = null
 
   switch (props.inputtype) {
-    case('input'):
+    case('input'):     
       inputElement = <input className='InputElement' {...props}/>
       break
     case('textarea'):
