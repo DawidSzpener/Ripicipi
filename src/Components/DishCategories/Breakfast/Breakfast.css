@@ -57,15 +57,51 @@
 }
 
 .RecipeArrow {
+  cursor: pointer;
   position: fixed;
   z-index: 91;
   float: left;
   padding: 10% 0% 0% 0%;
   margin-top: 6%;
   margin-left: 1%;
-  width: 20%;
+  width: 15%;
   height: auto;
   background-image: url('../../../assets/pictures/arrow.png');
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.RecipeCheatSheetButton {
+  cursor: pointer;
+  position: fixed;
+  z-index: 91;
+  float: left;
+  padding: 10% 0% 0% 0%;
+  margin-top: 17%;
+  margin-left: 1%;
+  width: 15%;
+  height: auto;
+  background-image: url('../../../assets/pictures/cheat-sheet.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.RecipeCheatSheet {
+  position: fixed;
+  z-index: 91;
+  float: left;
+  padding: 10% 0% 0% 0%;
+  margin-top: 12%;
+  margin-left: 1%;
+  width: 10%;
+  height: auto;
+}
+
+.RecipeCheatSheet img {
+  position: fixed;
+  z-index: 91;
+  float: left;
+  width: 20%;
+  left: 1%;
+  height: auto;
 }
