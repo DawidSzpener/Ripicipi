@@ -56,33 +56,25 @@
 .RecipeIngredients {
   font-family: 'Caveat', cursive;
   font-size: 31px;
-  width: 40%;
   height: auto;
-  background-color: rgb(245, 211, 197);
-  border: 2px #eee;
-  box-shadow: 0 12px 30px black;
   padding: 6px;
-  margin: 3% 5%;
+  width: 70%;
+  margin: 3% 15%;
   align-content: center;
   box-sizing: border-box;
-  border-radius: 8px;
   float: left;
 }
 
 .RecipeInstructions {
   font-family: 'Caveat', cursive;
   font-size: 31px;
-  width: 40%;
   height: auto;
-  background-color: rgb(245, 211, 197);
-  border: 2px #eee;
-  box-shadow: 0 12px 30px black;
   padding: 6px;
-  margin: 3% 5%;
+  width: 70%;
+  margin: 3% 15%;
   align-content: center;
   box-sizing: border-box;
-  border-radius: 8px;
-  float: left;
+  clear: both;
 }
 
 .Recipe img {
@@ -174,7 +166,7 @@
   text-align: left;
   position: relative;
   list-style: none;
-  padding: 0px 5px 0px 36px;
+  padding: 0px 5px 10px 36px;
   margin-top: 0.5em;
   min-height: 2em;  
   border-bottom: 1px solid #ac965c;
@@ -205,4 +197,8 @@
   padding: 0.12em;
   background-color: #06b05b;
   color: #fff;
+}
+
+.SingleRecipeTitle {
+    
 }

@@ -9,6 +9,8 @@ import Medium from '../../assets/pictures/medium.png'
 import Hard from '../../assets/pictures/hard.png'
 import Keto from '../../assets/pictures/keto.png'
 import NoKeto from '../../assets/pictures/ketofalse.png'
+import ingTitle from '../../assets/pictures/ingTitle.png'
+import metTitle from '../../assets/pictures/metTitle.png'
 
 class Recipe extends Component {
   state = {
@@ -93,11 +95,11 @@ class Recipe extends Component {
           {difficulty}
         </div>
         <div className='RecipeIngredients'>
-          <h5>I N G R E N D I E N T S</h5>
+          <div className='SingleRecipeTitle'><img src={ingTitle} alt='error'/></div>
           {ingredients}
         </div>
         <div className='RecipeInstructions'>
-          <h5>S T E P S</h5>
+        <div className='SingleRecipeTitle'><img src={metTitle} alt='error'/></div>
           {preparations}
         </div>
       </Aux>
