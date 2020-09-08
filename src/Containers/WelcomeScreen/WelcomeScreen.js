@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import Aux from '../../hoc/Aux'
 import './WelcomeScreen.css'
-import favourite from '../../assets/pictures/favouriteflower.png'
-import brown from '../../assets/pictures/brownflower.png'
-import newrecipe from '../../assets/pictures/newrecipe.png'
-import background from '../../assets/pictures/background8.jpeg'
+import background from '../../assets/pictures/background7.png'
 
 class Homescreen extends Component {
   goToCategories = () => {
@@ -18,13 +15,18 @@ class Homescreen extends Component {
   render() {
     return (
       <Aux>
-        <div className="bg-color">
-          <img src={background} alt="bg" className="bg"></img>
-        </div>
-        <div className='Homescreen'>
-          <div className='Button1' onClick={this.goToCategories}><img src={brown} alt='bg'/></div>
-          <div className='Button2' ><img src={favourite} alt='bg'/></div>
-          <div className='Button3' onClick={this.goToAddRecipe}><img src={newrecipe} alt='bg'/></div>
+        <div className="Background">
+          <img src={background} alt="bg" className="bg-homescreen"></img>
+          <div className='Homescreen-buttons'>
+            <h3>Read the Recipe Before Beginning</h3>
+            <h3>Weigh Your Ingredients Properly</h3>
+            <h3>Always Have Ingredients Prepped</h3>
+            <h3>Follow the Recipe</h3>
+            <h3>Don’t Over-mix, Don’t Under-mix</h3>
+            <h3>Don’t Open the Oven</h3>
+            <h3>Allow to Cool Completely</h3>
+            <h3>Store Properly</h3>
+          </div>
         </div>
       </Aux>
     )

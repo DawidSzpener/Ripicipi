@@ -1,55 +1,44 @@
-.Homescreen {
-  padding-top: 20px;
-  height: 90%;
+.Background {
+
+}
+
+.Homescreen-buttons {
+  padding-top: 70px;
+  width: 40%;
+  justify-content: space-between;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  margin: 0% 30%;
 }
 
-.Button1 img{
+.bg-homescreen {
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.Button1 img {
   opacity: 0.9;
-  height: 30%;
-  width: 30%;
+  cursor: pointer;
+  height: 80%;
+  width: 80%;
 }
 
 .Button2 img{
-  opacity: 0.8;
-  height: 20%;
-  width: 30%;
+  opacity: 0.9;
+  cursor: pointer;
+  height: 80%;
+  width: 80%;
 }
 
 .Button3 img{
-  opacity: 0.85;
-  height: 30%;
-  width: 30%;
-}
-
-@media (min-width: 499px){
-  .Homescreen {
-    padding-top: 110px;
-    height: 90%;
-    justify-content: space-between;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-  }
-
-  .Button1 img{
-    cursor: pointer;
-    height: 80%;
-    width: 80%;
-  }
-
-  .Button2 img{
-    cursor: pointer;
-    height: 80%;
-    width: 80%;
-  }
-
-  .Button3 img{
-    cursor: pointer;
-    height: 80%;
-    width: 80%;
-  }
+  opacity: 0.9;
+  cursor: pointer;
+  height: 80%;
+  width: 80%;
 }
