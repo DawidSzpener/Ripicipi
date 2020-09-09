@@ -4,11 +4,11 @@
 
 .comandements {
   opacity: 1;
-  width: 40%;
+  width: 32%;
   height: auto;
   position: fixed;
-  top: 110px;
-  left: 30%;
+  top: 20%;
+  left: 34%;
   z-index: 1;
 }
 
