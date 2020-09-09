@@ -3,14 +3,15 @@ import Recipe from '../../Recipe/Recipe'
 import Aux from '../../../hoc/Aux'
 import background from '../../../assets/pictures/background8.jpeg'
 import axios from '../../../axios-recipes'
-import '../Breakfast/Breakfast.css'
 import KetoPic from '../../../assets/pictures/keto1.jpeg'
+import cheatSheet from '../../../assets/pictures/conversion-chart.png'
 
 class Sauces extends Component {
   state = {
     recipeList: [],
     displayedRecipe: null,
     showArrow: false,
+    showSheet: false,
     loading: true
   }
 
@@ -91,11 +92,23 @@ class Sauces extends Component {
       return null
     })
 
+    let sheet = null 
+    if(this.state.showSheet) {
+        sheet = 
+        <Aux>
+            <div className='RecipeCheatSheet'>
+                <img alt='Error' src={cheatSheet}/>
+            </div>
+        </Aux>
+    }
+
     let arrow = null
     if(this.state.showArrow) {
       arrow = 
-      <div className='RecipeArrow' onClick={() => this.setState ({ displayedRecipe: null, showArrow: false })}>
-      </div>
+      <Aux>
+        <div className='RecipeArrow' onClick={() => this.setState ({ displayedRecipe: null, showArrow: false, showSheet: false })}></div>
+        <div className='RecipeCheatSheetButton' onClick={() => this.setState ({ showSheet: !this.state.showSheet })}></div>
+      </Aux>
     }
 
     return (
@@ -104,6 +117,7 @@ class Sauces extends Component {
           <img src={background} alt="bg" className="bg"></img>
         </div>
         {arrow}
+        {sheet}
         <div className='SingleBreakfast'>
           {shownRecipes}
         </div>
