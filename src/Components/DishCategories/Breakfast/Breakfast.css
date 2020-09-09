@@ -7,7 +7,7 @@
 .SingleRecipeCard {
   cursor: pointer;
   display: inline-block;
-  width: 40%;
+  width: 26%;
   height: auto;
   background-color: rgb(245, 211, 197);
   border: 2px #eee;
