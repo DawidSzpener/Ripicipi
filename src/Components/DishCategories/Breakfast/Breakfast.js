@@ -107,9 +107,8 @@ class Breakfast extends Component {
     if(this.state.showArrow) {
       arrow = 
       <Aux>
-        <div className='RecipeArrow' onClick={() => this.setState ({ displayedRecipe: null, showArrow: false })}></div>
+        <div className='RecipeArrow' onClick={() => this.setState ({ displayedRecipe: null, showArrow: false, showSheet: false })}></div>
         <div className='RecipeCheatSheetButton' onClick={() => this.setState ({ showSheet: !this.state.showSheet })}></div>
-        {sheet}
       </Aux>
     }
 
@@ -119,6 +118,7 @@ class Breakfast extends Component {
           <img src={background} alt="bg" className="bg"></img>
         </div>
         {arrow}
+        {sheet}
         <div className='SingleBreakfast'>
           {shownRecipes}
         </div>
