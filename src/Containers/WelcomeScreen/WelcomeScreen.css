@@ -2,6 +2,16 @@
 
 }
 
+.comandements {
+  opacity: 1;
+  width: 40%;
+  height: auto;
+  position: fixed;
+  top: 110px;
+  left: 30%;
+  z-index: 1;
+}
+
 .Homescreen-buttons {
   padding-top: 70px;
   width: 40%;
