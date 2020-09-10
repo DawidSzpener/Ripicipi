@@ -19,7 +19,7 @@ class AddRecipe extends Component {
       background: '',
       keto: true,
       time: '15 minutes',
-      difficulty: 'easy',
+      difficulty: 'easy'
     },
     showConfirmation: false,
     showWarning: false,
@@ -48,7 +48,8 @@ class AddRecipe extends Component {
       preparations: this.state.recipeForm.preparations,
       keto: this.state.recipeForm.keto,
       time: this.state.recipeForm.time,
-      difficulty: this.state.recipeForm.difficulty
+      difficulty: this.state.recipeForm.difficulty,
+      valid: false
     }
 
     axios.post(`/recipes/${recipe.category}.json`, recipe)

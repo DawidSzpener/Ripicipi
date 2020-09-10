@@ -14,6 +14,7 @@ import Salads from './Components/DishCategories/Salads/Salads'
 import Pizza from './Components/DishCategories/Pizza/Pizza'
 import Snacks from './Components/DishCategories/Snacks/Snacks'
 import Liquids from './Components/DishCategories/Liquids/Liquids'
+import Approval from './Containers/Approval/Approval'
 
 class App extends Component {
 
@@ -32,6 +33,7 @@ class App extends Component {
             <Route path='/categories/dinner' component={Dinner} />
             <Route path='/categories/breakfast' component={Breakfast} />
             <Route path='/categories' exact component={DishCategory} />
+            <Route path='/dawid' exact component={Approval} />
             <Route path='/add' component={AddRecipe} />
             <Route path='/' exact component={Homescreen} />
           </Switch>
