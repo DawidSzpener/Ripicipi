@@ -18,11 +18,13 @@ class Sauces extends Component {
   componentDidMount() {
     axios.get('/recipes/Sauces.json')
     .then(res => {
+      let list = []
       const data = Object.values(res.data)
       const filteredData = data.filter(recipe => recipe.category === 'Sauces')
-      const recipeList = filteredData.map(recipe => {
-        if(recipe.category === 'Sauces') {
+      filteredData.map(recipe => {
+        if(recipe.category === 'Sauces' && recipe.valid) {
           return (
+            list.push(
             <Recipe 
               key={recipe.title}
               title={recipe.title}
@@ -33,12 +35,12 @@ class Sauces extends Component {
               difficulty={recipe.difficulty}
               keto={recipe.keto}
               time={recipe.time}
-            />
+            />)
           )
         } else { return null }
       })
 
-      this.setState({recipeList: recipeList})
+      this.setState({recipeList: list})
     })
     .catch (err => {
       console.log(err)

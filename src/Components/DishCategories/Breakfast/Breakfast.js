@@ -17,13 +17,15 @@ class Breakfast extends Component {
   }
 
   componentDidMount() {
-    axios.get('/recipes/Breakfast.json')
-    .then(res => {
+    axios.get('/recipes/Breakfast.json') 
+    .then(res => {    
+      let list = []
       const data = Object.values(res.data)
       const filteredData = data.filter(recipe => recipe.category === 'Breakfast')
-      const recipeList = filteredData.map(recipe => {
-        if(recipe.category === 'Breakfast') {
+      filteredData.map(recipe => {
+        if(recipe.category === 'Breakfast' && recipe.valid) {
           return (
+            list.push(
             <Recipe 
               key={recipe.title}
               title={recipe.title}
@@ -34,12 +36,12 @@ class Breakfast extends Component {
               difficulty={recipe.difficulty}
               keto={recipe.keto}
               time={recipe.time}
-            />
+            />)
           )
         } else { return null }
       })
 
-      this.setState({recipeList: recipeList})
+      this.setState({recipeList: list})
     })
     .catch (err => {
       console.log(err)
