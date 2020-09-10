@@ -58,6 +58,18 @@ class Approval extends Component {
     this.setState({ displayedRecipe: null })
   }
 
+  approveRecipe = (title, category) => {
+    console.log('approved')
+    console.log(title)
+    console.log(category)
+  }
+
+  removeRecipe = (title, category) => {
+    console.log('removed')
+    console.log(title)
+    console.log(category)
+  }
+
   render() {
 
     let arrow = null
@@ -79,13 +91,17 @@ class Approval extends Component {
         keto = <img src={KetoPic} id='keto-card' alt="bg"/>
       }
       return (
-        <div className='SingleRecipeCard' key={recipe.props.title} onClick={() => this.setState({displayedRecipe: recipe.props.title, showArrow: true})}>
-          <div className='SingleRecipeCardTitle'>{title}
-            <div className='SingleRecipeCardKeto'>
-              {keto}
+        <div className='ApproveCard'>
+          <button onClick={() => this.approveRecipe(recipe.props.title, recipe.props.category)} className='SingleRecipeCardButtonApprove'>Approve</button>
+          <button onClick={() => this.removeRecipe(recipe.props.title, recipe.props.category)}  className='SingleRecipeCardButtonRemove'>Remove</button>
+          <div className='SingleRecipeCardApprove' key={recipe.props.title} onClick={() => this.setState({displayedRecipe: recipe.props.title, showArrow: true})}>
+            <div className='SingleRecipeCardTitle'>{title}
+              <div className='SingleRecipeCardKeto'>
+                {keto}
+              </div>
             </div>
+            <img id='card-bg' src={recipe.props.picture} alt="card_bg"></img>
           </div>
-          <img id='card-bg' src={recipe.props.picture} alt="card_bg"></img>
         </div>
       )
     })

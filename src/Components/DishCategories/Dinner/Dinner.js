@@ -62,12 +62,12 @@ class Dinner extends Component {
         }
         return (
           <div className='SingleRecipeCard' key={recipe.props.title} onClick={() => this.setState({displayedRecipe: recipe.props.title, showArrow: true})}>
-            <div className='SingleRecipeCardTitle'>{title}
+              <div className='SingleRecipeCardTitle'>{title}
               <div className='SingleRecipeCardKeto'>
-                {keto}
+                  {keto}
               </div>
-            </div>
-            <img id='card-bg' src={recipe.props.picture} alt="card_bg"></img>
+              </div>
+              <img id='card-bg' src={recipe.props.picture} alt="card_bg"></img>
           </div>
         )
       })
