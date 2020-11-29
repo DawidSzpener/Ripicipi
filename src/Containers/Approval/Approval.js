@@ -19,6 +19,7 @@ class Approval extends Component {
     .then(res => {    
       let list = []
       const data = Object.values(res.data)
+      console.log(data)
       const baking = Object.values(data[0])
       const breakfast = Object.values(data[1])
       const Desserts = Object.values(data[2])
@@ -100,7 +101,7 @@ class Approval extends Component {
                 {keto}
               </div>
             </div>
-            <img id='card-bg' src={recipe.props.picture} alt="card_bg"></img>
+              <img id='card-bg' src={recipe.props.picture} alt="card_bg"></img>
           </div>
         </div>
       )

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Aux from '../../hoc/Aux'
 import './WelcomeScreen.css'
-import background from '../../assets/pictures/background7.png'
+import background from '../../assets/pictures/background7.jpg'
 import comandements from '../../assets/pictures/commandments.png'
 
 class Homescreen extends Component {

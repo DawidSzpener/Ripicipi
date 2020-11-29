@@ -20,7 +20,7 @@
 .Modal {
     position: absolute;
     z-index: 500;
-    background-image: url('../../../assets/pictures/notebook1.png');
+    background-image: url('../../../assets/pictures/notebook1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 70%;
