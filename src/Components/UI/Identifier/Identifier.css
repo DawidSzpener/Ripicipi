@@ -1,0 +1,24 @@
+.Identifier {
+  position: fixed;
+  z-index: 91;
+  float: left;
+  padding: 10% 0% 0% 1%;
+  margin-top: 12%;
+  margin-left: 1%;
+  width: 12%;
+  height: auto;
+}
+
+.Identifier__picture {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.Identifier__name {
+  margin: auto;
+  width: 40%;
+  margin-right: 3%;
+  }

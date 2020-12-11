@@ -22,7 +22,9 @@ class Recipe extends Component {
     time: this.props.time,
     difficulty: this.props.difficulty,
     category: this.props.category,
-    loading: true
+    loading: true,
+    creatorsName: this.props.creatorsName,
+    creatorsPicture: this.props.creatorsPicture
   }
 
   componentDidMount() {
