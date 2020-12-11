@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
+
+import './Breakfast.css'
 import Recipe from '../../Recipe/Recipe'
 import Aux from '../../../hoc/Aux'
 import background from '../../../assets/pictures/background8.jpeg'
 import axios from '../../../axios-recipes'
-import './Breakfast.css'
 import KetoPic from '../../../assets/pictures/keto1.jpeg'
 import cheatSheet from '../../../assets/pictures/conversion-chart.jpg'
+import Identifier from '../../UI/Identifier/Identifier'
+import Backdrop from '../../UI/Backdrop/Backdrop'
+
 
 class Breakfast extends Component {
   state = {
@@ -17,8 +21,8 @@ class Breakfast extends Component {
   }
 
   componentDidMount() {
-    axios.get('/recipes/Breakfast.json') 
-    .then(res => {    
+    axios.get('/recipes/Breakfast.json')
+    .then(res => {
       let list = []
       const data = Object.values(res.data)
       const filteredData = data.filter(recipe => recipe.category === 'Breakfast')
@@ -36,6 +40,8 @@ class Breakfast extends Component {
               difficulty={recipe.difficulty}
               keto={recipe.keto}
               time={recipe.time}
+              creatorsName={recipe.creatorsName}
+              creatorsPicture={recipe.creatorsPicture}
             />)
           )
         } else { return null }
@@ -50,6 +56,10 @@ class Breakfast extends Component {
 
   showRecipeList = () => {
     this.setState({ displayedRecipe: null })
+  }
+
+  hideCheatSheet = () => {
+    this.setState({ showSheet: false })
   }
 
   render() {
@@ -74,12 +84,19 @@ class Breakfast extends Component {
       })
       
     let shownRecipes = recipesAsCards
+    let creator = null
 
     if (this.state.displayedRecipe === null) {
       shownRecipes = recipesAsCards }
 
     this.state.recipeList.map(recipe => {
       if (recipe.props.title === this.state.displayedRecipe) {
+        if (this.state.displayedRecipe.creatorsPicture !== null) {
+          console.log(recipe.props)
+        creator = <Identifier 
+          creatorsPicture={recipe.props.creatorsPicture}
+          creatorsName={recipe.props.creatorsName}/>
+        }
         shownRecipes = 
         <Recipe
           showList={() => this.showRecipeList()}
@@ -99,6 +116,7 @@ class Breakfast extends Component {
     if(this.state.showSheet) {
         sheet = 
         <Aux>
+            <Backdrop show={true} clicked={() => this.hideCheatSheet()}/>
             <div className='RecipeCheatSheet'>
                 <img alt='Error' src={cheatSheet}/>
             </div>
@@ -119,6 +137,7 @@ class Breakfast extends Component {
         <div className="bg-color">
           <img src={background} alt="bg" className="bg"></img>
         </div>
+        {creator}
         {arrow}
         {sheet}
         <div className='SingleBreakfast'>

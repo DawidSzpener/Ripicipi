@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
+
 import Recipe from '../../Recipe/Recipe'
 import Aux from '../../../hoc/Aux'
 import background from '../../../assets/pictures/background8.jpeg'
 import axios from '../../../axios-recipes'
 import KetoPic from '../../../assets/pictures/keto1.jpeg'
 import cheatSheet from '../../../assets/pictures/conversion-chart.jpg'
+import Identifier from '../../UI/Identifier/Identifier'
+import Backdrop from '../../UI/Backdrop/Backdrop'
+
 
 class Dinner extends Component {
   state = {
@@ -35,6 +39,8 @@ class Dinner extends Component {
               difficulty={recipe.difficulty}
               keto={recipe.keto}
               time={recipe.time}
+              creatorsName={recipe.creatorsName}
+              creatorsPicture={recipe.creatorsPicture}
             />)
           )
         } else { return null }
@@ -51,6 +57,10 @@ class Dinner extends Component {
     this.setState({ displayedRecipe: null })
   }
 
+  hideCheatSheet = () => {
+    this.setState({ showSheet: false })
+  }
+
   render() {
 
     const recipesAsCards = 
@@ -62,23 +72,30 @@ class Dinner extends Component {
         }
         return (
           <div className='SingleRecipeCard' key={recipe.props.title} onClick={() => this.setState({displayedRecipe: recipe.props.title, showArrow: true})}>
-              <div className='SingleRecipeCardTitle'>{title}
+            <div className='SingleRecipeCardTitle'>{title}
               <div className='SingleRecipeCardKeto'>
-                  {keto}
+                {keto}
               </div>
-              </div>
-              <img id='card-bg' src={recipe.props.picture} alt="card_bg"></img>
+            </div>
+            <img id='card-bg' src={recipe.props.picture} alt="card_bg"></img>
           </div>
         )
       })
       
     let shownRecipes = recipesAsCards
+    let creator = null
 
     if (this.state.displayedRecipe === null) {
       shownRecipes = recipesAsCards }
 
     this.state.recipeList.map(recipe => {
       if (recipe.props.title === this.state.displayedRecipe) {
+        if (this.state.displayedRecipe.creatorsPicture !== null) {
+          console.log(recipe.props)
+        creator = <Identifier 
+          creatorsPicture={recipe.props.creatorsPicture}
+          creatorsName={recipe.props.creatorsName}/>
+        }
         shownRecipes = 
         <Recipe
           showList={() => this.showRecipeList()}
@@ -98,6 +115,7 @@ class Dinner extends Component {
     if(this.state.showSheet) {
         sheet = 
         <Aux>
+            <Backdrop show={true} clicked={() => this.hideCheatSheet()}/>
             <div className='RecipeCheatSheet'>
                 <img alt='Error' src={cheatSheet}/>
             </div>
@@ -118,6 +136,7 @@ class Dinner extends Component {
         <div className="bg-color">
           <img src={background} alt="bg" className="bg"></img>
         </div>
+        {creator}
         {arrow}
         {sheet}
         <div className='SingleBreakfast'>
