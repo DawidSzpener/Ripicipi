@@ -5,8 +5,9 @@ import Aux from '../../../hoc/Aux'
 import background from '../../../assets/pictures/background8.jpeg'
 import axios from '../../../axios-recipes'
 import KetoPic from '../../../assets/pictures/keto1.jpeg'
-import cheatSheet from '../../../assets/pictures/conversion-chart.png'
+import cheatSheet from '../../../assets/pictures/conversion-chart.jpg'
 import Identifier from '../../UI/Identifier/Identifier'
+import Backdrop from '../../UI/Backdrop/Backdrop'
 
 class Baking extends Component {
   state = {
@@ -53,6 +54,10 @@ class Baking extends Component {
 
   showRecipeList = () => {
     this.setState({ displayedRecipe: null })
+  }
+
+  hideCheatSheet = () => {
+    this.setState({ showSheet: false })
   }
 
   render() {
@@ -109,6 +114,7 @@ class Baking extends Component {
     if(this.state.showSheet) {
         sheet = 
         <Aux>
+            <Backdrop show={true} clicked={() => this.hideCheatSheet()}/>
             <div className='RecipeCheatSheet'>
                 <img alt='Error' src={cheatSheet}/>
             </div>

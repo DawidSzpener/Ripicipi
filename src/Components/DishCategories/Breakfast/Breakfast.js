@@ -5,7 +5,7 @@ import background from '../../../assets/pictures/background8.jpeg'
 import axios from '../../../axios-recipes'
 import './Breakfast.css'
 import KetoPic from '../../../assets/pictures/keto1.jpeg'
-import cheatSheet from '../../../assets/pictures/conversion-chart.png'
+import cheatSheet from '../../../assets/pictures/conversion-chart.jpg'
 
 class Breakfast extends Component {
   state = {

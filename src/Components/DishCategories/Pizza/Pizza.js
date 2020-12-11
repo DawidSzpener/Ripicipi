@@ -4,7 +4,7 @@ import Aux from '../../../hoc/Aux'
 import background from '../../../assets/pictures/background8.jpeg'
 import axios from '../../../axios-recipes'
 import KetoPic from '../../../assets/pictures/keto1.jpeg'
-import cheatSheet from '../../../assets/pictures/conversion-chart.png'
+import cheatSheet from '../../../assets/pictures/conversion-chart.jpg'
 
 class Pizza extends Component {
   state = {
