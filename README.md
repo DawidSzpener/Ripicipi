@@ -16,33 +16,9 @@ $ npm install
 $ npm start
 ```
 
-## User Stories
+## DEMO
 
-```
-As a user
-So I can add a new recipe
-I want to be able to fill out the form
-
-As a user
-So I know I added a recipe
-I want to be able to view it on a website
-
-As a user
-So I can manouver around website easly
-I want the website to have a navigation
-
-As a user
-So I can view recipes details
-I want the recipe page to include steps and ingredients
-
-As a user
-When I get lost on a website
-I want to be able to go back to the main page simply
-
-As a user
-So I know how the dish looks like
-I want the recipe page to include a picture
-```
+![demo](https://github.com/DawidSzpener/D.SZ-portfolio/blob/main/src/assets/images/ricipici.gif)
 
 ## Built With
 
