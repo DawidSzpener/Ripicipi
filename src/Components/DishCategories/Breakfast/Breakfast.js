@@ -66,7 +66,7 @@ class Breakfast extends Component {
 
     const recipesAsCards = 
       this.state.recipeList.map(recipe => {
-        let title = recipe.props.title
+        let title = recipe.props.title.toUpperCase()
         let keto = null
         if(recipe.props.keto) {
           keto = <img src={KetoPic} id='keto-card' alt="bg"/>

@@ -88,7 +88,7 @@ class Recipe extends Component {
     return (   
       <Aux>
         <div className='Recipe'>
-          <p className='RecipeTitle'>{this.state.title}</p>
+          <p className='RecipeTitle'>{this.state.title.toUpperCase()}</p>
           <img src={this.state.background} alt="card_bg"></img>
         </div>
         <div className='RecipeCredentials'>
