@@ -3,10 +3,10 @@ import Aux from '../../hoc/Aux'
 import Card from '../../Components/UI/Card/Card'
 import background from '../../assets/pictures/background8.jpeg'
 import { withRouter } from 'react-router-dom'
-import './DishCategory.css'
+import './Categories.css'
 
 
-class DishCategory extends Component {
+class Categories extends Component {
   state = {
     categories: [
       'breakfast',
@@ -37,7 +37,7 @@ class DishCategory extends Component {
         <div className="bg-color">
           <img src={background} alt="bg" className="bg"></img>
         </div>
-        <div className='DishCategory'>
+        <div className='Categories'>
           {category}
         </div>
       </Aux>
@@ -45,4 +45,4 @@ class DishCategory extends Component {
   }
 }
 
-export default withRouter(DishCategory)
+export default withRouter(Categories)

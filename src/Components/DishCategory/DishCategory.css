@@ -1,0 +1,116 @@
+.SingleBreakfast {
+  overflow: auto;
+  padding-top: 50px;
+  padding-bottom: 35px;
+}
+
+.SingleRecipeCard {
+  cursor: pointer;
+  display: inline-block;
+  width: 26%;
+  height: auto;
+  background-color: rgb(245, 211, 197);
+  border: 2px #eee;
+  box-shadow: 0 12px 30px black;
+  padding: 0px;
+  margin: 35px 30px;
+  align-content: center;
+  box-sizing: border-box;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#keto-card{
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+#card-bg{
+  object-fit: cover;
+  width:  100%;
+  height: 300px;
+  max-width: 100%;
+  max-height: auto;
+  display: block;
+}
+
+.SingleRecipeCardTitle {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 2px;
+  border: 1px #eee;
+  box-shadow: 0 4px 8px black;
+  height: 10%;
+  font-family: 'Caveat', cursive;
+  font-size: 1.6rem;
+  color: black;
+}
+
+.SingleRecipeCardKeto {
+  position: absolute;
+  float: left;
+  padding: 0.2% 0% 0% 0%;
+  width: 8%;
+  height: auto;
+}
+
+.RecipeArrow {
+  cursor: pointer;
+  position: fixed;
+  z-index: 91;
+  float: left;
+  padding: 10% 0% 0% 0%;
+  margin-top: 25%;
+  margin-left: 2.5%;
+  width: 15%;
+  height: auto;
+  background-image: url('../../assets/pictures/arrow.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.RecipeCheatSheetButton {
+  cursor: pointer;
+  position: fixed;
+  z-index: 160;
+  float: left;
+  padding: 10% 0% 0% 0%;
+  margin-top: 36%;
+  margin-left: 2%;
+  width: 13%;
+  height: auto;
+  background-image: url('../../assets/pictures/cheat-sheet.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.RecipeCheatSheet {
+}
+
+.RecipeCheatSheet img {
+  border: 2px solid black;
+  box-shadow: 0 4px 8px black;
+  position: fixed;
+  z-index: 160;
+  float: left;
+  width: 66%;
+  height: 60%;
+  left: 17%;
+  top: 19%;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+@media (max-width: 400px) {
+  .RecipeCheatSheet img {
+    width: 96%;
+    height: 50%;
+    left: 1.4%;
+    top: 38%;
+  }
+}
