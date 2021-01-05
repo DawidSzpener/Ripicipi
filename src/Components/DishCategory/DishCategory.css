@@ -11,7 +11,7 @@
   height: auto;
   background-color: rgb(245, 211, 197);
   border: 2px #eee;
-  box-shadow: 0 12px 30px black;
+  box-shadow: 7px 7px 18px black;
   padding: 0px;
   margin: 35px 30px;
   align-content: center;
@@ -41,7 +41,6 @@
   border-top-right-radius: 8px;
   margin-bottom: 2px;
   border: 1px #eee;
-  box-shadow: 0 4px 8px black;
   height: 10%;
   font-family: 'Caveat', cursive;
   font-size: 1.6rem;
