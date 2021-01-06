@@ -10,13 +10,12 @@
   width: 26%;
   height: auto;
   background-color: ivory;
-  border: 2px solid #eee;
+  border-radius: 8px;
   box-shadow: 7px 7px 18px black;
   padding: 0px;
   margin: 35px 30px;
   align-content: center;
   box-sizing: border-box;
-  border-radius: 8px;
   object-fit: cover;
 }
 
@@ -43,12 +42,14 @@
 .SingleRecipeCardTitle {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  margin-bottom: 2px;
-  border: 1px #eee;
+  background-image: url('../../assets/pictures/border2.png');
+  background-repeat: round;
+  background-size: contain;
   height: 10%;
-  font-family: 'Caveat', cursive;
-  font-size: 1.6rem;
-  color: black;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.5rem;
+  color: ivory;
+  padding: 10px 0;
 }
 
 .SingleRecipeCardKeto {
@@ -56,6 +57,7 @@
   float: left;
   padding: 0.2% 0% 0% 0%;
   width: 8%;
+  margin-top: 9px;
   height: auto;
 }
 

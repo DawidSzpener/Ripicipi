@@ -21,8 +21,7 @@
     position: absolute;
     z-index: 500;
     background-image: url('../../../assets/pictures/notebook1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 70%;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 1px black;
