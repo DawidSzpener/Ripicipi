@@ -9,6 +9,7 @@
   box-sizing: border-box;
   border-radius: 8px;
   clear: both;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .Recipe img {
@@ -21,7 +22,6 @@
 }
 
 .RecipeCredentials {
-  font-family: 'Caveat', cursive;
   font-size: 28px;
   width: 60%;
   height: auto;
@@ -61,8 +61,7 @@
 }
 
 .RecipeIngredients {
-  font-family: 'Caveat', cursive;
-  font-size: 31px;
+  font-size: 1.4rem;
   height: auto;
   padding: 6px;
   width: 70%;
@@ -73,8 +72,7 @@
 }
 
 .RecipeInstructions {
-  font-family: 'Caveat', cursive;
-  font-size: 31px;
+  font-size: 1.4rem;
   height: auto;
   padding: 6px;
   width: 70%;
@@ -98,10 +96,11 @@
 }
 
 .RecipeIngredients li {
+  font-size: 20px;
   text-align: left;
   position: relative;
   list-style: none;
-  padding: 0px 5px 0px 36px;
+  padding: 10px 10px 0px 45px;
   margin-top: 0.5em;
   min-height: 2em;  
   border-bottom: 1px solid #ac965c;
@@ -114,7 +113,6 @@
 }
 
 .RecipeIngredients li:before {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   content: counter(li);
   counter-increment: li;
   font-size: 1rem;
@@ -144,7 +142,6 @@
   padding: 10px 10px;
   height: auto;
   border: 1px #eee;
-  font-family: 'Libre Baskerville', serif;
   font-size: 1.6rem;
   color: ivory;
 }
@@ -164,10 +161,11 @@
 }
 
 .RecipeInstructions li {
+  font-size: 20px;
   text-align: left;
   position: relative;
   list-style: none;
-  padding: 0px 5px 10px 36px;
+  padding: 11px 10px 0.5em 45px;
   margin-top: 0.5em;
   min-height: 2em;  
   border-bottom: 1px solid #ac965c;
@@ -180,7 +178,6 @@
 }
 
 .RecipeInstructions li:before {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   content: counter(li);
   counter-increment: li;
   font-size: 1rem;
