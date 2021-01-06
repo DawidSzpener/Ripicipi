@@ -1,0 +1,294 @@
+.AnimatedDropdown {
+  transition: all 0.7s ease;
+  text-align: center;
+  user-select: none;
+  height: 100%;
+  margin: 10px 0;
+  border-bottom: 4px solid transparent;
+  font-size: 24px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+  &:hover {
+    background-color: rgb(245, 211, 197);
+  }
+  &--blue {
+    border: 3px solid rgb(132, 144, 235);
+    &:hover {
+      border: 3px solid rgb(50, 65, 172);
+    }
+  }
+  &--red {
+    border: 3px solid rgb(235, 132, 132);
+    &:hover {
+      border: 3px solid rgb(248, 3, 3);
+    }
+  }
+  &--black {
+    border: 3px solid rgb(1, 5, 3);
+    &:hover {
+      border: 3px solid rgb(1, 5, 3);
+    }
+  }
+  &--green {
+    border: 3px solid rgb(81, 194, 81);
+    &:hover {
+      border: 3px solid rgb(1, 122, 11);
+    }
+  }
+  
+  &--rectangle {
+    height: 100%;
+  }
+  &--circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+  }
+  &__arrow {
+    border: 1em solid transparent;
+    border-bottom: none;
+    border-top-color: rgb(245, 211, 197);
+    content: '';
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    bottom: -10px;
+    margin-top: -70px;
+
+    &--blue{
+      border-top-color: rgb(132, 144, 235);
+    }
+    &--red{
+      border-top-color: rgb(235, 132, 132);
+    }
+    &--black{
+      border-top-color: rgb(245, 211, 197);
+    }
+    &--green{
+      border-top-color: rgb(81, 194, 81);
+    }
+
+    &--circle {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid #ddd;
+      animation: slide-in-blurred 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+      &--blue{
+        border-bottom-color: rgb(132, 144, 235);
+      }
+      &--red{
+        border-bottom-color: rgb(235, 132, 132);
+      }
+      &--black{
+        border-bottom-color: #ddd;
+      }
+      &--green{
+        border-bottom-color: rgb(81, 194, 81);
+      }
+    }
+  }
+  &__header {
+    cursor: pointer;
+    color: black;
+    height: 100%;
+    padding: 34px 10px 0 10px;
+    border-bottom: 4px solid transparent;
+    text-align: center;
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    &--circle {
+      &--title {
+        border-radius: 50%;
+      }
+    }
+    &--rectangle {
+      width: 120px;
+      height: 100%;
+      
+      &--title {
+        width: 100%;
+        display: inline-block;
+      }
+    }
+  }
+
+  &__list {
+    display: inline-block;
+    height: 100%;
+    width: 200px;
+    vertical-align: middle;
+
+    &--circle {
+      margin-left: -65px;
+      margin-top: -5px;
+      width: 240px;
+      animation: slide-in-blurred 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+
+    }
+    &--rectangle {
+      margin-top: 10px;
+      margin-left: -3px;
+      animation: slide-in-blurred-left 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+
+      &--right {
+        margin-top: -15px;
+        margin-left: -77px;
+        animation: slide-in-blurred-right 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+      }
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid rgb(243, 181, 157);
+    border-left: 3px solid rgb(243, 181, 157);
+    border-right: 3px solid rgb(243, 181, 157);
+    height: 45px;
+    background-color: ivory;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s ease;
+    
+    &:first-child {
+      border-top: 3px solid rgb(243, 181, 157);
+      border-radius: 20px 20px 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 20px 20px;
+      border-bottom: 3px solid rgb(243, 181, 157);
+    }
+    &:hover {
+      background-color: rgb(2, 3, 2);
+      color: white;
+    } 
+
+    &--blue {
+      border-bottom: 1px solid rgb(132, 144, 235);
+      border-left: 3px solid rgb(132, 144, 235);
+      border-right: 3px solid rgb(132, 144, 235);
+
+      &:hover {
+        background-color: rgb(50, 65, 172);
+        color: white;
+        border-bottom-color:rgb(3, 32, 248);
+        border-left-color: rgb(3, 32, 248);
+        border-right-color: rgb(3, 32, 248);
+      }
+      &:first-child {
+        border-top: 3px solid rgb(132, 144, 235);
+        &:hover {
+          border-top-color: rgb(3, 32, 248);
+        }
+      }
+      &:last-child {
+        border-bottom: 3px solid rgb(132, 144, 235);
+        &:hover {
+          border-bottom-color: rgb(3, 32, 248);
+        }
+      }
+    } 
+    &--red {
+      border-bottom: 1px solid rgb(235, 132, 132);
+      border-left: 3px solid rgb(235, 132, 132);
+      border-right: 3px solid rgb(235, 132, 132);
+
+      &:hover {
+        background-color: rgb(172, 50, 50);
+        color: white;
+        border-bottom-color:rgb(248, 3, 3);
+        border-left-color: rgb(248, 3, 3);
+        border-right-color: rgb(248, 3, 3);
+      }
+      &:first-child {
+        border-top: 3px solid rgb(235, 132, 132);
+        &:hover {
+          border-top-color: rgb(248, 3, 3);
+        }
+      }
+      &:last-child {
+        border-bottom: 3px solid rgb(235, 132, 132);
+        &:hover {
+          border-bottom-color: rgb(248, 3, 3);
+        }
+      }
+    }   
+    &--green {
+      border-bottom: 1px solid rgb(81, 194, 81);
+      border-left: 3px solid rgb(81, 194, 81);
+      border-right: 3px solid rgb(81, 194, 81);
+
+      &:hover {
+        background-color: rgb(50, 172, 50);
+        color: white;
+        border-bottom-color:rgb(1, 122, 11);
+        border-left-color: rgb(1, 122, 11);
+        border-right-color: rgb(1, 122, 11);
+      }
+      &:first-child {
+        border-top: 3px solid rgb(81, 194, 81);
+        &:hover {
+          border-top-color: rgb(1, 122, 11);
+        }
+      }
+      &:last-child {
+        border-bottom: 3px solid rgb(81, 194, 81);
+        &:hover {
+          border-bottom-color: rgb(1, 122, 11);
+        }
+      }
+    }
+
+    &--black {
+      &:first-child {
+        border-top: 3px solid rgb(243, 181, 157);
+        border-radius: 20px 20px 0 0;
+      }
+      &:last-child {
+        border-radius: 0 0 20px 20px;
+        border-bottom: 3px solid rgb(243, 181, 157);
+      }
+      &:hover {
+        background-color: rgb(243, 181, 157);
+        color: black;
+      } 
+    }
+  }
+}
+
+@keyframes slide-in-blurred {
+  0% {
+    transform: translateY(-50px) scaleY(1) scaleX(0.2);
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-left {
+  0% {
+    transform: translateY(-50px) translateX(-50px) scaleY(1) scaleX(0.2);
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-right {
+  0% {
+    transform: translateY(-50px) translateX(50px)  scaleY(1) scaleX(0.2);
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    opacity: 1;
+  }
+}

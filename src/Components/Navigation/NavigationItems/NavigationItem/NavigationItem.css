@@ -7,6 +7,7 @@
 }
 
 .NavigationItem a {
+  transition: all 0.7s ease;
   color: #8F5C2C;
   text-decoration: none;
   width: 100%;
