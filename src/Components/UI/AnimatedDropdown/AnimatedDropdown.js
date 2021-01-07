@@ -62,7 +62,7 @@ const AnimatedDropdown = (props) => {
         style={{ display: showList ? "block" : "none" }}>
         {list.map(item => (
           <div className={"AnimatedDropdown__item AnimatedDropdown__item--" + theme} key={item.id} onClick={() => selectItem(item)}>
-            <div style={{paddingTop: "12px"}}>{item.value}</div>
+            <div style={{paddingTop: "12px"}}>{item.value[0].toUpperCase() + item.value.slice(1)}</div>
           </div>
         ))}
       </div>
