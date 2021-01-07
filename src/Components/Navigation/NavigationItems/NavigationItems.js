@@ -10,7 +10,7 @@ const navigationItems = () => (
     <AnimatedDropdown shape="rectangle" headerPosition="right" title="Categories" list={[
       {value: "breakfast", id: 1},
       {value: "dinner", id: 2},
-      {value: "dessert", id: 3},
+      {value: "desserts", id: 3},
       {value: "baking", id: 4},
       {value: "sauces", id: 5},
       {value: "salads", id: 6},

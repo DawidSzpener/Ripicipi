@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 
 import './AnimatedDropdown.scss'
 
@@ -15,7 +15,8 @@ const AnimatedDropdown = (props) => {
   function selectItem(item) {
     setSelectedItem(item)
     setShowList(false)
-    props.history.push(`/categories/${item.value}`);
+    props.history.push(`/categories/${item.value}`)
+    window.location.reload()
   }
 
   let theme = "black"
