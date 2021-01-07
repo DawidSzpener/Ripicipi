@@ -5,7 +5,6 @@ import './App.css';
 import Layout from './Components/Layout/Layout'
 import Categories from './Containers/Categories/Categories'
 import DishCategory from './Components/DishCategory/DishCategory'
-import Homescreen from './Containers/WelcomeScreen/WelcomeScreen'
 import AddRecipe from './Containers/AddRecipe/AddRecipe'
 import Approval from './Containers/Approval/Approval'
 
@@ -25,10 +24,9 @@ class App extends Component {
             <Route path='/categories/desserts' render={(props) => (<DishCategory {...props} category="Desserts"/>)} />
             <Route path='/categories/dinner' render={(props) => (<DishCategory {...props} category="Dinner"/>)} />
             <Route path='/categories/breakfast' render={(props) => (<DishCategory {...props} category="Breakfast"/>)} />
-            <Route path='/categories' exact component={Categories} />
+            <Route path='/' exact component={Categories} />
             <Route path='/dawid' exact component={Approval} />
             <Route path='/add' component={AddRecipe} />
-            <Route path='/' exact component={Homescreen} />
           </Switch>
         </Layout>
       </div>

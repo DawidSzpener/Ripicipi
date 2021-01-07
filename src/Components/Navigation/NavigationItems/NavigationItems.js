@@ -5,7 +5,7 @@ import AnimatedDropdown from '../../UI/AnimatedDropdown/AnimatedDropdown'
 
 const navigationItems = () => (
   <ul className='NavigationItems'>
-    <NavigationItem link='/categories'>Recipes</NavigationItem>
+    <NavigationItem link='/'>Recipes</NavigationItem>
     <NavigationItem link='/add'>New Recipe</NavigationItem>
     <AnimatedDropdown shape="rectangle" headerPosition="right" title="Categories" list={[
       {value: "breakfast", id: 1},
