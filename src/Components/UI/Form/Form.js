@@ -31,7 +31,7 @@ const form = (props) => {
     case('select_time'):
 			inputElement = 
 				<Aux>
-					<label>How long?</label>
+					<label for="time">How long?</label>
 					<div style={{paddingTop: '5px'}}></div>
 					<select className='InputElement' name='select_time' {...props}>
 						<option key='15' value='15 minutes'>15 Minutes</option>
@@ -43,7 +43,7 @@ const form = (props) => {
     case('select_difficulty'):
     inputElement = 
         <Aux>
-            <label>How hard?</label>
+            <label for="difficulty">How hard?</label>
             <div style={{paddingTop: '5px'}}></div>
             <select className='InputElement' {...props}>  
                 <option key='easy' value='easy'>easy</option>
@@ -55,7 +55,7 @@ const form = (props) => {
     case('select_keto'):
     inputElement = 
         <Aux>
-            <label>Keto friendly?</label>
+            <label for="keto">Keto friendly?</label>
             <div style={{paddingTop: '5px'}}></div>
             <select className='InputElement' {...props}>  
                 <option key='yes' value={true}>Yes</option>
