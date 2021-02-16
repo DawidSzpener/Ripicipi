@@ -55,7 +55,7 @@ const AnimatedDropdown = (props) => {
   }
 
   return (
-    <div className={classes.join(' ')}>
+    <li className={classes.join(' ')}>
       {header}
       <div
         className={props.shape === "circle" ? 'AnimatedDropdown__list AnimatedDropdown__list--circle' : 'AnimatedDropdown__list AnimatedDropdown__list--rectangle'+ headerPosition}
@@ -66,7 +66,7 @@ const AnimatedDropdown = (props) => {
           </div>
         ))}
       </div>
-    </div>
+    </li>
   )
 }
 
