@@ -10,17 +10,17 @@ class Layout extends Component {
     showSideDrawer: false
   }
 
-  componentDidMount() {
-    axios.get(`/recipes.json`)
-    .then(res => {
-      const data = Object.values(res.data)
-      data.map(category => {
-        Object.values(category).map(recipe => {
-          console.log(recipe.title)
-        })
-      })
-    })
-  }
+  // componentDidMount() {
+  //   axios.get(`/recipes.json`)
+  //   .then(res => {
+  //     const data = Object.values(res.data)
+  //     data.map(category => {
+  //       Object.values(category).map(recipe => {
+  //         console.log(recipe.title)
+  //       })
+  //     })
+  //   })
+  // }
 
   sideDrawerClosedHandler = () => {
     this.setState({ showSideDrawer: false })

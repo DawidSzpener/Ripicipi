@@ -59,10 +59,28 @@ class Approval extends Component {
     this.setState({ displayedRecipe: null })
   }
 
+  getKeyByValue(object, value) {
+    return Object.keys(object).find(key => object[key] === value);
+  }
+
   approveRecipe = (title, category) => {
-    console.log('approved')
-    console.log(title)
-    console.log(category)
+    axios.get(`/recipes/${category}.json`)
+    .then(res => {
+      const dataValues = Object.values(res.data)
+      const data = res.data
+
+      let recipe = dataValues.filter(recipe => (recipe.title === title))
+      recipe.map(r => recipe = r)
+
+      let key = this.getKeyByValue(data, recipe)
+
+      axios.post(`/recipes/${category}/${key}`, {
+        headers:{
+          'Access-Control-Allow-Origin': true,
+        },
+        valid: true
+      })
+    })
   }
 
   removeRecipe = (title, category) => {
