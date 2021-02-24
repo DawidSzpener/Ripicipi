@@ -19,7 +19,6 @@ class Approval extends Component {
     .then(res => {    
       let list = []
       const data = Object.values(res.data)
-      console.log(data)
       const baking = Object.values(data[0])
       const breakfast = Object.values(data[1])
       const Desserts = Object.values(data[2])
@@ -74,9 +73,20 @@ class Approval extends Component {
 
       let key = this.getKeyByValue(data, recipe)
 
+      // axios.get(`/recipes/${category}/${key}`, {
+      //     headers:{
+      //       'Content-Type': null,
+      //       'Access-Control-Allow-Origin': "*",
+      //     },})
+      // .then(res => console.log(res))
+
       axios.post(`/recipes/${category}/${key}`, {
         headers:{
-          'Access-Control-Allow-Origin': true,
+          'Content-Type': null,
+          'Access-Control-Allow-Origin': "*",
+          "Access-Control-Expose-Headers": "Content-Length, X-JSON",
+          'Access-Control-Allow-Methods': 'POST, PUT, PATCH, DELETE',
+          'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token, Authorization, Lang',
         },
         valid: true
       })
