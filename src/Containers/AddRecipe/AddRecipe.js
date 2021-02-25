@@ -49,6 +49,8 @@ class AddRecipe extends Component {
       keto: this.state.recipeForm.keto,
       time: this.state.recipeForm.time,
       difficulty: this.state.recipeForm.difficulty,
+      creatorsName: 'https://i.imgur.com/XeQeCul.png',
+      creatorsPicture: 'https://i.imgur.com/ZRv5rvN.jpg',
       valid: false
     }
 

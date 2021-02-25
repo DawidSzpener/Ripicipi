@@ -34,3 +34,11 @@ $ npm start
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+# TODO
+- search bar
+- creators profile pictures
+- update forms
+- access password 
+- delete, update
+- favourite dishes
