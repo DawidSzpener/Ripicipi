@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+
 import './Approval.css'
+
 import Aux from '../../hoc/Aux'
 import axios from '../../axios-recipes'
 import background from '../../assets/pictures/background8.jpeg'
