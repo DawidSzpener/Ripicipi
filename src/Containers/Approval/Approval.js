@@ -73,23 +73,9 @@ class Approval extends Component {
 
       let key = this.getKeyByValue(data, recipe)
 
-      // axios.get(`/recipes/${category}/${key}`, {
-      //     headers:{
-      //       'Content-Type': null,
-      //       'Access-Control-Allow-Origin': "*",
-      //     },})
-      // .then(res => console.log(res))
+      recipe.valid = true
 
-      axios.post(`/recipes/${category}/${key}`, {
-        headers:{
-          'Content-Type': null,
-          'Access-Control-Allow-Origin': "*",
-          "Access-Control-Expose-Headers": "Content-Length, X-JSON",
-          'Access-Control-Allow-Methods': 'POST, PUT, PATCH, DELETE',
-          'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token, Authorization, Lang',
-        },
-        valid: true
-      })
+      axios.put(`/recipes/${category}/${key}.json`, recipe)
     })
   }
 
