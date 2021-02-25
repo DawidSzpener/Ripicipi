@@ -26,7 +26,6 @@ $ npm start
 * [React](https://reactjs.org/) - The frontend framework
 * [Node](https://nodejs.org/) - The backend environment
 
-
 ## Authors
 
 * **[Dawid Szpener](https://github.com/DawidSzpener)**
@@ -41,4 +40,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - update forms
 - access password 
 - delete, update
+- update class names to BAM
 - favourite dishes
