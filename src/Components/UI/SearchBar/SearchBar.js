@@ -1,16 +1,16 @@
 import React from 'react';
 
-import './SearchBar.css';
+import './SearchBar.scss';
 
-const SearchBar = ({keyword, setKeyword}) => {
+const SearchBar = (props) => {
 
   return (
     <input 
      className="SearchBar__Input"
      key="random1"
-     value={keyword}  
+     value={props.keyword}  
      placeholder={"search recipe"}
-     onChange={(e) => setKeyword(e.target.value)}
+     onChange={(e) => props.setKeyword(e.target.value)}
     />
   );
 }

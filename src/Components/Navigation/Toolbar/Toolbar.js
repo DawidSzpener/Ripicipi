@@ -42,6 +42,7 @@ const Toolbar = (props) => {
     const filtered = defaultRecipeList.filter(recipe => {
       return recipe.title.toLowerCase().includes(input.toLowerCase())
     })
+    console.log(recipeList)
     setInput(input);
     setRecipeList(filtered)
  }
@@ -50,9 +51,10 @@ const Toolbar = (props) => {
     <Aux>
       <div className='Toolbar'>
         <div className='Ricipici' onClick={goToHomepage}></div>
-        <SearchBar 
-          input={input} 
-          onChange={updateInput}/>
+        <SearchBar
+          keyword={input}
+          setKeyword={updateInput}
+        />
         <NavigationItems />
         <div className='Menu' onClick={props.clicked}>MENU</div>
       </div>

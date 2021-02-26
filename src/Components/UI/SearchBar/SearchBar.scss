@@ -1,0 +1,11 @@
+.SearchBar__Input {
+  width: 20rem;
+  background: rgb(245, 211, 197);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+
+  &:focus {
+    outline: none;
+  }
+}
