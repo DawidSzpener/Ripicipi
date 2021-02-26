@@ -17,7 +17,7 @@ class Recipe extends Component {
     title: this.props.title,
     background: this.props.picture,
     ingredients: this.props.ingredients,
-    preparation: this.props.preparatio,
+    preparation: this.props.preparation,
     keto: this.props.keto,
     time: this.props.time,
     difficulty: this.props.difficulty,
