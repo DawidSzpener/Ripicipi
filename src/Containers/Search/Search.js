@@ -1,25 +1,23 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 
-import './Approval.css'
+import './Search.scss'
 
 import Aux from '../../hoc/Aux'
 import axios from '../../axios-recipes'
 import background from '../../assets/pictures/background8.jpeg'
 import Recipe from '../../Components/Recipe/Recipe'
 import KetoPic from '../../assets/pictures/keto1.jpeg'
+import SearchBar from '../../Components/UI/SearchBar/SearchBar'
 
-class Approval extends Component {
-  state = {
-      recipeList: [],
-      displayedRecipe: null,
-      showArrow: false,
-  }
+const Search = (props) => {
 
+  const [input, setInput] = useState('');
+  const [defaultRecipeList, setDefaultRecipeList] = useState();
+  const [recipeList, setRecipeList] = useState();
 
-  componentDidMount() {  
+  useEffect( () => {
     axios.get('/recipes.json')
     .then(res => {    
-      let list = []
       const data = Object.values(res.data)
       const baking = Object.values(data[0])
       const breakfast = Object.values(data[1])
@@ -31,63 +29,20 @@ class Approval extends Component {
       const Sauces = Object.values(data[7])
       const Snacks = Object.values(data[8])
       const allRecipes = [...baking, ...breakfast, ...Desserts, ...Dinner, ...Liquids, ...Pizza, ...Salads, ...Sauces, ...Snacks]
-      const filteredData = allRecipes.filter(recipe => recipe.valid === false)
-      filteredData.map(recipe => {
-        return (
-          list.push(
-          <Recipe 
-            key={recipe.title}
-            title={recipe.title}
-            picture={recipe.background}
-            ingredients={Object.values(recipe.ingredients.map(ing => ing.ingredient))}
-            preparation={Object.values(recipe.preparations.map(prep => prep.preparation))}
-            category={recipe.category}
-            difficulty={recipe.difficulty}
-            keto={recipe.keto}
-            time={recipe.time}
-          />)
-        )
-      })
+      const filteredData = allRecipes.filter(recipe => recipe.valid === true)
 
-      this.setState({recipeList: list})
+      setDefaultRecipeList(filteredData)
     })
-    .catch (err => {
-      console.log(err)
+  },[]);
+
+  const updateInput = async (input) => {
+    const filtered = defaultRecipeList.filter(recipe => {
+      return recipe.title.toLowerCase().includes(input.toLowerCase())
     })
+    console.log(recipeList)
+    setInput(input);
+    setRecipeList(filtered)
   }
-
-  showRecipeList = () => {
-    this.setState({ displayedRecipe: null })
-  }
-
-  getKeyByValue(object, value) {
-    return Object.keys(object).find(key => object[key] === value);
-  }
-
-  approveRecipe = (title, category) => {
-    axios.get(`/recipes/${category}.json`)
-    .then(res => {
-      const dataValues = Object.values(res.data)
-      const data = res.data
-
-      let recipe = dataValues.filter(recipe => (recipe.title === title))
-      recipe.map(r => recipe = r)
-
-      let key = this.getKeyByValue(data, recipe)
-
-      recipe.valid = true
-
-      axios.put(`/recipes/${category}/${key}.json`, recipe)
-    })
-  }
-
-  removeRecipe = (title, category) => {
-    console.log('removed')
-    console.log(title)
-    console.log(category)
-  }
-
-  render() {
 
     let arrow = null
     if(this.state.showArrow) {
@@ -153,11 +108,14 @@ class Approval extends Component {
           <img src={background} alt="bg" className="bg"></img>
         </div>
         <div className='SingleBreakfast'>
+          <SearchBar 
+            keyword={input}
+            setKeyword={updateInput}
+          />
           {shownRecipes}
         </div>
       </div>
     )
   }
-}
 
-export default Approval
+export default Search

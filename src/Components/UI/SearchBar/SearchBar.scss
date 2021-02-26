@@ -5,6 +5,13 @@
   padding: 0.5rem;
   border-radius: 10px;
 
+  &::placeholder {
+    color: ivory;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.1rem;
+  }
+
   &:focus {
     outline: none;
   }
