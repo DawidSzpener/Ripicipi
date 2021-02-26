@@ -13,7 +13,11 @@ const Search = (props) => {
 
   const [input, setInput] = useState('');
   const [defaultRecipeList, setDefaultRecipeList] = useState();
-  const [recipeList, setRecipeList] = useState();
+  const [recipeList, setRecipeList] = useState([]);
+  const [showArrow, setShowArrow] = useState();
+  const [displayedRecipe, setDisplayedRecipe] = useState();
+  const [showSheet, setShowSheet] = useState();
+
 
   useEffect( () => {
     axios.get('/recipes.json')
@@ -39,24 +43,23 @@ const Search = (props) => {
     const filtered = defaultRecipeList.filter(recipe => {
       return recipe.title.toLowerCase().includes(input.toLowerCase())
     })
-    console.log(recipeList)
     setInput(input);
     setRecipeList(filtered)
   }
 
     let arrow = null
-    if(this.state.showArrow) {
+    if(showArrow) {
       arrow = 
       <Aux>
-        <div className='RecipeArrow' onClick={() => this.setState ({ displayedRecipe: null, showArrow: false, showSheet: false })}></div>
+        <div className='RecipeArrow' onClick={() => {setShowArrow(false); setDisplayedRecipe(null); setShowSheet(false)}}></div>
       </Aux>
     }
 
   let recipesAsCards = null
 
-  if(this.state.recipeList !== []) {
+  if(recipeList !== []) {
     recipesAsCards = 
-    this.state.recipeList.map(recipe => {
+    recipeList.map(recipe => {
       let title = recipe.props.title
       let keto = null
       if(recipe.props.keto) {
@@ -66,7 +69,7 @@ const Search = (props) => {
         <div className='ApproveCard'>
           <button onClick={() => this.approveRecipe(recipe.props.title, recipe.props.category)} className='SingleRecipeCardButtonApprove'>Approve</button>
           <button onClick={() => this.removeRecipe(recipe.props.title, recipe.props.category)}  className='SingleRecipeCardButtonRemove'>Remove</button>
-          <div className='SingleRecipeCardApprove' key={recipe.props.title} onClick={() => this.setState({displayedRecipe: recipe.props.title, showArrow: true})}>
+          <div className='SingleRecipeCardApprove' key={recipe.props.title} onClick={() => {setDisplayedRecipe(recipe.props.title); setShowArrow(true)}}>
             <div className='SingleRecipeCardTitle'>{title}
               <div className='SingleRecipeCardKeto'>
                 {keto}
@@ -81,11 +84,11 @@ const Search = (props) => {
     
   let shownRecipes = recipesAsCards
 
-  if (this.state.displayedRecipe === null) {
+  if (displayedRecipe === null) {
     shownRecipes = recipesAsCards }
 
-  this.state.recipeList.map(recipe => {
-    if (recipe.props.title === this.state.displayedRecipe) {
+  recipeList.map(recipe => {
+    if (recipe.props.title === displayedRecipe) {
       shownRecipes = 
       <Recipe
         showList={() => this.showRecipeList()}

@@ -7,6 +7,7 @@ import Categories from './Containers/Categories/Categories'
 import DishCategory from './Components/DishCategory/DishCategory'
 import AddRecipe from './Containers/AddRecipe/AddRecipe'
 import Approval from './Containers/Approval/Approval'
+import Search from './Containers/Search/Search'
 
 class App extends Component {
 
@@ -26,6 +27,7 @@ class App extends Component {
             <Route path='/categories/breakfast' render={(props) => (<DishCategory {...props} category="Breakfast"/>)} />
             <Route path='/' exact component={Categories} />
             <Route path='/dawid' exact component={Approval} />
+            <Route path='/search' exact component={Search} />
             <Route path='/add' component={AddRecipe} />
           </Switch>
         </Layout>
