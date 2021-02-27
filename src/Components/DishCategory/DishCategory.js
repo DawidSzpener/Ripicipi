@@ -93,8 +93,7 @@ class DishCategory extends Component {
     this.state.recipeList.map(recipe => {
       if (recipe.props.title === this.state.displayedRecipe) {
         if (this.state.displayedRecipe.creatorsPicture !== null) {
-          console.log(recipe.props)
-        creator = <Identifier 
+          creator = <Identifier 
           creatorsPicture={recipe.props.creatorsPicture}
           creatorsName={recipe.props.creatorsName}/>
         }
@@ -138,9 +137,9 @@ class DishCategory extends Component {
         <div className="bg-color">
           <img src={background} alt="bg" className="bg"></img>
         </div>
-        {creator}
-        {arrow}
-        {sheet}
+          {creator}
+          {arrow}
+          {sheet}
         <div className="SingleBreakfast">
           {shownRecipes}
         </div>

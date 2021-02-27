@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
 import './Search.scss'
+import cheatSheet from '../../assets/pictures/conversion-chart.jpg'
+import Identifier from '../../Components/UI/Identifier/Identifier'
 
 import Aux from '../../hoc/Aux'
 import axios from '../../axios-recipes'
@@ -8,6 +10,7 @@ import background from '../../assets/pictures/background8.jpeg'
 import Recipe from '../../Components/Recipe/Recipe'
 import KetoPic from '../../assets/pictures/keto1.jpeg'
 import SearchBar from '../../Components/UI/SearchBar/SearchBar'
+import Backdrop from '../../Components/UI/Backdrop/Backdrop'
 
 const Search = () => {
 
@@ -47,13 +50,29 @@ const Search = () => {
     setRecipeList(filtered)
   }
 
-    let arrow = null
-    if(showArrow) {
-      arrow = 
-      <Aux>
-        <div className='RecipeArrow' onClick={() => {setShowArrow(false); setDisplayedRecipe(null); setShowSheet(false)}}></div>
-      </Aux>
-    }
+  const hideCheatSheet = () => {
+    setShowSheet(false)
+  }
+
+  let arrow = null
+  if(showArrow) {
+    arrow = 
+    <Aux>
+      <div className='RecipeArrow' onClick={() => {setShowArrow(false); setDisplayedRecipe(null); setShowSheet(false)}}></div>
+      <div className='RecipeCheatSheetButton' onClick={() => setShowSheet(!showSheet)}></div>
+    </Aux>
+  }
+
+  let sheet = null 
+  if(showSheet) {
+    sheet = 
+    <Aux>
+      <Backdrop show={true} clicked={() => hideCheatSheet()}/>
+      <div className='RecipeCheatSheet'>
+        <img alt='Error' src={cheatSheet}/>
+      </div>
+    </Aux>
+  }
 
   let recipesAsCards = defaultRecipeList
 
@@ -81,6 +100,7 @@ const Search = () => {
   }
     
   let shownRecipes = recipesAsCards
+  let creator = null
 
   if (displayedRecipe === null) {
     shownRecipes = recipesAsCards }
@@ -89,6 +109,12 @@ const Search = () => {
     if (recipe.title === displayedRecipe) {
       let preps = recipe.preparations.map(prep => Object.values(prep))
       let ings = recipe.ingredients.map(prep => Object.values(prep))
+
+      if (displayedRecipe.creatorsPicture !== null) {
+        creator = <Identifier 
+        creatorsPicture={recipe.creatorsPicture}
+        creatorsName={recipe.creatorsName}/>
+      }
 
       shownRecipes = 
       <Recipe
@@ -101,6 +127,8 @@ const Search = () => {
         picture={recipe.background}
         ingredients={[].concat.apply([], ings)}
         preparation={[].concat.apply([], preps)}
+        creatorsName={recipe.creatorsName}
+        creatorsPicture={recipe.creatorsPicture}
       />
     } 
     return null
@@ -109,7 +137,9 @@ const Search = () => {
     return  (
       <div>
         <div className="bg-color">
+          {creator}
           {arrow}
+          {sheet}
           <img src={background} alt="bg" className="bg"></img>
         </div>
         <div className='SingleBreakfast'>
