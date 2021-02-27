@@ -131,6 +131,9 @@ class Approval extends Component {
 
   this.state.recipeList.map(recipe => {
     if (recipe.props.title === this.state.displayedRecipe) {
+
+      window.scrollTo(0, 0);
+
       shownRecipes = 
       <Recipe
         showList={() => this.showRecipeList()}

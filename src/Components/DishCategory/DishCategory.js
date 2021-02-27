@@ -97,6 +97,9 @@ class DishCategory extends Component {
           creatorsPicture={recipe.props.creatorsPicture}
           creatorsName={recipe.props.creatorsName}/>
         }
+
+        window.scrollTo(0, 0);
+
         shownRecipes = 
         <Recipe
           showList={() => this.showRecipeList()}

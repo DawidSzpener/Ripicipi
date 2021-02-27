@@ -127,6 +127,8 @@ const Search = () => {
 
       bar = null
 
+      window.scrollTo(0, 0);
+
       shownRecipes = 
       <Recipe
         showList={() => this.showRecipeList()}
