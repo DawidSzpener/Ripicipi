@@ -20,7 +20,7 @@ const Search = () => {
   const [showArrow, setShowArrow] = useState();
   const [displayedRecipe, setDisplayedRecipe] = useState();
   const [showSheet, setShowSheet] = useState();
-
+  const [showBar, setShowBar] = useState(true);
 
   useEffect( () => {
     axios.get('/recipes.json')
@@ -58,7 +58,7 @@ const Search = () => {
   if(showArrow) {
     arrow = 
     <Aux>
-      <div className='RecipeArrow' onClick={() => {setShowArrow(false); setDisplayedRecipe(null); setShowSheet(false)}}></div>
+      <div className='RecipeArrow' onClick={() => {setShowArrow(false); setDisplayedRecipe(null); setShowSheet(false); setShowBar(true)}}></div>
       <div className='RecipeCheatSheetButton' onClick={() => setShowSheet(!showSheet)}></div>
     </Aux>
   }
@@ -101,6 +101,15 @@ const Search = () => {
     
   let shownRecipes = recipesAsCards
   let creator = null
+  let bar = null
+
+  if(showBar) {
+    bar =
+    <SearchBar 
+      keyword={input}
+      setKeyword={updateInput}
+    />
+  }
 
   if (displayedRecipe === null) {
     shownRecipes = recipesAsCards }
@@ -115,6 +124,8 @@ const Search = () => {
         creatorsPicture={recipe.creatorsPicture}
         creatorsName={recipe.creatorsName}/>
       }
+
+      bar = null
 
       shownRecipes = 
       <Recipe
@@ -143,10 +154,7 @@ const Search = () => {
           <img src={background} alt="bg" className="bg"></img>
         </div>
         <div className='SingleBreakfast'>
-          <SearchBar 
-            keyword={input}
-            setKeyword={updateInput}
-          />
+          {bar}
           {shownRecipes}
         </div>
       </div>

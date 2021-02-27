@@ -1,15 +1,22 @@
 .SearchBar__Input {
-  width: 20rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  width: 30rem;
+  height: 2.4rem;
   background: rgb(245, 211, 197);
   border: none;
   padding: 0.5rem;
   border-radius: 10px;
+  font-size: 1.7rem;
+  text-align: center;
 
   &::placeholder {
     color: ivory;
     text-align: center;
     font-weight: 900;
-    font-size: 1.1rem;
+    font-size: 1.7rem;
   }
 
   &:focus {

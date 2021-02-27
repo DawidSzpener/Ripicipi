@@ -1,10 +1,14 @@
 import React from 'react'
-import './NavigationItems.css'
+
+import './NavigationItems.scss'
+import magnifier from '../../../assets/pictures/magnifier.png'
+
 import NavigationItem from './NavigationItem/NavigationItem'
 import AnimatedDropdown from '../../UI/AnimatedDropdown/AnimatedDropdown'
 
 const navigationItems = () => (
   <ul className='NavigationItems'>
+    <NavigationItem link='/search'><img className="Magnifier" alt="magnifier" src={magnifier}/></NavigationItem>
     <NavigationItem link='/'>Recipes</NavigationItem>
     <NavigationItem link='/add'>New Recipe</NavigationItem>
     <AnimatedDropdown shape="rectangle" headerPosition="right" title="Categories" list={[

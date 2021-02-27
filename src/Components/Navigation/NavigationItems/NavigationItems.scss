@@ -8,6 +8,11 @@
   height: 100%;
 }
 
+.Magnifier {
+  margin-top: -10px;
+  width: 50px;
+}
+
 @media (min-width: 500px) {
   .NavigationItems {
     flex-flow: row;
