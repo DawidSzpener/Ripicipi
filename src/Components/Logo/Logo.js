@@ -1,14 +1,15 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
+
+import './Logo.css'
 
 import openBook from '../../assets/pictures/openbook.png'
 import closedBook from '../../assets/pictures/closedbook.png'
 import writingBook from '../../assets/pictures/writingbook.png'
-import { withRouter } from 'react-router-dom'
-import './Logo.css'
 
 const logo = (props) => {
   const goToHomepage = () => {
-    props.history.push('/')
+    props.history.push('/dawid')
   }
 
   let picture = null

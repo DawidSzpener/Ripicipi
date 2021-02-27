@@ -9,7 +9,7 @@ import NavigationItems from '../NavigationItems/NavigationItems'
 const Toolbar = (props) => {
 
   const goToHomepage = () => {
-    props.history.push('/')
+    props.history.push('/dawid')
   }
 
   return (

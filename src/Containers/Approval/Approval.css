@@ -35,11 +35,9 @@
   width: 100%;
   height: auto;
   background-color: rgb(245, 211, 197);
-  border: 2px #eee;
-  box-shadow: 0 12px 30px black;
+  border: 1px solid;
   padding: 0px;
   align-content: center;
   box-sizing: border-box;
-  border-radius: 8px;
   object-fit: cover;
 }
