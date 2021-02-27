@@ -1,25 +1,43 @@
 .SingleRecipeCardButtonApprove {
-  border-radius: 0.5em;
-  margin: 1px 5.5px;
   padding: 6px 10px 4px 10px;
   background-color: green;
   color: white;
   font-family: 'Special Elite', cursive;
   font-size: 1.1rem;
   float: left;
-  width: 40%;
+  width: 50%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: rgb(1, 158, 1);
+  }
 }
 
 .SingleRecipeCardButtonRemove {
-  border-radius: 0.5em;
-  margin: 1px 5.5px;
   padding: 6px 10px 4px 10px;
   background-color: black;
   color: white;
   font-family: 'Special Elite', cursive;
   font-size: 1.1rem;
   float: right;
-  width: 40%;
+  width: 50%;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 3px solid black;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color:rgb(49, 49, 49);
+    border-top: 1px solid rgb(49, 49, 49);
+    border-left: 1px solid rgb(49, 49, 49);
+    border-bottom: 3px solid rgb(49, 49, 49);
+  }
 }
 
 .ApproveCard {

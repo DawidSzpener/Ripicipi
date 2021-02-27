@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './Approval.css'
+import './Approval.scss'
 
 import Aux from '../../hoc/Aux'
 import axios from '../../axios-recipes'
