@@ -21,12 +21,13 @@
   display: block;
   width: 100%;
   box-sizing: border-box;
-}
 
-.InputElement:focus {
-	border-color: #aaa;
-	box-shadow: 0 0 1px 3px rgb(7, 7, 7);
-	box-shadow: 0 0 0 3px -moz-mac-focusring;
-	color: #222;
-	outline: none;
+  &:focus {
+    outline: none;
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px rgb(7, 7, 7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222;
+    outline: none;
+  }
 }

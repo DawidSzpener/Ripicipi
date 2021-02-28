@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import './Approval.scss'
 
@@ -88,6 +89,10 @@ class Approval extends Component {
 
   render() {
 
+    if(this.props.pass !== 'gandzialf1') {
+      this.props.history.push('/')
+    }
+
     let arrow = null
     if(this.state.showArrow) {
       arrow = 
@@ -161,4 +166,10 @@ class Approval extends Component {
   }
 }
 
-export default Approval
+const mapStateToProps = state => {
+  return {
+    pass: state.password
+  }
+}
+
+export default connect(mapStateToProps)(Approval)

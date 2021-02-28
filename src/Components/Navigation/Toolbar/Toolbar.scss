@@ -38,10 +38,44 @@
   width: 286px;
   cursor: pointer;
   background-size: cover;
+  outline: none;
+  user-select: none;
+
+  &:focus {
+    outline: none;
+    user-select: none;
+  }
 }
 
 .Menu {
   color: black;
+}
+
+.Input__password {
+  position: absolute;
+  left: 320px;
+  top: 16px;
+  width: 300px;
+  height: 50px;
+  z-index: 100;
+  outline: none;
+  user-select: none;
+
+  &:focus {
+    outline: none;
+    user-select: none;
+  }
+}
+
+.Warning {
+  position: absolute;
+  left: 320px;
+  top: 14px;
+  width: 200px;
+  height: 50px;
+  z-index: 100;
+  outline: none;
+  user-select: none;
 }
 
 @media (min-width: 499px) {

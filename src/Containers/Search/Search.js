@@ -12,7 +12,7 @@ import KetoPic from '../../assets/pictures/keto1.jpeg'
 import SearchBar from '../../Components/UI/SearchBar/SearchBar'
 import Backdrop from '../../Components/UI/Backdrop/Backdrop'
 
-const Search = () => {
+const Search = (props) => {
 
   const [input, setInput] = useState('');
   const [defaultRecipeList, setDefaultRecipeList] = useState();
@@ -147,20 +147,20 @@ const Search = () => {
     return null
   })
 
-    return  (
-      <div>
-        <div className="bg-color">
-          {creator}
-          {arrow}
-          {sheet}
-          <img src={background} alt="bg" className="bg"></img>
-        </div>
-        <div className='SingleBreakfast'>
-          {bar}
-          {shownRecipes}
-        </div>
+  return  (
+    <div>
+      <div className="bg-color">
+        {creator}
+        {arrow}
+        {sheet}
+        <img src={background} alt="bg" className="bg"></img>
       </div>
-    )
-  }
+      <div className='SingleBreakfast'>
+        {bar}
+        {shownRecipes}
+      </div>
+    </div>
+  )
+}
 
 export default Search
