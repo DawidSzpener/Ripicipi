@@ -35,7 +35,6 @@ $ npm start
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 # TODO
-- access password (click on logo to put in passsword, if no passowrd is entered or is wrong you will not be authorized to access special routes and it will redirect you back to homepage)
 - creators profile pictures (add new form field where you choose the creator, default is guest)
 - delete, update (update or delete a recipe in a special authorized route)
 - update class names to BAM (use sass and bam instead of normal css)
