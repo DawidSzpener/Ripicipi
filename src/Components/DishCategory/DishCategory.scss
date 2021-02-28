@@ -9,17 +9,15 @@
   display: inline-block;
   width: 26%;
   height: auto;
-  background-color: ivory;
   padding: 0px;
   margin: 35px 30px;
   align-content: center;
   box-sizing: border-box;
   object-fit: cover;
-  border: 1px solid;
-}
 
-.SingleRecipeCard img {
-  border-radius: 0 0 8px 8px;
+  &:hover {
+    font-weight: 900;
+  }
 }
 
 #keto-card{
@@ -31,30 +29,27 @@
 
 #card-bg{
   object-fit: cover;
-  width:  100%;
+  width: 100%;
   height: 300px;
   max-width: 100%;
   max-height: auto;
   display: block;
+  border: 1px solid black;
 }
 
 .SingleRecipeCardTitle {
-  background-image: url('../../assets/pictures/border2.png');
-  background-repeat: round;
-  background-size: contain;
-  height: 10%;
   font-family: 'Libre Baskerville', serif;
-  font-size: 1.5rem;
-  color: ivory;
-  padding: 10px 0;
+  text-align: left;
+  font-size: 0.9rem;
+  padding: 5px 0;
 }
 
 .SingleRecipeCardKeto {
   position: absolute;
   float: left;
-  padding: 0.2% 0% 0% 0%;
+  padding: 0.2% 0% 0% 0.1%;
   width: 8%;
-  margin-top: 9px;
+  margin-top: 4.5px;
   height: auto;
 }
 

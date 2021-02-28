@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './DishCategory.css'
+import './DishCategory.scss'
 import KetoPic from '../../assets/pictures/keto1.jpeg'
 import cheatSheet from '../../assets/pictures/conversion-chart.jpg'
 import background from '../../assets/pictures/background8.jpeg'
@@ -67,7 +67,7 @@ class DishCategory extends Component {
 
     const recipesAsCards = 
       this.state.recipeList.map(recipe => {
-        let title = recipe.props.title.toUpperCase()
+        let title = recipe.props.title.charAt(0).toUpperCase() + recipe.props.title.toLowerCase().slice(1);
         let keto = null
         if(recipe.props.keto) {
           keto = <img src={KetoPic} id='keto-card' alt="bg"/>

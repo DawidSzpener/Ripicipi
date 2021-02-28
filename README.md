@@ -41,3 +41,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - delete, update
 - update class names to BAM
 - favourite dishes
+
+rolada z kurczaka i pesto
+budyn kajmakowy

@@ -79,7 +79,7 @@ const Search = () => {
   if(recipeList !== []) {
     recipesAsCards = 
     recipeList.map(recipe => {
-      let title = recipe.title
+      let title = recipe.title.charAt(0).toUpperCase() + recipe.title.toLowerCase().slice(1);
       let keto = null
       if(recipe.keto) {
         keto = <img src={KetoPic} id='keto-card' alt="bg"/>

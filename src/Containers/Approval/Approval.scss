@@ -52,10 +52,12 @@
   display: inline-block;
   width: 100%;
   height: auto;
-  background-color: rgb(245, 211, 197);
-  border: 1px solid;
   padding: 0px;
   align-content: center;
   box-sizing: border-box;
   object-fit: cover;
+
+  &:hover {
+    font-weight: 900;
+  }
 }
