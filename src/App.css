@@ -1,6 +1,10 @@
 .App {
   text-align: center;
-  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+  font-family: 'Average,serif';
+  font-size: 17px;
+  line-height: 1.42857143;
+  color: #776241;
 }
 
 img.bg {

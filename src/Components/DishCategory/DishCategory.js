@@ -10,6 +10,7 @@ import Aux from '../../hoc/Aux'
 import axios from '../../axios-recipes'
 import Identifier from '../UI/Identifier/Identifier'
 import Backdrop from '../UI/Backdrop/Backdrop'
+import CategoryHeader from './CategoryHeader/CategoryHeader'
 
 
 class DishCategory extends Component {
@@ -134,7 +135,7 @@ class DishCategory extends Component {
         <div className='RecipeCheatSheetButton' onClick={() => this.setState ({ showSheet: !this.state.showSheet })}></div>
       </Aux>
     }
-
+    console.log(this.props.category)
     return (
       <Aux>
         <div className="bg-color">
@@ -144,6 +145,7 @@ class DishCategory extends Component {
           {arrow}
           {sheet}
         <div className="SingleBreakfast">
+          <CategoryHeader category={this.props.category}/>
           {shownRecipes}
         </div>
       </Aux>
