@@ -1,10 +1,9 @@
 
 # Ricipici
 
-Check out the deployed app [here](www.google.com)
+Check out the deployed app [here](https://ricipici.herokuapp.com/)
 
 Ricipici - A food website that contains a collection of recipes, as well as instructional guides.
-
 
 ## Getting Started
 
@@ -25,6 +24,10 @@ $ npm start
 * [Firebase](https://firebase.google.com/docs/database) - The database provider
 * [React](https://reactjs.org/) - The frontend framework
 * [Node](https://nodejs.org/) - The backend environment
+* [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
+* [Redux](https://redux.js.org/) - A Predictable State Container for JS Apps
+* [Sass](https://sass-lang.com/) - Sass is the most mature, stable, and powerful professional grade CSS extension language in the world
+* [Heroku](https://www.heroku.com/) - My app host
 
 ## Authors
 
@@ -37,11 +40,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 # TODO
 - add lazyloading to the app
 - add infinite scrollbar to the app
-- fix categories on navbar, categories should appear with animation
-- creators profile pictures (add new form field where you choose the creator, default is guest)
+- creator's profile picture (add new form field where you choose the creator, default is guest)
 - delete, update (update or delete a recipe in a special authorized route)
+- fix categories on navbar, categories should appear with animation
 - update class names to BAM (use sass and bam instead of normal css)
 - favourite dishes (new container where you create your own profile with favourite dishes you submitted)
-
-rolada z kurczaka i pesto
-budyn kajmakowy
