@@ -35,6 +35,8 @@ $ npm start
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 # TODO
+- add lazyloading to the app
+- add infinite scrollbar to the app
 - fix categories on navbar, categories should appear with animation
 - creators profile pictures (add new form field where you choose the creator, default is guest)
 - delete, update (update or delete a recipe in a special authorized route)
