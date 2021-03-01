@@ -91,6 +91,7 @@
       }
     }
   }
+
   &__header {
     cursor: pointer;
     color: black;
@@ -100,6 +101,11 @@
     text-align: center;
     font-size: 24px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    &:hover + .AnimatedDropdown__list {
+      transition: all 0.7s ease 0s;
+      visibility: visible;
+    }
 
     &--circle {
       &--title {
@@ -118,10 +124,15 @@
   }
 
   &__list {
-    display: inline-block;
     height: 100%;
     width: 200px;
     vertical-align: middle;
+    transition: all 0s ease 0.5s;
+    visibility: hidden;
+
+    &:hover {
+      visibility: visible;
+    }
 
     &--circle {
       margin-left: -65px;
