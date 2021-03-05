@@ -26,7 +26,7 @@ $ npm start
 * [Node](https://nodejs.org/) - The backend environment
 * [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
 * [Redux](https://redux.js.org/) - A Predictable State Container for JS Apps
-* [Sass](https://sass-lang.com/) - Sass is the most mature, stable, and powerful professional grade CSS extension language in the world
+* [Sass](https://sass-lang.com/) - CSS extension
 * [Heroku](https://www.heroku.com/) - My app host
 
 ## Authors
@@ -42,6 +42,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - add infinite scrollbar to the app
 - creator's profile picture (add new form field where you choose the creator, default is guest)
 - delete, update (update or delete a recipe in a special authorized route)
-- fix categories on navbar, categories should appear with animation
+- fix categories on navbar, categories should appear with an animation
 - update class names to BAM (use sass and bam instead of normal css)
 - favourite dishes (new container where you create your own profile with favourite dishes you submitted)
