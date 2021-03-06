@@ -196,3 +196,63 @@
   background-color: #06b05b;
   color: #fff;
 }
+
+@media (max-width: 400px) {
+  .RecipeTitle {
+    font-size: 1.2rem;
+  }
+  .ketoContainer {
+    width: 33.3%;
+    height: 20px;
+  }
+  .timeContainer {
+    width: 33.3%;
+    height: 20px;
+  }
+  .difficultyContainer {
+    width: 33.3%;
+    height: 20px;
+  }
+  .SingleRecipeTitle {
+    background-repeat: round;
+    background-size: contain;
+    margin: 0 0 -1px 0;
+    padding: 10px 10px;
+    height: auto;
+
+    &__img {
+      width: 100%;
+    }
+  }
+  .RecipeIngredients ol {
+    padding-inline-start: 0px;
+    width: 120%;
+    margin-left: -15px;
+  }
+  .RecipeIngredients li:before {
+    height: 0.6rem;
+    width: 0.6rem;
+    line-height: 0.7rem;
+    font-size: 0.9rem;
+  }
+  .RecipeIngredients li {
+    padding: 5px 10px 0px 33px;
+    font-size: 15px;
+  }
+
+  .RecipeInstructions ol {
+    padding-inline-start: 0px;
+    width: 120%;
+    margin-left: -15px;
+  }
+  .RecipeInstructions li:before {
+    height: 0.6rem;
+    width: 0.6rem;
+    line-height: 0.7rem;
+    font-size: 0.9rem;
+  }
+  .RecipeInstructions li {
+    padding: 5px 10px 0px 33px;
+    font-size: 15px;
+  }
+}

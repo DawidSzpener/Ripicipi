@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import './Recipe.css'
+
+import './Recipe.scss'
+
 import Aux from '../../hoc/Aux'
 import Time15 from '../../assets/pictures/15minutes.png'
 import Time30 from '../../assets/pictures/30minutes.png'
@@ -97,11 +99,11 @@ class Recipe extends Component {
           {difficulty}
         </div>
         <div className='RecipeIngredients'>
-          <div className='SingleRecipeTitle'><img src={ingTitle} alt='error'/></div>
+          <div className='SingleRecipeTitle'><img className="SingleRecipeTitle__img" src={ingTitle} alt='error'/></div>
           {ingredients}
         </div>
         <div className='RecipeInstructions'>
-        <div className='SingleRecipeTitle'><img src={metTitle} alt='error'/></div>
+        <div className='SingleRecipeTitle'><img className="SingleRecipeTitle__img" src={metTitle} alt='error'/></div>
           {preparations}
         </div>
       </Aux>

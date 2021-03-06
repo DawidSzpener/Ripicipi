@@ -21,4 +21,10 @@
   margin: auto;
   width: 40%;
   margin-right: 3%;
+}
+
+@media (max-width: 400px) {
+  .Identifier {
+    display: none;
   }
+}

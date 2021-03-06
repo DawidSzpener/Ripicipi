@@ -49,6 +49,7 @@
 
 .Menu {
   color: black;
+  margin: -5px 20px 0 0;
 }
 
 .Input__password {
@@ -84,5 +85,16 @@
   }
   .Menu {
     display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .Ricipici {
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    margin-left: 1%;
+    height: 86px;
+    width: 186px;
   }
 }
