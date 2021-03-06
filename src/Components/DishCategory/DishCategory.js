@@ -135,7 +135,6 @@ class DishCategory extends Component {
         <div className='RecipeCheatSheetButton' onClick={() => this.setState ({ showSheet: !this.state.showSheet })}></div>
       </Aux>
     }
-    console.log(this.props.category)
     return (
       <Aux>
         <div className="bg-color">

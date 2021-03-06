@@ -3,7 +3,7 @@ import Aux from '../../../hoc/Aux'
 import Backdrop from '../Backdrop/Backdrop'
 import {Animated} from "react-animated-css";
 import Input from '../Form/Form'
-import './Modal.css'
+import './Modal.scss'
 
 class Modal extends Component {
 
@@ -22,9 +22,10 @@ render () {
             <Input inputtype='select_time' id="time" onChange={this.props.timeChangeHandler}  type="text" name="time" placeholder="How long"></Input>
             <Input inputtype='select_keto' id="keto" onChange={this.props.ketoChangeHandler} type="text" name="keto" placeholder="Keto friendly?"/>
             <Input inputtype='select_difficulty' id="difficulty" onChange={this.props.difficultyChangeHandler} type="text" name="difficulty" placeholder="How difficult"/>
+            <Input inputtype='select_creator' id="creator" onChange={this.props.creatorsChangeHandler} type="text" name="creator" placeholder="Creator"/>
           </form>
           <div style={{paddingTop: '20px'}}></div>
-          <button className='AddFormSubmit' onClick={this.props.clicked} value='Submit'>   Submit a recipe!</button>
+          <button className='AddFormSubmit' onClick={this.props.clicked} value='Submit'>Submit!</button>
         </div>
       </Animated>
       </Aux>

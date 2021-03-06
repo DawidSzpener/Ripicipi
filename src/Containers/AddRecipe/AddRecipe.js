@@ -14,6 +14,7 @@ class AddRecipe extends Component {
     recipeForm: {
       ingredients: [],
       preparations: [],
+      creatorsName: 'Guest',
       title: '',
       category: 'Breakfast',
       background: '',
@@ -49,7 +50,7 @@ class AddRecipe extends Component {
       keto: this.state.recipeForm.keto,
       time: this.state.recipeForm.time,
       difficulty: this.state.recipeForm.difficulty,
-      creatorsName: 'https://i.imgur.com/XeQeCul.png',
+      creatorsName: this.state.recipeForm.creatorsName,
       creatorsPicture: 'https://i.imgur.com/ZRv5rvN.jpg',
       valid: false
     }
@@ -131,7 +132,7 @@ class AddRecipe extends Component {
 
       updatedRecipeForm[inputIdentifier] = updatedFormElement
       this.setState({recipeForm: updatedRecipeForm})
-      }
+    }
   }
 
   render() {
@@ -154,6 +155,7 @@ class AddRecipe extends Component {
           ketoChangeHandler={(event) => this.inputChangedHandler(event, 'keto')}
           timeChangeHandler={(event) => this.inputChangedHandler(event, 'time')}
           difficultyChangeHandler={(event) => this.inputChangedHandler(event, 'difficulty')}
+          creatorsChangeHandler={(event) => this.inputChangedHandler(event, 'creatorsName')}
           show={this.state.showConfirmation}
           modalClosed={() => this.modalClosed()}/>
     }
