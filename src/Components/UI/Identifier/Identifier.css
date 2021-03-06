@@ -23,7 +23,7 @@
   margin-right: 3%;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 499px) {
   .Identifier {
     display: none;
   }
