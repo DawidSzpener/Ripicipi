@@ -49,8 +49,8 @@ const categoryHeader = (props) => {
 
   let header = 
     <div>
-      <h1 style={{padding: "0px 100px", fontWeight: '400', marginTop: '80px', fontSize: '32px', fontFamily: 'Georgia', fontStyle: 'italic', color: 'black', marginBottom: '0px'}}>{category}</h1>
-      <h5 style={{padding: "0px 260px", fontSize: '17px', color: '#776241', marginTop: '10px'}}>{description}</h5>
+      <h1 className="CategoryHeaderTitle">{category}</h1>
+      <h5 className="CategoryHeaderBody">{description}</h5>
     </div>
 
   return (
