@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
-import './Categories.css'
+import './Categories.scss'
 
 import Aux from '../../hoc/Aux'
 import Card from '../../Components/UI/Card/Card'
@@ -40,7 +40,7 @@ class Categories extends Component {
           <img src={background} alt="bg" className="bg"></img>
         </div>
         <div style={{marginTop: '120px'}}>
-          <img src={categories} alt="categories title"/>
+          <img className="bg-ricipici" src={categories} alt="categories title"/>
         </div>
         <div className='Categories'>
           {category}
