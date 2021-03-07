@@ -1,19 +1,19 @@
 import React from 'react'
 
-import './Identifier.css'
+import './Identifier.scss'
 
-const Identifier = (props => {
+const Identifier = (props) => {
   let name = null
   let picture = null
 
   switch(props.creatorsName) {
     case('Guest'):
-      name = ''
-      picture = ''
+      name = "https://i.imgur.com/XeQeCul.png"
+      picture = "https://i.imgur.com/ZRv5rvN.jpg"
     break
     case('Dawid'):
-      name = ''
-      picture = ''
+      name = "https://i.imgur.com/XeQeCul.png"
+      picture = "https://i.imgur.com/ZRv5rvN.jpg"
     break
     case('Karolina'):
       name = ''
@@ -23,25 +23,25 @@ const Identifier = (props => {
       name = ''
       picture = ''
     break
-    case('Magda i Maciej'):
+    case('Magda-i-Maciej'):
       name = ''
       picture = ''
     break
-    case('Seba i Beata'):
+    case('Seba-i-Beata'):
       name = ''
       picture = ''
     break
     default:
-      name = ''
-      picture = ''
+      name = "https://i.imgur.com/XeQeCul.png"
+      picture = "https://i.imgur.com/ZRv5rvN.jpg"
   }
 
   return (
     <div className="Identifier">
-      <img className="Identifier__picture" alt="identirfier pic" src={name}/>
-      <img className="Identifier__name" alt="name pic" src={picture}/>
+      <img className="Identifier__picture" alt="identirfier pic" src={picture}/>
+      <img className="Identifier__name" alt="name pic" src={name}/>
     </div>
   )
-})
+}
 
 export default Identifier

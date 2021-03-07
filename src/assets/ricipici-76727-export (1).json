@@ -1153,6 +1153,43 @@
         "time" : "60 minutes",
         "title" : "PYCHOTKA",
         "valid" : true
+      },
+      "-MUQI6PCdJMYChSC-xpD" : {
+        "background" : "https://i.imgur.com/DYvyumT.jpg",
+        "category" : "Baking",
+        "creatorsName" : "https://i.imgur.com/XeQeCul.png",
+        "creatorsPicture" : "https://i.imgur.com/ZRv5rvN.jpg",
+        "difficulty" : "moderate",
+        "ingredients" : [ {
+          "ingredient" : "Ciasto: 2 szklanki kaszy manny"
+        }, {
+          "ingredient" : "2 szklanki mąki pszennej"
+        }, {
+          "ingredient" : "3 łyżeczki proszku do pieczenia"
+        }, {
+          "ingredient" : "1,5 szklanki cukru"
+        }, {
+          "ingredient" : "Nadzienie: ok. 2,5 kg kwaśnym jabłek (najlepiej odmiana: szara reneta)"
+        }, {
+          "ingredient" : "3 łyżki cukru"
+        }, {
+          "ingredient" : "2 łyżeczki cynamonu"
+        }, {
+          "ingredient" : "200 g zimnego masła (plus trochę do posmarowania formy)"
+        } ],
+        "keto" : false,
+        "preparations" : [ {
+          "preparation" : "Jabłka umyć, osuszyć i razem ze skórką zetrzeć na tarce o dużych oczkach. Lekko odsączyć. (Nie wyciskać całego soku z jabłek, tylko lekko odcisnąć! Jabłka muszą pozostać wilgotne). Dodać cukier i cynamon. Wymieszać."
+        }, {
+          "preparation" : "Wszystkie sypkie składniki na ciasto wymieszać i podzielić na 3 części."
+        }, {
+          "preparation" : "Dno formy prostokątnej (o wymiarach ok. 35 x 24 cm) wyłożyć papierem do pieczenia. Papier i boki formy wysmarować masłem. Wsypać jedną część sypkich składników. Rozłożyć połowę jabłek. Przykryć drugą częścią sypkich składników, wyłożyć resztę jabłek i rozłożyć resztę sypkich składników. Z wierzchu pokryć ciasto równomiernie wiórkami z masła. (Masłem pokryć całą powierzchnię ciasta)."
+        }, {
+          "preparation" : "Piec w nagrzanym piekarniku ok. 60 minut w temperaturze 180°C (grzałka góra- dół), aż wierzch ciasta ładnie się zarumieni."
+        } ],
+        "time" : "30 minutes",
+        "title" : "Szarlotka Sypana",
+        "valid" : true
       }
     },
     "Breakfast" : {
@@ -2068,6 +2105,51 @@
         "valid" : false
       },
       "-MOCzgqS0Sr8YrjK98mb" : {
+        "-MUOgDgihYBLE7-VB-Fc" : {
+          "background" : "https://i.imgur.com/sAPexU5.jpg",
+          "category" : "Breakfast",
+          "creatorsName" : "https://i.imgur.com/XeQeCul.png",
+          "creatorsPicture" : "https://i.imgur.com/ZRv5rvN.jpg",
+          "difficulty" : "easy",
+          "ingredients" : [ {
+            "ingredient" : "400 gramów kurek"
+          }, {
+            "ingredient" : "6 dużych jajek (lub więcej)"
+          }, {
+            "ingredient" : "3 łyżki masła np. klarowanego"
+          }, {
+            "ingredient" : "garść świeżego koperku"
+          }, {
+            "ingredient" : "łyżka soku z cytryny"
+          }, {
+            "ingredient" : "przyprawy: pół łyżeczki soli, 1/4 płaskiej łyżeczki pieprzu"
+          } ],
+          "keto" : false,
+          "preparations" : [ {
+            "preparation" : "Jajecznicę możesz zrobić z grzybów świeżych lub kurek mrożonych. Jeśli sięgasz po mrożone kurki, to w pierwszej kolejności musisz je rozmrozić. Polecam naturalny proces rozmrażania, przez zostawienie kurek na talerzu, na blacie kuchennym. Rozmrożone kurki przełóż na sitko i ostrożnie przelej wrzątkiem a następnie osusz ręcznikiem papierowym"
+          }, {
+            "preparation" : "Kurki świeże wymagają oczyszczenia z piasku i fragmentów innych roślin. Możesz oczyścić je w zlewie pod zimną, bieżącą wodą. Należy to jednak robić sprawnie, by nie moczyć za długo grzybów w wodzie. Każdą sztukę należy wtedy przepłukać osobno"
+          }, {
+            "preparation" : "Wstępnie oczyszczone kurki można też umieścić w misce z ciepłą wodą z solą. Kilkukrotnie zatapiaj kurki w wodzie, aż czyste grzyby wypłyną na powierzchnię a zabrudzenia opadną na dno naczynia. Wyłów kurki i w razie potrzeby jeszcze oczyść ręcznie a następnie delikatnie osusz ręcznikiem papierowym"
+          }, {
+            "preparation" : "Kurki pokrój na mniejsze kawałki. Średniej wielkości patelnię nagrzej dobrze i dodaj masło. Polecam użyć masło klarowane. Następnie dodaj też kurki i smaż je bez przykrycia przez dziesięć minut. Od czasu do czasu zamieszaj grzybki przy pomocy drewnianej łyżki. W ciągu kilku minut grzyby piszczą sporo wody, ale już po pięciu minutach podsmażania kurek woda zacznie odparowywać"
+          }, {
+            "preparation" : "Po tym czasie możesz dodać pół łyżeczki soli, 1/4 płaskiej łyżeczki pieprzu, łyżkę świeżo wyciśniętego soku z cytryny oraz małą garść siekanego koperku"
+          }, {
+            "preparation" : "Porada: Przed dodaniem na patelnię kurek możesz też podsmażyć dodatkowo drobno posiekaną małą cebulkę oraz pokrojony w plasterki spory ząbek czosnku. Zamiast koperku zaś można dać cienki szczypiorek"
+          }, {
+            "preparation" : "W trakcie podsmażania kurek przygotuj sobie jajka. Można je wbić całe bezpośrednio na patelnię z kurkami, lub też zmiksować wcześniej na gładki i jednolity płyn jajeczny. Wówczas do miski wbij wszystkie jajka. Przy pomocy trzepaczki zrób z nich gładki kogel mogel. Powinno Ci to zająć niecałą minutę. Jednolity płyn jajeczny można dodatkowo przecedzić przez sitko"
+          }, {
+            "preparation" : "Jajka wlej na patelnię z kurkami. Zmniejsz moc palnika do minimalnej i podgrzewaj całość przez kilka minut. Cały czas mieszaj jajecznicę przy pomocy drewnianej łyżki. Płyn jajeczny w ciągu maksymalnie pięciu minut powinien się ściąć"
+          }, {
+            "preparation" : "Sprawdź smak jajecznicy z kurkami i w razie potrzeby dodaj jeszcze trochę soli lub pieprzu. Jajecznica z kurkami to przepis z dużą ilością grzybków. Jeśli wolisz zmienić proporcje, to śmiało możesz dać nawet o kilka jajek więcej. Pamiętaj jednak o tym, by dodać wówczas więcej przypraw"
+          }, {
+            "preparation" : "Jajecznica z kurkami będzie pyszna podana z kromką świeżego pieczywa. Świetnie smakuje też podana na ryż lub makaron"
+          } ],
+          "time" : "15 minutes",
+          "title" : "JAJECZNICA Z KURKAMI",
+          "valid" : true
+        },
         "background" : "https://i.imgur.com/sAPexU5.jpg",
         "category" : "Breakfast",
         "creatorsName" : "https://i.imgur.com/XeQeCul.png",
@@ -2110,7 +2192,7 @@
         } ],
         "time" : "15 minutes",
         "title" : "JAJECZNICA Z KURKAMI",
-        "valid" : false
+        "valid" : true
       },
       "-MOD-iONZEC4u9k1iLIm" : {
         "background" : "https://i.imgur.com/RjhlV77.jpg",
@@ -2219,7 +2301,7 @@
         "valid" : false
       },
       "-MODfT9XAczEap8AJeju" : {
-        "background" : "https://i.imgur.com/XYeeFtR.jpg",
+        "background" : "https://i.imgur.com/ow7LpRY.jpg",
         "category" : "Breakfast",
         "creatorsName" : "https://i.imgur.com/XeQeCul.png",
         "creatorsPicture" : "https://i.imgur.com/ZRv5rvN.jpg",
@@ -2227,29 +2309,29 @@
         "ingredients" : [ {
           "ingredient" : "4 jajka"
         }, {
-          "ingredient" : "4 łyżki masła"
+          "ingredient" : "masło"
         }, {
           "ingredient" : "1 łyżka oleju roślinnego"
         }, {
-          "ingredient" : "2 filiżanki małych pieczarek"
+          "ingredient" : "50g pieczarek"
         }, {
-          "ingredient" : "sól morska i świeżo zmielony czarny pieprz"
+          "ingredient" : "sól i pieprz"
         }, {
-          "ingredient" : "4 kromki opieczonych w tosterze grzanek z bagietki"
+          "ingredient" : "2 kawałki chleba"
         }, {
-          "ingredient" : "2 łyżki posiekanej natki pietruszki"
+          "ingredient" : "odrobina szczypiorku"
         } ],
-        "keto" : true,
+        "keto" : false,
         "preparations" : [ {
           "preparation" : "Przygotować dwie nieduże patelnie. Pierwszą rozgrzać i wlać olej oraz dodać 2 łyżki masła, rozpuścić. Wrzucić umyte i osuszone pieczarki i smażyć kilka minut, ładnie rumieniąc z każdej strony. Doprawić solą i pieprzem"
         }, {
-          "preparation" : "W międzyczasie opiec w tosterze grzanki, posmarować je masłem i ułożyć na dwóch talerzach"
+          "preparation" : "W międzyczasie posmarować chleb masłem i ułożyć na talerzu"
         }, {
-          "preparation" : "Rozgrzać drugą patelnię i rozpuścić na niej 2 łyżki masła, wbić jajka i doprawić solą. Smażyć szybko, robiąc tylko 4-5 ósemek. Jak tylko białka się zetną zdjąć z patelni i ułożyć na przygotowanej jednej grzance. Na drugiej grzance ułożyć pieczarki. Posypać pieprzem i natką pietruszki"
+          "preparation" : "Rozgrzać drugą patelnię i rozpuścić na niej 2 łyżki masła, wbić jajka, wrzucić szczypiorek i doprawić solą. Smażyć szybko, robiąc tylko 4-5 ósemek. Jak tylko białka się zetną zdjąć z patelni i ułożyć na talerzu. Następnie dodać pieczarki i lekko wymieszać."
         } ],
         "time" : "15 minutes",
-        "title" : "JAJECZNICA Z PIECZARKAMI NA GRZANKACH",
-        "valid" : false
+        "title" : "JAJECZNICA Z PIECZARKAMI",
+        "valid" : true
       },
       "-MODklxzTMUTnBl02EIM" : {
         "background" : "https://i.imgur.com/61lDh8E.jpg",
@@ -2952,6 +3034,166 @@
         "time" : "30 minutes",
         "title" : "Ciasto malinowo- waniliowe bez pieczenia",
         "valid" : true
+      },
+      "-MUQIa-y5U4Udvben3Rp" : {
+        "background" : "https://i.imgur.com/Hw9rTd7.jpg",
+        "category" : "Desserts",
+        "creatorsName" : "https://i.imgur.com/XeQeCul.png",
+        "creatorsPicture" : "https://i.imgur.com/ZRv5rvN.jpg",
+        "difficulty" : "moderate",
+        "ingredients" : [ {
+          "ingredient" : "2 ½ szklanki mleka"
+        }, {
+          "ingredient" : "3 żółtka"
+        }, {
+          "ingredient" : "1 szklanka cukru"
+        }, {
+          "ingredient" : "2 łyżeczki cukru waniliowego"
+        }, {
+          "ingredient" : "2 łyżki mąki pszennej"
+        }, {
+          "ingredient" : "3 łyżki mąki ziemniaczanej"
+        }, {
+          "ingredient" : "300g masła"
+        }, {
+          "ingredient" : "250g wiórków kokosowych + do posypania z góry (można również pomieszać wiórki kokosowe z płatkami migdałowymi)"
+        }, {
+          "ingredient" : "1 szklanka adwokata"
+        }, {
+          "ingredient" : "ok. 500g herbatników (64 sztuk)"
+        } ],
+        "keto" : false,
+        "preparations" : [ {
+          "preparation" : "Ugotować budyń. W tym celu 2 szklanki mleka zagotować z cukrem i cukrem waniliowym. ½ szklanki mleka wymieszać z żółtkami i mąkami. Dodać do gotującego się mleka i ugotować budyń, ciągle mieszając. Budyń pozostawić do ostygnięcia."
+        }, {
+          "preparation" : "Masło utrzeć mikserem. Dalej miksując dodawać porcjami zimny budyń. Następnie dodać stopniowo adwokat. Wyłączyć mikser i wmieszać wiórki kokosowe (lub wiórki kokosowe z płatkami migdałowymi)."
+        }, {
+          "preparation" : "Rozłożyć pierwszą warstwę herbatników 4 x 4. (Można rozłożyć herbatniki w formie, albo na desce. Ja użyłam do tego celu rozciąganej formy). Na herbatnikach rozsmarować ¼ masy budyniowej. Postępować tak dalej, aż do wyczerpania składników (Wychodzą 4 warstwy). Na górze ma być masa budyniowa. Z góry posypać ciasto wiórkami kokosowymi."
+        } ],
+        "time" : "30 minutes",
+        "title" : "Rafaello z adwokatem",
+        "valid" : true
+      },
+      "-MUj3J3lfgC2B3og_89H" : {
+        "background" : "https://i.imgur.com/3wMa9LF.jpg",
+        "category" : "Desserts",
+        "creatorsName" : "https://i.imgur.com/XeQeCul.png",
+        "creatorsPicture" : "https://i.imgur.com/ZRv5rvN.jpg",
+        "difficulty" : "easy",
+        "ingredients" : [ {
+          "ingredient" : "80g gorzkiej czekolady"
+        }, {
+          "ingredient" : "40g masla"
+        }, {
+          "ingredient" : "1 lyzka maki"
+        }, {
+          "ingredient" : "2 male jajka"
+        }, {
+          "ingredient" : "3 lyzki cukru"
+        }, {
+          "ingredient" : "mala szczypta soli"
+        } ],
+        "keto" : false,
+        "preparations" : [ {
+          "preparation" : "Nastaw piekarnik na 200 stopni, gora-dol."
+        }, {
+          "preparation" : "Czekolade rozpusc razem z maslem. Dwie kokilki natlusc maslem i poprusz maka."
+        }, {
+          "preparation" : "W osobnej misce roztrzep jajka az sie lekko spienia. Dodaj cukier i sol i ubijaj do polaczenia. Nastepnie przesiej make, dodaj i wymieszaj. Na koniec dodaj roztopiona czekolade."
+        }, {
+          "preparation" : "Wlej mase do kokilek i wstaw do goracego piekarnika. Piec 8 minut. Deser ma byc sciety z wierzchu i po bokach ale w srodku plynny. "
+        }, {
+          "preparation" : "Kokilki wyjmij z piekarnika, chwile odczekaj i wyloz na talerzyki."
+        }, {
+          "preparation" : "Oprusz cukrem pudrem i dodaj na gore jakis owoc np. maliny albo bita smietane.."
+        } ],
+        "time" : "15 minutes",
+        "title" : "Fondat czekoladowy",
+        "valid" : true
+      },
+      "-MUmBLYfhaLiuNZWjzRa" : {
+        "background" : "https://i.imgur.com/lyQow7B.jpg",
+        "category" : "Desserts",
+        "creatorsName" : "https://i.imgur.com/XeQeCul.png",
+        "creatorsPicture" : "https://i.imgur.com/ZRv5rvN.jpg",
+        "difficulty" : "moderate",
+        "ingredients" : [ {
+          "ingredient" : "Biszkopt: 6 jajek"
+        }, {
+          "ingredient" : "200 g cukru"
+        }, {
+          "ingredient" : "150 g mąki"
+        }, {
+          "ingredient" : "30 g masła"
+        }, {
+          "ingredient" : "Masa: 400 ml mleka"
+        }, {
+          "ingredient" : "4 żółtka"
+        }, {
+          "ingredient" : "80 g cukru"
+        }, {
+          "ingredient" : "2 łyżeczki cukru waniliowego"
+        }, {
+          "ingredient" : "60 g skrobi (4 łyżki)"
+        }, {
+          "ingredient" : "150 g miękkiego masła"
+        }, {
+          "ingredient" : "400 g zimnej śmietanki 30 %"
+        }, {
+          "ingredient" : "300 g masy krówkowej"
+        }, {
+          "ingredient" : "150 g płatków migdałowych"
+        } ],
+        "keto" : false,
+        "preparations" : [ {
+          "preparation" : "Przygotuj biszkopt. Jajka ubij z cukrem na jasną i puszystą masę, ktora zwiększy swoją objętość dwu, trzy krotnie. Następnie do miski z jajkami przesiej mąkę i zmiksuj krótko na wolnych obrotach miksera. Wlej roztopione i przestudzone masło i ponownie krótko zmiksuj. Piecz 20 min w piekarniku nagrzanym do 160°C."
+        }, {
+          "preparation" : "Przygotuj mase. Mleko postaw na ogniu i zagotuj. W czasie gotowania się mleka utrzyj żółtka z cukrami, pod koniec wsyp skrobię i zmiksuj do połączenia się składników. Cały czas miksując masę żółtkową wlej powoli gotujące się mleko. Całość przelej z powrotem do garnka i gotuj na małym ogniu do powstania gęstego budyniu. Ugotowany budyń przykryj folią spożywczą tak, aby stykała się z powierzchnią budyniu i odstaw do całkowitego wystudzenia. Miękkie masło zmiksuj przez chwilę a następnie zacznij dodawać zimny budyń po łyżce, po każdej porcji dokładnie miksując. Zimną śmietankę ubij na sztywno i dodaj ją w kilku porcjach do masy budyniowej, mieszając delikatnie."
+        }, {
+          "preparation" : "Przygotuj krowke. Płatki migdałowe upraż na suchej patelni na złoty kolor, odstaw do wystudzenia. Masę krówkową rozmieszaj łyżką tak aby nie było grudek. Jeden z blatów biszkoptu ułóż na płaskim naczyniu i wyłóż na niego całą masę, wyrównaj."
+        }, {
+          "preparation" : "Przykryj drugim blatem biszkoptu. Drugi blat posmaruj równo masą krówkową i posyp płatkami migdałowymi. Wstaw do lodówki na min kilka godzin a najlepiej na całą noc."
+        } ],
+        "time" : "60 minutes",
+        "title" : "Ciasto krówka budyniowa na biszkopcie",
+        "valid" : true
+      },
+      "-MUmCUQR5PybR9qhK4ok" : {
+        "background" : "https://i.imgur.com/aegffht.jpg",
+        "category" : "Desserts",
+        "creatorsName" : "https://i.imgur.com/XeQeCul.png",
+        "creatorsPicture" : "https://i.imgur.com/ZRv5rvN.jpg",
+        "difficulty" : "moderate",
+        "ingredients" : [ {
+          "ingredient" : "250 g mascarpone (schłodzonego)"
+        }, {
+          "ingredient" : "1 szklanka mocnej kawy"
+        }, {
+          "ingredient" : "3 - 4 łyżki amaretto lub innego alkoholu"
+        }, {
+          "ingredient" : "300 g masy krówkowej - kajmaku"
+        }, {
+          "ingredient" : "mała paczka okrągłych biszkoptów (ok. 120 g)"
+        }, {
+          "ingredient" : "ok. 200 g mrożonych owoców czarnej porzeczki lub malin lub ok. 300 g świeżych malin, jagód, borówki amerykańskiej"
+        }, {
+          "ingredient" : "kakao"
+        } ],
+        "keto" : false,
+        "preparations" : [ {
+          "preparation" : "Mascarpone schłodzić w lodówce. Zaparzyć mocną kawę (np. z 2 łyżek rozpuszczalnej kawy + 250 ml wrzątku), dodać likier lub inny alkohol i ostudzić (np. wstawić kawę w zimną wodę)."
+        }, {
+          "preparation" : "Biszkopty wkładać na chwilę (po ok. 2 sekundy z każdej strony) do kawy, przełamać na 2 - 3 części i włożyć do małych szklaneczek. Do każdej włożyć po ok. 2 - 3 biszkopty. "
+        }, {
+          "preparation" : "Mascarpone włożyć do miski i ubijać mikserem przez ok. 1,5 minuty. Dodać kajmak i ubijać jeszcze przez ok. 1 minutę aż powstanie kremowa i nieco puszysta masa. Połowę masy wyłożyć na biszkopty w szklaneczkach."
+        }, {
+          "preparation" : "Dodać owoce (mogą być zamrożone jeśli deser będzie oczekiwał na podanie i owoce zdążą się rozmrozić) lub rozmrożone ewentualnie świeże. Kwaśne owoce można posłodzić."
+        }, {
+          "preparation" : "Przykryć pozostałym kremem. Na wierzchu ułożyć namoczone w kawie biszkopty wypukłą stroną do góry. Posypać kakao bezpośrednio przez sitko."
+        } ],
+        "time" : "15 minutes",
+        "title" : "KAJMAKOWE TIRAMISU",
+        "valid" : true
       }
     },
     "Dinner" : {
@@ -2991,7 +3233,7 @@
           "preparation" : "Podajemy z pieczywem"
         } ],
         "time" : "30 minutes",
-        "title" : "FASOLKA PO BRYTONSKU",
+        "title" : "FASOLKA PO BRETONSKU",
         "valid" : true
       },
       "-MGnvSorGdGO5BBa0VSM" : {
@@ -3497,6 +3739,88 @@
         "time" : "30 minutes",
         "title" : "TORTILLA HISZPAŃSKA Z ZIEMNIAKAMI, SZPINAKIEM I FETĄ",
         "valid" : false
+      },
+      "-MUOraWP7qvt-e51PG1I" : {
+        "background" : "https://i.imgur.com/r1O34j7.jpg",
+        "category" : "Dinner",
+        "creatorsName" : "https://i.imgur.com/XeQeCul.png",
+        "creatorsPicture" : "https://i.imgur.com/ZRv5rvN.jpg",
+        "difficulty" : "easy",
+        "ingredients" : [ {
+          "ingredient" : "Ziemniaki"
+        }, {
+          "ingredient" : "Pierś z kurczaka 500g-700g"
+        }, {
+          "ingredient" : "Sól, pieprz"
+        }, {
+          "ingredient" : "Ser feta 50g"
+        }, {
+          "ingredient" : "Szpinak"
+        }, {
+          "ingredient" : "Serek topiony"
+        }, {
+          "ingredient" : "Kostka rosołowa"
+        }, {
+          "ingredient" : "Czosnek 1 ząbek"
+        }, {
+          "ingredient" : "Masło, mąka, cytryna, cukier i śmietana  do sosu"
+        } ],
+        "keto" : false,
+        "preparations" : [ {
+          "preparation" : "Obrabiamy pierś z kurczaka i tworzymy w nich otwór po długości, najpierw nacinamy nożem a następnie wkładamy w otwór palec i poszerzamy. "
+        }, {
+          "preparation" : "Przygotowujemy farsz. Mieszamy razem ser feta, drobno pokrojony ząbek czosnku, poszatkowany szpinak i serek topiony."
+        }, {
+          "preparation" : "Farsz napychamy do piersi. Ustawiamy piekarnik na góra i dół 200 stopni. Piersi układamy w żaro-odpornym naczyniu z przykryciem. Pieczemy ok. 60-80 minut. "
+        }, {
+          "preparation" : "W między czasie obieramy ziemniaki, kroimy na kawałki, wrzucamy do garnka i solimy. Wstawiamy na gaz i gotujemy."
+        }, {
+          "preparation" : "Przygotowujemy sos. Najpierw robimy bulion - wstawiamy garnek z wodą na gaz (ok. 1 szklanka wody). Dodajemy kostkę rosołową i mieszamy (nie całą, tak żeby nie było zbyt słone). Wstawiamy inny garnek na mały gaz, dodajemy łyżkę masła i roztapiamy. Następnie dodajemy łyżkę mąki i mieszamy."
+        }, {
+          "preparation" : "Pomału dodajemy bulion, aż sos będzie miał odpowiednią konsystencję. Doprawiamy cukrem, śmietaną i sokiem z cytryny."
+        }, {
+          "preparation" : "Wyjmujemy pierś z piekarnika i odlewamy wodę, zlewamy ziemniaki. Nakładamy ugotowane ziemniaki na talerz, polewamy je sosem i dodajemy usmażoną pierś z kurczaka."
+        } ],
+        "time" : "60 minutes",
+        "title" : "NADZIEWANA PIERŚ Z KURCZAKA",
+        "valid" : true
+      },
+      "-MUj4pWg-qlszeGKQ6jc" : {
+        "background" : "https://i.imgur.com/PRq8nSU.jpg",
+        "category" : "Dinner",
+        "creatorsName" : "https://i.imgur.com/XeQeCul.png",
+        "creatorsPicture" : "https://i.imgur.com/ZRv5rvN.jpg",
+        "difficulty" : "easy",
+        "ingredients" : [ {
+          "ingredient" : "450 g filetów z kurczaka"
+        }, {
+          "ingredient" : "przyprawy: sól i pieprz, po jednej łyżeczce kurkumy, słodkiej papryki, suszonego oregano, 1/2 łyżeczki ostrej papryki"
+        }, {
+          "ingredient" : "2 ząbki czosnku"
+        }, {
+          "ingredient" : "1 łyżka oliwy lub oleju"
+        }, {
+          "ingredient" : "200 g szpinaku"
+        }, {
+          "ingredient" : "100 g sera feta lub sera sałatkowego"
+        }, {
+          "ingredient" : "1 pomidor"
+        } ],
+        "keto" : true,
+        "preparations" : [ {
+          "preparation" : "Filety opłukać, osuszyć, oczyścić z błonek i kostek. Położyć na desce, każdą pierś przekroić pionowo na 2 połówki (otrzymamy 4 porcje kurczaka)."
+        }, {
+          "preparation" : "W każdej połówce, od góry, zrobić pionowe głębsze nacięcie w kształcie krzyża. Rozchylić boki i poszerzyć nieco powstałą kieszonkę."
+        }, {
+          "preparation" : "Mięso doprawić z każdej strony przyprawami oraz startym czosnkiem, następnie natrzeć oliwą i odłożyć na ok. 30 minut lub dłużej jeśli mamy czas."
+        }, {
+          "preparation" : "Szpinak włożyć na patelnię i mieszając podgrzewać aż zmięknie, ostudzić. Wymieszać z pokrojonym w kostkę serem i wypełnić nadzieniem kieszonki."
+        }, {
+          "preparation" : "Na wierzchu położyć plaster pomidora, doprawić go solą, pieprzem, suszonym oregano. Ułożyć na blaszce do pieczenia, wstawić do piekarnika nagrzanego do 180 stopni C, piec przez ok. 30 minut."
+        } ],
+        "time" : "30 minutes",
+        "title" : "KIESZENIE Z KURCZAKA ZE SZPINAKIEM I FETĄ",
+        "valid" : true
       }
     },
     "Liquids" : {
@@ -4026,7 +4350,7 @@
         "valid" : false
       },
       "-MR2A63cOFKho20zKos9" : {
-        "background" : "https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/ciasto_na_pizze_05_0.jpg",
+        "background" : "https://i.imgur.com/CF2Zu65.jpg",
         "category" : "Pizza",
         "difficulty" : "easy",
         "ingredients" : [ {
@@ -4059,7 +4383,7 @@
     },
     "Salads" : {
       "-MGo_UwBGdQesXjsJ-Ws" : {
-        "background" : "https://i.imgur.com/Ma7gk6y.jpg",
+        "background" : "https://i.imgur.com/UEUrGTQ.jpg",
         "category" : "Salads",
         "creatorsName" : "https://i.imgur.com/XeQeCul.png",
         "creatorsPicture" : "https://i.imgur.com/ZRv5rvN.jpg",
