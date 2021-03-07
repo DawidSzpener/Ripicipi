@@ -48,6 +48,14 @@
   }
 }
 
+@media (max-width: 499px) {
+  .Modal {
+  width: 90%;
+  left: 5%;
+  padding: 45px;
+  }
+}
+
 @media (min-width: 600px) {
   .Modal {
 		left: calc(50% - 200px);

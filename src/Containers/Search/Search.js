@@ -85,15 +85,13 @@ const Search = (props) => {
         keto = <img src={KetoPic} id='keto-card' alt="bg"/>
       }
       return (
-        <div className='ApproveCard'>
-          <div className='SingleRecipeCardApprove' key={recipe.title} onClick={() => {setDisplayedRecipe(recipe.title); setShowArrow(true)}}>
-            <div className='SingleRecipeCardTitle'>{title}
-              <div className='SingleRecipeCardKeto'>
-                {keto}
-              </div>
+        <div className='SingleRecipeCard' key={recipe.title} onClick={() => {setDisplayedRecipe(recipe.title); setShowArrow(true)}}>
+          <div className='SingleRecipeCardTitle'>{title}
+            <div className='SingleRecipeCardKeto'>
+              {keto}
             </div>
-              <img id='card-bg' src={recipe.background} alt="card_bg"></img>
           </div>
+            <img id='card-bg' src={recipe.background} alt="card_bg"></img>
         </div>
       )
     })
