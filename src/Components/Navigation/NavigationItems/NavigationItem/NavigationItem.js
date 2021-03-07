@@ -6,7 +6,7 @@ import './NavigationItem.scss'
 
 const navigationItem = (props) => {
   return (
-    <li className='NavigationItem'>
+    <li className='NavigationItem' onClick={props.close}>
       <NavLink 
         to={props.link}
         exact

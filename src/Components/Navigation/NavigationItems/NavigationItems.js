@@ -8,9 +8,9 @@ import AnimatedDropdown from '../../UI/AnimatedDropdown/AnimatedDropdown'
 
 const navigationItems = (props) => (
   <ul className='NavigationItems'>
-    <NavigationItem link='/search'><img className="Magnifier" alt="magnifier" src={magnifier}/></NavigationItem>
-    <NavigationItem link='/'>Recipes</NavigationItem>
-    <NavigationItem link='/add'>New Recipe</NavigationItem>
+    <NavigationItem close={props.clicked} link='/search'><img className="Magnifier" alt="magnifier" src={magnifier}/></NavigationItem>
+    <NavigationItem close={props.clicked} link='/'>Recipes</NavigationItem>
+    <NavigationItem close={props.clicked} link='/add'>New Recipe</NavigationItem>
     <AnimatedDropdown shape="rectangle" headerPosition="right" title="Categories" list={[
       {value: "breakfast", id: 1},
       {value: "dinner", id: 2},
