@@ -4,6 +4,7 @@
   box-sizing: border-box;
   display: block;
   width: 100%;
+  z-index: 151;
 }
 
 .NavigationItem a {

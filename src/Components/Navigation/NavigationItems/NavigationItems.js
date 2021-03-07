@@ -6,7 +6,7 @@ import magnifier from '../../../assets/pictures/magnifier.png'
 import NavigationItem from './NavigationItem/NavigationItem'
 import AnimatedDropdown from '../../UI/AnimatedDropdown/AnimatedDropdown'
 
-const navigationItems = () => (
+const navigationItems = (props) => (
   <ul className='NavigationItems'>
     <NavigationItem link='/search'><img className="Magnifier" alt="magnifier" src={magnifier}/></NavigationItem>
     <NavigationItem link='/'>Recipes</NavigationItem>

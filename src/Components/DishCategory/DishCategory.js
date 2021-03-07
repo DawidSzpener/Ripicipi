@@ -94,9 +94,7 @@ class DishCategory extends Component {
     this.state.recipeList.map(recipe => {
       if (recipe.props.title === this.state.displayedRecipe) {
         if (this.state.displayedRecipe.creatorsPicture !== null) {
-          creator = <Identifier 
-          creatorsPicture={recipe.props.creatorsPicture}
-          creatorsName={recipe.props.creatorsName}/>
+          creator = <Identifier creatorsName={recipe.props.creatorsName}/>
         }
 
         window.scrollTo(0, 0);

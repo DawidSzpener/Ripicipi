@@ -23,4 +23,11 @@
   .NavigationItems {
     display: none;
   }
+
+  .SideDrawer {
+    .NavigationItems {
+      width: 50px;
+      display: flex;
+    }
+  }
 }
