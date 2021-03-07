@@ -19,6 +19,7 @@ class DishCategory extends Component {
     displayedRecipe: null,
     showArrow: false,
     showSheet: false,
+    showHeader: true,
     loading: true
   }
 
@@ -91,6 +92,33 @@ class DishCategory extends Component {
     if (this.state.displayedRecipe === null) {
       shownRecipes = recipesAsCards }
 
+    let sheet = null 
+    if(this.state.showSheet) {
+        sheet = 
+        <Aux>
+            <Backdrop show={true} clicked={() => this.hideCheatSheet()}/>
+            <div className='RecipeCheatSheet'>
+                <img alt='Error' src={cheatSheet}/>
+            </div>
+        </Aux>
+    }
+
+    let arrow = null
+    if(this.state.showArrow) {
+      arrow = 
+      <Aux>
+        <div className='RecipeArrow' onClick={() => this.setState ({ displayedRecipe: null, showArrow: false, showSheet: false})}></div>
+        <div className='RecipeCheatSheetButton' onClick={() => this.setState ({ showSheet: !this.state.showSheet })}></div>
+      </Aux>
+    }
+
+    let categoryHeader = null
+    if(this.state.showHeader) {
+      categoryHeader = <CategoryHeader category={this.props.category}/>
+    } else {
+      categoryHeader = null
+    }
+
     this.state.recipeList.map(recipe => {
       if (recipe.props.title === this.state.displayedRecipe) {
         if (this.state.displayedRecipe.creatorsPicture !== null) {
@@ -98,6 +126,8 @@ class DishCategory extends Component {
         }
 
         window.scrollTo(0, 0);
+
+        categoryHeader = null
 
         shownRecipes = 
         <Recipe
@@ -114,25 +144,6 @@ class DishCategory extends Component {
       return null
     })
 
-    let sheet = null 
-    if(this.state.showSheet) {
-        sheet = 
-        <Aux>
-            <Backdrop show={true} clicked={() => this.hideCheatSheet()}/>
-            <div className='RecipeCheatSheet'>
-                <img alt='Error' src={cheatSheet}/>
-            </div>
-        </Aux>
-    }
-
-    let arrow = null
-    if(this.state.showArrow) {
-      arrow = 
-      <Aux>
-        <div className='RecipeArrow' onClick={() => this.setState ({ displayedRecipe: null, showArrow: false, showSheet: false })}></div>
-        <div className='RecipeCheatSheetButton' onClick={() => this.setState ({ showSheet: !this.state.showSheet })}></div>
-      </Aux>
-    }
     return (
       <Aux>
         <div className="bg-color">
@@ -142,7 +153,7 @@ class DishCategory extends Component {
           {arrow}
           {sheet}
         <div className="SingleBreakfast">
-          <CategoryHeader category={this.props.category}/>
+          {categoryHeader}
           {shownRecipes}
         </div>
       </Aux>
