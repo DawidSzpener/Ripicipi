@@ -3,25 +3,27 @@
   margin: 10px 0;
   box-sizing: border-box;
   display: block;
-  width: 100%;
+  width: 115%;
+  height: 100px;
   z-index: 151;
+  background-color: ivory;
 }
 
 .NavigationItem a {
   transition: all 0.7s ease;
-  color: #8F5C2C;
+  color: black;
   text-decoration: none;
   width: 100%;
   box-sizing: border-box;
+  font-size: 2rem;
   display: block;
-}
+  margin: auto;
+  margin-top: 28px;
 
-.NavigationItem a:hover,
-.NavigationItem a:active,
-.NavigationItem a.active {
-  color: black
+  &:hover {
+    color: rgb(218, 4, 4);
+  }
 }
-
 
 @media (min-width: 500px) {
   .NavigationItem {

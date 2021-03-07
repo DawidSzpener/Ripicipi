@@ -24,3 +24,9 @@
     outline: none;
   }
 }
+
+@media (max-width: 499px) {
+  .SearchBar__Input {
+    width: 90%;
+  }
+}

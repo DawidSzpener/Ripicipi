@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+
+import './AddRecipe.scss'
+
 import Aux from '../../hoc/Aux'
 import Input from '../../Components/UI/Form/Form'
-import './AddRecipe.css'
 import axios from '../../axios-recipes'
 import Modal from '../../Components/UI/Modal/Modal'
 import thankyou from '../../assets/pictures/thankyou.jpeg'

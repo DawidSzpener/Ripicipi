@@ -31,3 +31,9 @@
     outline: none;
   }
 }
+
+@media (max-width: 499px) {
+  .InputElement {
+    padding: 4px 9px 5px 9px;
+  }
+}

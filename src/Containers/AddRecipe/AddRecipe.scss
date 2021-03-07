@@ -3,9 +3,9 @@
   width: 80%;
   text-align: center;
   padding-top: 30px;
+  font-size: 12px;
   line-height: 1px;
   box-sizing: border-box;
-  font-family: 'Special Elite', cursive;
 }
 
 .IngredientsForms {
@@ -72,7 +72,7 @@
 	border-color: #aaa;
 	box-shadow: 0 0 1px 3px rgb(7, 7, 7);
 	box-shadow: 0 0 0 3px -moz-mac-focusring;
-    color: white;
+  color: white;
 	outline: none;
 }
 
@@ -113,7 +113,7 @@
 	appearance: none;
 	background-color: #fff;
 	background-image: url('https://i.imgur.com/JFIRiDY.jpg'),
-	  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
 	background-repeat: no-repeat, repeat;
 	background-position: right .7em top 50%, 0 0;
 	background-size: .65em auto, 100%;
@@ -141,6 +141,35 @@
 }
 .add-select option {
   font-weight:normal;
+}
+
+@media (max-width: 499px) {
+  .AddFormSubmit {
+    font-size: 15px;
+    padding: 0px 20px;
+  }
+
+  .IngredientsButton {
+    padding: 0px 20px;
+
+    &:focus {
+      color: white;
+      outline: none;
+      box-shadow: 0 0 0px 0px rgb(7, 7, 7);
+      box-shadow: 0 0 0 0px -moz-mac-focusring;
+    }
+  }
+
+  .PreparationsButton {
+    padding: 0px 20px;
+
+    &:focus {
+      color: white;
+      outline: none;
+      box-shadow: 0 0 0px 0px rgb(7, 7, 7);
+      box-shadow: 0 0 0 0px -moz-mac-focusring;
+    }
+  }
 }
 
 @media (min-width: 600px) {
